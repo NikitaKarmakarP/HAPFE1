@@ -102,7 +102,7 @@ export default function StrategicPartnershipsPage() {
               Strategic Partnerships
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-orange-100 leading-relaxed">
-              Building collaborative relationships with diverse stakeholders to amplify development impact and create sustainable solutions for complex challenges.
+              Building collaborative partnerships with diverse stakeholders to enhance developmental outcomes and promote sustainable solutions for emerging challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50">

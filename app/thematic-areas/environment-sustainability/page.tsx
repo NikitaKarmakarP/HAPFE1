@@ -133,8 +133,8 @@ export default function EnvironmentSustainabilityPage() {
                     <span className="text-2xl">🛡️</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Disaster Preparedness</h3>
-                    <p className="text-gray-600">Building community capacity for disaster risk reduction</p>
+                    <h3 className="font-semibold text-gray-900">Resilient Futures</h3>
+                    <p className="text-gray-600">Empowering communities to build resilience and respond effectively to disasters.</p>
                   </div>
                 </div>
               </div>
