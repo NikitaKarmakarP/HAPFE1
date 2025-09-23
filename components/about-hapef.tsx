@@ -146,8 +146,7 @@ export function AboutHapef() {
           </div>
           
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Since our founding, HAPEF has been at the forefront of rural development, combining innovative 
-            agricultural practices with community empowerment to create lasting positive change across India.
+            Since its inception, HAPEF has been at the forefront of rural development by combining new ideas with community empowerment to bring lasting change in India.
           </p>
         </div>
 
@@ -162,14 +161,10 @@ export function AboutHapef() {
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             <div className="space-y-8 max-w-xl">
               <p className="text-xl text-gray-600 leading-relaxed">
-                Founded with a vision to eradicate poverty through sustainable development, HAPEF has evolved 
-                into a leading force for rural transformation. Our innovative approach combines traditional 
-                agricultural wisdom with modern techniques, creating opportunities that honor both heritage and progress.
+                Founded with a vision to eradicate poverty through sustainable development, HAPEF has evolved into a leading force for rural transformation. Our innovative approach combines traditional agricultural wisdom with modern techniques, creating opportunities that honor both heritage and progress.
               </p>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Operating primarily in Pakur district of Jharkhand, with our headquarters in Kolkata, we've built 
-                strong partnerships with government departments and community organizations, highlighting our commitment to 
-                transparency and measurable impact.
+                Operating primarily in the Pakur district of Jharkhand, with our registered office at Kolkata, West Bengal, we've built strong partnerships with government departments and community organizations, highlighting our commitment to transparency and measurable impact.
               </p>
               
               {/* Info cards removed from homepage */}

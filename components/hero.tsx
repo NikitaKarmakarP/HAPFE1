@@ -98,20 +98,19 @@ export function Hero() {
                 <span
                   className={`block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600 animate-gradient-x transition-all duration-1000 delay-400 ${isVisible ? "animate-slide-in-left" : "opacity-0 -translate-x-10"}`}
                 >
-                  Rural Dreams
+                  Rural Communities
                 </span>
                 <span
                   className={`block text-4xl lg:text-5xl text-gray-700 transition-all duration-1000 delay-600 ${isVisible ? "animate-slide-in-left" : "opacity-0 -translate-x-10"}`}
                 >
-                  Through Sustainable Growth
+                  Through Sustainable Development
                 </span>
               </h1>
 
               <p
                 className={`text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-2xl transition-all duration-1000 delay-800 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
               >
-                HAPEF transforms lives through innovative agricultural programs, mushroom entrepreneurship, and
-                community empowerment initiatives across rural India.
+                HAPEF drives rural transformation through innovative livelihood programs, inclusive growth opportunities and community initiatives that promote resilience and self-reliance across India.
               </p>
             </div>
 
@@ -153,7 +152,7 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                  500+
+                  5000+
                 </div>
                 <div className="text-sm text-gray-600 font-medium">Families Empowered</div>
               </div>
@@ -164,7 +163,7 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                  50+
+                  40+
                 </div>
                 <div className="text-sm text-gray-600 font-medium">Villages Reached</div>
               </div>
@@ -204,8 +203,8 @@ export function Hero() {
                     <Sprout className="h-6 w-6 text-white group-hover/card:animate-bounce" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">Mushroom Farming</div>
-                    <div className="text-sm text-gray-600">Sustainable Income</div>
+                    <div className="font-bold text-gray-900">Resilient Agriculture</div>
+                    <div className="text-sm text-gray-600">Millet cultivation</div>
                   </div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:animate-ping transition-opacity duration-300"></div>
@@ -217,8 +216,8 @@ export function Hero() {
                     <Heart className="h-6 w-6 text-white group-hover/card:animate-pulse" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">Community Care</div>
-                    <div className="text-sm text-gray-600">Blanket Distribution</div>
+                    <div className="font-bold text-gray-900">Community Participation</div>
+                    <div className="text-sm text-gray-600">Sustainable Income</div>
                   </div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-pink-400 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:animate-ping transition-opacity duration-300"></div>

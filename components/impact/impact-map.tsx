@@ -29,10 +29,9 @@ export function ImpactMap() {
     <section id="geographic-impact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Geographic Impact</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Geographic Impact</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our programs span across multiple regions, creating a network of sustainable development and community
-            empowerment.
+            Our programs span across multiple regions, creating a network of sustainable development and community empowerment, with key presence in Pakur District, Jharkhand and South 24 Parganas, West Bengal. We focus primarily on Hiranpur Block under Pakur District, measuring our reach across regions and communities we serve.
           </p>
         </div>
 

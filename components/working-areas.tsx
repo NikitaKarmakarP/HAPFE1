@@ -203,8 +203,7 @@ export function WorkingAreas() {
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our programs span across multiple regions, creating a network of sustainable development and community empowerment. 
-              We focus primarily on <span className="font-semibold text-green-700">Hiranpur Block under Pakur District</span>, 
-              measuring our reach across regions and communities we serve.
+              We focus primarily on <span className="font-semibold text-green-700">Pakur District, Jharkhand</span> and <span className="font-semibold text-green-700">South 24 Parganas, West Bengal</span>, measuring our reach across regions and communities we serve.
             </p>
           </div>
 
