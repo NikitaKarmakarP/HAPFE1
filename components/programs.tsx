@@ -41,7 +41,7 @@ export function Programs() {
       title: "Mushroom Entrepreneurship Program",
       description:
         "Comprehensive training and resources for oyster and button mushroom cultivation, helping rural families generate sustainable income through modern farming techniques.",
-      features: ["Training workshops", "Seed funding support", "Market linkage", "Technical guidance"],
+      features: ["Capacity building training", "Seed funding support", "Market linkage", "Technical guidance"],
       image: "/m1.jpg",
       color: "from-emerald-500 to-green-600",
       bgColor: "from-emerald-50 to-green-50",
@@ -54,10 +54,10 @@ export function Programs() {
       description:
         "Annual initiative providing warm blankets to vulnerable families during winter months, ensuring comfort and protection from harsh weather conditions.",
       features: [
-        "Community outreach",
-        "Vulnerable family identification",
-        "Quality blanket distribution",
-        "Follow-up support",
+        "Engaging Local Communities",
+        "Identifying Vulnerable Families",
+        "Distributing Warm Blankets",
+        "Providing Ongoing Support",
       ],
       image: "/m2.jpg",
       color: "from-red-500 to-pink-600",
@@ -69,11 +69,11 @@ export function Programs() {
       icon: Leaf,
       title: "Climate-Resilient Agriculture & BRC",
       description:
-        "Building resilient communities through sustainable agriculture practices, climate adaptation strategies, and Block Resource Center initiatives.",
+        "Building resilient communities through sustainable agricultural practices, climate adaptation strategies and Bio-Resource Center initiatives.",
       features: [
         "Climate adaptation training",
         "Sustainable farming methods",
-        "Resource center development",
+        "Bio-Resource center development",
         "Community resilience building",
       ],
       image: "/m3.jpg",

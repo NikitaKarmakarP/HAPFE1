@@ -10,7 +10,7 @@ export function ProgramsGrid() {
       title: "Mushroom Entrepreneurship Program",
       description:
         "Comprehensive training and resources for oyster and button mushroom cultivation, helping rural families generate sustainable income through modern farming techniques.",
-      features: ["Training workshops", "Seed funding support", "Market linkage", "Technical guidance"],
+      features: ["Capacity building training", "Seed funding support", "Market linkage", "Technical guidance"],
       stats: { beneficiaries: "200+", villages: "25", success: "85%" },
       image: "/mu.jpg",
       href: "/programs/mushroom-entrepreneurship",
@@ -22,10 +22,10 @@ export function ProgramsGrid() {
       description:
         "Annual initiative providing warm blankets to vulnerable families during winter months, ensuring comfort and protection from harsh weather conditions.",
       features: [
-        "Community outreach",
-        "Vulnerable family identification",
-        "Quality blanket distribution",
-        "Follow-up support",
+        "Engaging Local Communities",
+        "Identifying Vulnerable Families",
+        "Distributing Warm Blankets",
+        "Providing Ongoing Support",
       ],
       stats: { beneficiaries: "1000+", villages: "30", success: "100%" },
       image: "/b11.jpg",
@@ -36,11 +36,11 @@ export function ProgramsGrid() {
       icon: Leaf,
       title: "Climate-Resilient Agriculture & BRC",
       description:
-        "Building resilient communities through sustainable agriculture practices, climate adaptation strategies, and Block Resource Center initiatives.",
+        "Building resilient communities through sustainable agricultural practices, climate adaptation strategies and Bio-Resource Center initiatives.",
       features: [
         "Climate adaptation training",
         "Sustainable farming methods",
-        "Resource center development",
+        "Bio-Resource center development",
         "Community resilience building",
       ],
       stats: { beneficiaries: "150+", villages: "20", success: "90%" },

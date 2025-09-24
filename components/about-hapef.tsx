@@ -271,8 +271,7 @@ export function AboutHapef() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  To eradicate poverty through sustainable agricultural practices, community empowerment, 
-                  and innovative livelihood programs that create lasting positive change in rural India.
+                  A world where every rural family has access to sustainable livelihoods, food security, and the opportunity to thrive through dignified work and community support.
                 </p>
               </div>
             </div>
@@ -286,8 +285,7 @@ export function AboutHapef() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  A world where every rural family has access to sustainable livelihoods, food security, 
-                  and the opportunity to thrive through dignified work and community support.
+                  To create resilient rural communities where every individual flourishes with dignity, health and sustainable opportunities.
                 </p>
               </div>
             </div>
@@ -296,14 +294,18 @@ export function AboutHapef() {
             <div className="relative group animate-fade-in-up" style={{animationDelay: '0.5s'}}>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/20 rounded-lg transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500 animate-wiggle"></div>
               <div className="relative bg-white/80 backdrop-blur-sm border border-purple-200/50 rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 animate-spin-slow">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300">
                   <Leaf className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Our Values</h4>
-                <p className="text-gray-600 leading-relaxed">
-                  Sustainability, community empowerment, innovation in agriculture, transparency in operations, 
-                  and unwavering commitment to the dignity and rights of rural communities.
-                </p>
+                <ul className="text-gray-600 leading-relaxed space-y-2 list-disc list-inside">
+                  <li><span className="font-medium">People First</span> – Prioritizing the needs, dignity and rights of rural communities.</li>
+                  <li><span className="font-medium">Partnership</span> – Collaborating with communities, governments and organizations for change.</li>
+                  <li><span className="font-medium">Sustainability</span> – Promoting environmentally responsible and economically viable practices.</li>
+                  <li><span className="font-medium">Equity & Inclusion</span> – Reaching everyone, leaving no one behind.</li>
+                  <li><span className="font-medium">Learning & Innovation</span> – Continuously adapting and innovating for impact.</li>
+                  <li><span className="font-medium">Integrity & Accountability</span> – Ensuring transparency and responsibility to communities and partners.</li>
+                </ul>
               </div>
             </div>
           </div>
