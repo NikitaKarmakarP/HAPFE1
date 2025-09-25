@@ -194,7 +194,7 @@ export function AboutHero() {
                       HAPEF was founded in 2022 by five young visionaries, inspired by two motivated young professionals, Bappa Mridha and Annyesha Purkait, who are committed to transforming the lives of rural communities through holistic and sustainable development. Established with the vision of eradicating poverty and promoting inclusive growth, HAPEF works tirelessly to uplift the most vulnerable and marginalized populations by ensuring access to dignified livelihoods, quality healthcare, environmental sustainability, and socio-economic empowerment.
                     </p>
                     <p>
-                      HAPEF’s work on the ground focuses on the states of Jharkhand and West Bengal, targeting underserved and remote rural regions where development needs are urgent and multifaceted. These regions remain the heart of our work and a living testament to the transformative potential of grassroots action.
+                      HAPEF’s work on the ground focuses on the states of Jharkhand and West Bengal, targeting underserved and remote rural regions where development needs are urgent and multifaceted. These regions remain the heart of our work and a living example of the transformative potential of grassroots action.
                     </p>
                     <p>
                       Our professionals believe that grassroots work, driven by a strong commitment to giving back to society, empowers rural communities by creating innovative solutions in agriculture, climate change, and gender equality. We aim to build a future where every individual, regardless of socio-economic background, has the opportunity to thrive and lead a life of dignity.
@@ -363,10 +363,10 @@ export function AboutHero() {
                 </h3>
                 <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    At HAPEF, we dream of a world where rural communities are not just surviving, but <span className="font-semibold text-blue-600">thriving</span>. A world where every family has access to sustainable agricultural practices, modern technology, and the knowledge to build prosperous futures.
+                    At HAPEF, we envision a world where rural communities do more than survive; they <span className="font-semibold text-blue-600">thrive</span>. Every family should have access to sustainable livelihoods, quality education, healthcare and modern technology, enabling them to build secure and dignified lives.
                   </p>
                   <p>
-                    We envision villages transformed into <span className="font-semibold text-indigo-600">hubs of innovation</span>, where traditional wisdom meets modern solutions, creating a sustainable model that can be replicated across India and beyond.
+                    We aim to see villages grow into <span className="font-semibold text-blue-600">vibrant centers of progress</span>, where traditional wisdom meet with modern solutions, promoting holistic development and creating sustainable models that can be replicated across India and beyond.
                   </p>
                 </div>
               </div>
@@ -450,7 +450,7 @@ export function AboutHero() {
                 </h2>
                 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mt-8">
-                  Our values are the foundation of everything we do. They guide our decisions, shape our programs, and ensure we remain true to our mission of serving rural communities.
+                  Our values form the foundation of our work. They guide our decisions, shape our initiatives, and help us stay committed to our mission of serving rural communities.
                 </p>
               </div>
             </div>
@@ -678,7 +678,7 @@ export function AboutHero() {
                     </div>
                   </div>
                   <div className="text-4xl lg:text-5xl font-bold text-emerald-600 mb-3">
-                    500+
+                    5000+
                   </div>
                   <div className="text-lg font-semibold text-gray-900 mb-1">Families Empowered</div>
                   <div className="text-sm text-gray-600">Direct beneficiaries of our programs</div>
@@ -692,7 +692,7 @@ export function AboutHero() {
                     </div>
                   </div>
                   <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-3">
-                    50+
+                    40+
                   </div>
                   <div className="text-lg font-semibold text-gray-900 mb-1">Villages Reached</div>
                   <div className="text-sm text-gray-600">Communities across multiple states</div>
