@@ -298,14 +298,9 @@ export function AboutHapef() {
                   <Leaf className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Our Values</h4>
-                <ul className="text-gray-600 leading-relaxed space-y-2 list-disc list-inside">
-                  <li><span className="font-medium">People First</span> – Prioritizing the needs, dignity and rights of rural communities.</li>
-                  <li><span className="font-medium">Partnership</span> – Collaborating with communities, governments and organizations for change.</li>
-                  <li><span className="font-medium">Sustainability</span> – Promoting environmentally responsible and economically viable practices.</li>
-                  <li><span className="font-medium">Equity & Inclusion</span> – Reaching everyone, leaving no one behind.</li>
-                  <li><span className="font-medium">Learning & Innovation</span> – Continuously adapting and innovating for impact.</li>
-                  <li><span className="font-medium">Integrity & Accountability</span> – Ensuring transparency and responsibility to communities and partners.</li>
-                </ul>
+                <p className="text-gray-600 leading-relaxed">
+                  At HAPEF, we put people first, foster partnerships and promote sustainability. We uphold equity and inclusion, embrace learning and innovation and remain committed to integrity and accountability in all we do.
+                </p>
               </div>
             </div>
           </div>

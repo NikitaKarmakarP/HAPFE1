@@ -176,7 +176,7 @@ export function AboutHero() {
                 </h2>
                 
                 <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mt-8">
-                  From humble beginnings to transformative impact - discover how HAPEF evolved into a beacon of hope for rural communities across India.
+                  From small beginnings to big change – discover how HAPEF has grown into a source of hope for rural communities across India.
                 </p>
               </div>
             </div>
