@@ -271,7 +271,7 @@ export function AboutHapef() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  A world where every rural family has access to sustainable livelihoods, food security, and the opportunity to thrive through dignified work and community support.
+                  To eradicate poverty by creating sustainable livelihood opportunities, promoting inclusive growth, ensuring access to basic services, and nurturing eco-friendly rural development, with a strong focus on grassroots participation and community empowerment.
                 </p>
               </div>
             </div>

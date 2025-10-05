@@ -80,9 +80,11 @@ export function WorkingAreas() {
           </h2>
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-            HAPEF operates across multiple regions in India, with our headquarters in 
-            <span className="font-semibold text-blue-700"> Kolkata</span> and primary focus areas in 
-            <span className="font-semibold text-green-700"> Jharkhand state</span>, creating lasting impact in rural communities.
+            HAPEF operates across multiple regions in India, with our registered office at
+            <span className="font-semibold text-blue-700"> Kolkata</span>,
+            <span className="font-semibold text-black"> West Bengal</span> and primary focus areas in the states of
+            <span className="font-semibold text-green-700"> Jharkhand</span> and
+            <span className="font-semibold text-black"> West Bengal</span>, creating lasting impact in rural communities.
           </p>
         </div>
 
@@ -221,7 +223,7 @@ export function WorkingAreas() {
                   <div className="text-4xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300">2</div>
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">States Covered</div>
-                <div className="text-sm text-gray-600 leading-relaxed">West Bengal & Jharkhand</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Jharkhand & West Bengal</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-green-200 to-emerald-300 rounded-full"></div>
               </CardContent>
             </Card>
@@ -236,10 +238,10 @@ export function WorkingAreas() {
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">50+</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">40+</div>
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">Villages Reached</div>
-                <div className="text-sm text-gray-600 leading-relaxed">Across Pakur District</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Across Pakur and South 24 Parganas Districts</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-blue-200 to-indigo-300 rounded-full"></div>
               </CardContent>
             </Card>
@@ -254,10 +256,10 @@ export function WorkingAreas() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Target className="h-8 w-8 text-purple-600" />
                   </div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">1</div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">2</div>
                 </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Primary Block</div>
-                <div className="text-sm text-gray-600 leading-relaxed">Hiranpur Block Focus</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Primary Blocks</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Hiranpur and Kultali Blocks</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-purple-200 to-pink-300 rounded-full"></div>
               </CardContent>
             </Card>
@@ -272,10 +274,10 @@ export function WorkingAreas() {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Heart className="h-8 w-8 text-orange-600" />
                   </div>
-                  <div className="text-4xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">5K+</div>
                 </div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">People Impacted</div>
-                <div className="text-sm text-gray-600 leading-relaxed">Direct & Indirect Beneficiaries</div>
+                <div className="text-sm text-gray-600 leading-relaxed"></div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-orange-200 to-red-300 rounded-full"></div>
               </CardContent>
             </Card>
