@@ -134,16 +134,16 @@ export function WorkingAreas() {
                     <div className="flex-1">
                       <h4 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
                         <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                        Headquarters
+                        Registered Office
                       </h4>
                       <p className="text-gray-600 leading-relaxed mb-3">
                         <span className="font-semibold text-blue-700">Bidyadharpur - Madsar Natunpally, Near Naba Sakti Sangha Club, P.O + P.S - Sonarpur, Kolkata - 700150</span>
                         <br />
-                        Administrative Hub & Registered Office
+                        Administrative Center
                       </p>
                       <span className="inline-flex items-center gap-1 text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                         <Target className="h-3 w-3" />
-                        NGO Headquarters
+                        NGO Headquarter
                       </span>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ export function WorkingAreas() {
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="text-center sm:text-left">
                       <p className="text-sm text-gray-600 mb-1">Our Geographic Coverage</p>
-                      <p className="font-semibold text-gray-900">2 States • 50+ Villages • 10,000+ Lives Impacted</p>
+                      <p className="font-semibold text-gray-900">2 States • 40+ Villages • 5,000+ Lives Impacted</p>
                     </div>
                     <div className="flex gap-3">
                       <Button variant="outline" size="sm" className="group/btn border-blue-200 hover:border-blue-400 hover:bg-blue-50">
