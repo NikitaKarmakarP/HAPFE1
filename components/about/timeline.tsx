@@ -9,38 +9,38 @@ export function Timeline() {
   const milestones = [
     {
       year: "2022",
-      title: "Foundation Established",
+      title: "Organization Established",
       description: "HAPEF was officially registered as an NGO in Kolkata with a mission to eradicate rural poverty.",
       icon: Calendar,
     },
     {
       year: "2022",
-      title: "First Mushroom Program",
-      description: "Launched our flagship mushroom cultivation program in 5 villages of Pakur district.",
+      title: "Climate-Resilient Agriculture",
+      description: "Initiated comprehensive climate-resilient agriculture programs to help farmers adapt to environmental challenges.",
       icon: Sprout,
-    },
-    {
-      year: "2023",
-      title: "100 Families Milestone",
-      description: "Successfully trained and supported 100 families in sustainable agricultural practices.",
-      icon: Users,
     },
     {
       year: "2023",
       title: "Government Partnership",
-      description: "Established formal partnerships with government departments for program expansion.",
+      description: "Established key partnerships with government departments to enhance program delivery and impact.",
       icon: Award,
     },
     {
-      year: "2024",
-      title: "Climate-Resilient Agriculture",
-      description: "Launched comprehensive climate-resilient agriculture programs to help farmers adapt to environmental challenges.",
-      icon: Sprout,
+      year: "2023",
+      title: "Christmas Blanket Distribution",
+      description: "Spreading warmth and cheer through Christmas blanket distribution drive.",
+      icon: Sparkles,
     },
     {
       year: "2024",
-      title: "500+ Families Impact",
-      description: "Reached milestone of supporting over 500 families across 50+ villages.",
+      title: "Mushroom Entrepreneurship Program",
+      description: "Initiated mushroom entrepreneurship development program in ten villages of Pakur district.",
+      icon: Sprout,
+    },
+    {
+      year: "2025",
+      title: "5000+ Families Impacted",
+      description: "Reached milestone of supporting over 5000+ families across 40+ villages.",
       icon: Users,
     },
     {
@@ -64,7 +64,7 @@ export function Timeline() {
             <span className="inline-flex items-center gap-2">
               <Sparkles className="h-6 w-6 text-emerald-500" />
               <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">
-                Our Journey
+                Our Milestones
               </span>
             </span>
           </h2>

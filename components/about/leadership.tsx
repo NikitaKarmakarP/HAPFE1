@@ -85,10 +85,10 @@ const boardMembers = [
 const advisoryBoard = [
   {
     name: "Dr. Bikash Ghosh",
-    role: "Agricultural Research Advisor",
-    institution: "Former Director, ICAR",
+    role: "Advisory Member, HAPEF Ex-Professor, Bidhan Chandra Krishi Viswavidyalaya",
+    institution: "Bidhan Chandra Krishi Viswavidyalaya",
     image: "/Bikash.jpg",
-    bio: "Renowned horticulturist and retired professor.",
+    bio: "Ex-Professor, Bidhan Chandra Krishi Viswavidyalaya",
     details: `Dr. Bikash Ghosh is an Advisory Member of HAPEF. He is a renowned horticulturist and retired Professor from the Department of Fruits and Orchard Management at Bidhan Chandra Krishi Viswavidyalaya, West Bengal. With over four decades of experience in academics, research, and fieldwork, he has made significant contributions to fruit crop husbandry, particularly in mango, citrus, guava, litchi, and ber. He has mentored numerous M.Sc. and Ph.D. scholars and has published more than 40 research papers in reputed journals. Dr. Ghosh has led and collaborated on major projects funded by ICAR, DBT, and the Department of Food Processing Industries and Horticulture. His work on orchard rejuvenation, crop regulation, and organic nutrition has had a lasting impact on both the scientific community and farming practices. He has represented India at international symposia in countries including Indonesia, Portugal, China, and Thailand. Dr. Ghosh has actively contributed to academic collaboration with Bangladesh by presenting a paper at an international symposium in Maymensingh in 2009 and serving as an external Ph.D. thesis evaluator for Khulna University in 2016. He continues to advise academic institutions, serve as a thesis examiner, and contribute actively to national horticultural development initiatives.`,
     email: "sk.mishra@hapef.org",
     linkedin: "#",
@@ -96,12 +96,12 @@ const advisoryBoard = [
     achievements: "50+ Research Publications, National Agriculture Award",
   },
   {
-    name: "Dr. Lavanya Sravani Balguri",
-    role: "Agricultural Entomology Advisor",
-    institution: "Advisory Member, HAPEF (Ph.D., BCKV, West Bengal)",
+    name: "Dr. Lavanya Sravani Bulguri",
+    role: "Advisory Member, HAPEF Ph.D Agricultural Entomology, Bidhan Chandra Krishi Viswavidyalaya",
+    institution: "Bidhan Chandra Krishi Viswavidyalaya",
     image: "/l.jpg",
-    bio: "Expert in eco-friendly pest management and biocontrol.",
-    details: `Dr. Lavanya Sravani Balguri is an advisory member of HAPEF. She holds a doctoral degree in Agricultural Entomology from Bidhan Chandra Krishi Viswavidyalaya (BCKV), West Bengal. Her expertise spans several key areas, including eco-friendly stored grain pest management, ecological pest management of chilli, insect rearing and biocontrol agent production, fruit fly mass production, and honeybee rearing and handling. During her Master's degree at Central Agricultural University, Imphal, she was awarded the University Gold Medal. Dr. Balguri has also contributed to academia as a part-time lecturer at the Susurijo Institute of Agricultural Science, Technology and Management in West Bengal and RNB Global University in Rajasthan. A life member of the Society for Biocontrol Advancement, she has received numerous honors for her contributions to Agricultural Entomology. In 2019, she was awarded the Birth Anniversary Celebration Award for Distinction in the Study of Agriculture by the Maharaja Narasingh Memorial Committee, Imphal. Dr. Balguri's commitment to her field is further demonstrated by her extensive publications, including articles and book chapters, as well as her active participation in conferences, workshops, and training programs.`,
+    bio: "Ph.D Agricultural Entomology, Bidhan Chandra Krishi Viswavidyalaya",
+    details: `Dr. Lavanya Sravani Bulguri is an advisory member of HAPEF. She holds a doctoral degree in Agricultural Entomology from Bidhan Chandra Krishi Viswavidyalaya (BCKV), West Bengal. Her expertise spans several key areas, including eco-friendly stored grain pest management, ecological pest management of chilli, insect rearing and biocontrol agent production, fruit fly mass production, and honeybee rearing and handling. During her Master's degree at Central Agricultural University, Imphal, she was awarded the University Gold Medal. Dr. Bulguri has also contributed to academia as a part-time lecturer at the Susurijo Institute of Agricultural Science, Technology and Management in West Bengal and RNB Global University in Rajasthan. A life member of the Society for Biocontrol Advancement, she has received numerous honors for her contributions to Agricultural Entomology. In 2019, she was awarded the Birth Anniversary Celebration Award for Distinction in the Study of Agriculture by the Maharaja Narasingh Memorial Committee, Imphal. Dr. Bulguri's commitment to her field is further demonstrated by her extensive publications, including articles and book chapters, as well as her active participation in conferences, workshops, and training programs.`,
     expertise: [
       "Eco-friendly Stored Grain Pest Management",
       "Ecological Pest Management (Chilli)",
@@ -562,7 +562,7 @@ export function Leadership() {
         {/* Our Notable Interns */}
         <div id="notable-interns" className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Notable Interns</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Words From Our Interns</h3>
             <p className="text-lg text-gray-600">
               Exceptional individuals who have made significant contributions to our mission
             </p>
