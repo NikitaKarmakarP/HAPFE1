@@ -14,7 +14,7 @@ export function Timeline() {
       icon: Calendar,
     },
     {
-      year: "2022",
+      year: "2023",
       title: "Climate-Resilient Agriculture",
       description: "Initiated comprehensive climate-resilient agriculture programs to help farmers adapt to environmental challenges.",
       icon: Sprout,

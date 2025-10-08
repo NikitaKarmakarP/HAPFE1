@@ -329,7 +329,7 @@ export function Leadership() {
               </span>
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Strategic oversight and governance leadership ensuring organizational excellence and sustainable growth
+              Delivering excellence and sustainability through visionary governance and oversight.
             </p>
           </div>
 
@@ -358,17 +358,6 @@ export function Leadership() {
                   <div className="text-center mb-4">
                     <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 leading-tight">{member.name}</h4>
                     <p className="text-blue-600 font-semibold mb-2 text-xs uppercase tracking-wide">{member.role}</p>
-                  </div>
-
-                  <div className="mb-4 space-y-2">
-                    <div className="flex items-center justify-center text-xs text-gray-500">
-                      <Award className="h-3 w-3 mr-1 text-blue-500" />
-                      <span className="line-clamp-1">{member.experience}</span>
-                    </div>
-                    <div className="flex items-center justify-center text-xs text-gray-500">
-                      <Target className="h-3 w-3 mr-1 text-indigo-500" />
-                      <span className="line-clamp-1">{member.specialization}</span>
-                    </div>
                   </div>
 
                   <div className="flex justify-center space-x-2">
