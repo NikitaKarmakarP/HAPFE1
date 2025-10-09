@@ -264,20 +264,7 @@ export function Leadership() {
                     <p className="text-green-600 font-semibold mb-3 text-sm uppercase tracking-wide">{member.role}</p>
                   </div>
 
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {member.expertise.slice(0, 2).map((skill, skillIndex) => (
-                        <Badge key={skillIndex} className="bg-green-100 text-green-700 hover:bg-green-200 text-xs px-3 py-1">
-                          {skill}
-                        </Badge>
-                      ))}
-                      {member.expertise.length > 2 && (
-                        <Badge className="bg-gray-100 text-gray-600 text-xs px-3 py-1">
-                          +{member.expertise.length - 2} more
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
+
 
                   <div className="flex justify-center space-x-3">
                     <Button 
@@ -443,16 +430,7 @@ export function Leadership() {
                     <p className="text-sm text-gray-500 mb-3">{member.institution}</p>
                   </div>
 
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-1 justify-center mb-2">
-                      {member.expertise.map((skill, skillIndex) => (
-                        <Badge key={skillIndex} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
 
-                  </div>
 
                   <div className="flex justify-center space-x-3">
                     <Button size="sm" variant="outline" className="flex items-center gap-2 bg-transparent">
@@ -519,13 +497,6 @@ export function Leadership() {
                   </div>
 
                   <div className="mb-4">
-                    <div className="flex flex-wrap gap-1 justify-center mb-2">
-                      {intern.focus.map((area, areaIndex) => (
-                        <Badge key={areaIndex} variant="secondary" className="text-xs">
-                          {area}
-                        </Badge>
-                      ))}
-                    </div>
                     <div className="flex items-center justify-center text-xs text-gray-500">
                       <Calendar className="h-3 w-3 mr-1" />
                       Started: {intern.startDate}
@@ -624,13 +595,6 @@ export function Leadership() {
                   </div>
 
                   <div className="mb-4">
-                    <div className="flex flex-wrap gap-1 justify-center mb-2">
-                      {intern.focus.map((area, areaIndex) => (
-                        <Badge key={areaIndex} variant="secondary" className="text-xs">
-                          {area}
-                        </Badge>
-                      ))}
-                    </div>
                     <div className="text-xs text-center text-emerald-600 font-medium mb-2">
                       <Award className="h-3 w-3 inline mr-1" />
                       {intern.achievements}
@@ -735,36 +699,9 @@ export function Leadership() {
                 </p>
               </div>
 
-              {/* Expertise or Specialization */}
-              {Array.isArray((selectedMember as any)?.expertise) && (
-                <div className="mt-6">
-                  <p className="text-xs font-medium text-gray-500 mb-2">Areas of Expertise</p>
-                  <div className="flex flex-wrap gap-2">
-                    {(selectedMember as any).expertise.map((skill: string, idx: number) => (
-                      <Badge key={idx} className="bg-blue-100 text-blue-700">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              )}
 
-              {(!(selectedMember as any)?.expertise && ((selectedMember as any)?.experience || (selectedMember as any)?.specialization)) && (
-                <div className="mt-6 space-y-2 text-sm text-gray-700">
-                  {(selectedMember as any)?.experience && (
-                    <div className="flex items-center">
-                      <Award className="h-4 w-4 text-blue-500 mr-2" />
-                      <span>{(selectedMember as any).experience}</span>
-                    </div>
-                  )}
-                  {(selectedMember as any)?.specialization && (
-                    <div className="flex items-center">
-                      <Target className="h-4 w-4 text-indigo-500 mr-2" />
-                      <span>{(selectedMember as any).specialization}</span>
-                    </div>
-                  )}
-                </div>
-              )}
+
+
 
               {/* Divider */}
               <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent" />

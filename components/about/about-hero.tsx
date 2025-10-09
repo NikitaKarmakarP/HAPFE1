@@ -191,7 +191,7 @@ export function AboutHero() {
                 <div className="relative bg-white/60 backdrop-blur-sm p-8 rounded-3xl border border-blue-100/50 shadow-xl">
                   <div className="text-lg text-gray-700 leading-relaxed space-y-6">
                     <p>
-                      HAPEF was founded in 2022 by five young visionaries, inspired by two motivated young professionals, Bappa Mridha and Annyesha Purkait, who are committed to transforming the lives of rural communities through holistic and sustainable development. Established with the vision of eradicating poverty and promoting inclusive growth, HAPEF works tirelessly to uplift the most vulnerable and marginalized populations by ensuring access to dignified livelihoods, quality healthcare, environmental sustainability, and socio-economic empowerment.
+                      HAPEF was founded in 2022 by five young visionaries, inspired by two motivated young professionals, Bappa Mridha and Annyesha Purkait, who are committed here to transform the lives of rural communities through holistic and sustainable development. Established with the vision of eradicating poverty and promoting inclusive growth, HAPEF works tirelessly to uplift the most vulnerable and marginalized populations by ensuring access to dignified livelihoods, quality healthcare, environmental sustainability, and socio-economic empowerment.
                     </p>
                     <p>
                       HAPEF’s work on the ground focuses on the states of Jharkhand and West Bengal, targeting underserved and remote rural regions where development needs are urgent and multifaceted. These regions remain the heart of our work and a living example of the transformative potential of grassroots action.

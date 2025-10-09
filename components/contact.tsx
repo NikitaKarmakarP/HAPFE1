@@ -78,21 +78,7 @@ export function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-orange-50 to-red-50 hover:from-orange-100 hover:to-red-100 transition-all duration-300">
-                  <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full">
-                    <Clock className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 mb-2">Office Hours</h4>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      Monday - Friday: 9:00 AM - 6:00 PM
-                      <br />
-                      Saturday: 9:00 AM - 2:00 PM
-                      <br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </div>
+
 
                 <div className="pt-6 border-t border-gray-200">
                   <div className="text-center p-6 rounded-lg bg-gradient-to-r from-indigo-50 to-cyan-50">

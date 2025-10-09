@@ -204,7 +204,7 @@ export function Hero() {
                   </div>
                   <div>
                     <div className="font-bold text-gray-900">Resilient Agriculture</div>
-                    <div className="text-sm text-gray-600">Millet cultivation</div>
+                    <div className="text-sm text-gray-600">Millet Cultivation</div>
                   </div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:animate-ping transition-opacity duration-300"></div>
@@ -213,7 +213,7 @@ export function Hero() {
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-blue-100 animate-float-card-delayed hover:scale-110 transition-all duration-300 cursor-pointer group/card">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover/card:rotate-12 transition-transform duration-300">
-                    <Heart className="h-6 w-6 text-white group-hover/card:animate-pulse" />
+                    <Users className="h-6 w-6 text-white group-hover/card:animate-bounce" />
                   </div>
                   <div>
                     <div className="font-bold text-gray-900">Community Participation</div>

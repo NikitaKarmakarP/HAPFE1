@@ -164,7 +164,7 @@ export function WorkingAreas() {
                         Hiranpur Block - Implementation Zone
                       </p>
                       <span className="inline-flex items-center gap-1 text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">
-                        <Heart className="h-3 w-3" />
+                        <Target className="h-3 w-3" />
                         Program Area
                       </span>
                     </div>
