@@ -102,12 +102,7 @@ export function ProgramDetails({
               alt={benefitsImageAlt || "Program illustration"}
               className="rounded-2xl shadow-xl"
             />
-            <div className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-green-100">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-1">95%</div>
-                <div className="text-sm text-gray-600">Satisfaction Rate</div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { MouseIcon as Mushroom, Gift, Leaf, Users, ArrowRight, Sparkles, Target } from "lucide-react"
+import { Sprout as Mushroom, Gift, Leaf, Users, ArrowRight, Sparkles, Target } from "lucide-react"
 import Link from "next/link"
 
 // Custom hook for intersection observer

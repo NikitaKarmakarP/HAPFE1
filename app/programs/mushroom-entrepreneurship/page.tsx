@@ -10,7 +10,7 @@ export default function MushroomEntrepreneurshipPage() {
     title: "Mushroom Entrepreneurship Program",
     subtitle: "Empowering Rural Families Through Sustainable Mushroom Cultivation",
     description:
-      "Our flagship program provides comprehensive training, resources, and ongoing support to help rural families, particularly women, establish profitable mushroom farming enterprises.",
+      "We offer training, resources, and support to help rural families, particularly women, start and grow profitable mushroom farming businesses.",
     image: "/mo.jpg",
     stats: [
       { number: "200+", label: "Families Trained" },
