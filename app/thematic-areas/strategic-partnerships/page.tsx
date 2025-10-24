@@ -17,7 +17,7 @@ export default function StrategicPartnershipsPage() {
     },
     {
       title: "Academic Collaborations",
-      description: "Partnering with universities and research institutions for knowledge and innovation.",
+      description: "Partnering with various universities and institutions for knowledge and innovation.",
       icon: "🎓"
     },
     {

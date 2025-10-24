@@ -15,11 +15,11 @@ interface ProgramCTAProps {
 }
 
 export function ProgramCTA({
-  title = "Ready to Start Your\nMushroom Enterprise?",
+  title = "Ready to Transform Your Community?",
   description =
-    "Join hundreds of successful entrepreneurs who have transformed their lives through sustainable mushroom cultivation. Our comprehensive program provides everything you need to succeed.",
-  primaryButton = { text: "Apply for Program", href: "#" },
-  secondaryButton = { text: "Download Brochure", href: "#" },
+    "Join our mushroom entrepreneurship program and become part of a growing network of successful rural entrepreneurs.",
+  primaryButton = { text: "Apply Now", href: "#" },
+  secondaryButton = { text: "Learn More", href: "#" },
   image = "/en.jpg",
 }: ProgramCTAProps = {}) {
   const [firstLine, secondLine] = title.split("\n")

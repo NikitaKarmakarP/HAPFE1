@@ -1,6 +1,5 @@
 import { ProgramHero } from "@/components/programs/program-hero"
 import { ProgramDetails } from "@/components/programs/program-details"
-import { ProgramImpact } from "@/components/programs/program-impact"
 import { ProgramTestimonials } from "@/components/programs/program-testimonials"
 import { ProgramCTA } from "@/components/programs/program-cta"
 import { ContactSection } from "@/components/contact-section"
@@ -24,7 +23,6 @@ export default function MushroomEntrepreneurshipPage() {
     <main className="min-h-screen">
       <ProgramHero data={programData} />
       <ProgramDetails benefitsImage="/mo1.jpg" benefitsImageAlt="Mushroom program benefits" />
-      <ProgramImpact />
       <ProgramTestimonials />
       <ProgramCTA />
       <ContactSection />

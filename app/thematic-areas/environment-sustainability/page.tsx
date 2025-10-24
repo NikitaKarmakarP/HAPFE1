@@ -18,7 +18,7 @@ export default function EnvironmentSustainabilityPage() {
     },
     {
       title: "Disaster Risk Reduction",
-      description: "Comprehensive disaster preparedness and risk reduction programs for vulnerable communities.",
+      description: "Comprehensive disaster management and risk reduction programs for vulnerable communities.",
       icon: "🛡️"
     },
     {
@@ -113,10 +113,10 @@ export default function EnvironmentSustainabilityPage() {
                 Building Environmental Resilience
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Our environmental sustainability and disaster management programs address the growing challenges of climate change, environmental degradation, and natural disasters affecting vulnerable communities.
+                Our environmental sustainability and disaster management programs address the growing challenges of climate change, environmental degradation and climate-induced as well as socio-economic disasters affecting vulnerable communities.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We work on multiple fronts - from conservation and sustainable resource management to disaster preparedness and climate adaptation - ensuring communities are resilient and environmentally sustainable.
+                We work on multiple fronts - from conservation and sustainable resource management to disaster risk reduction and climate adaptation - ensuring communities are resilient and environmentally sustainable.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
