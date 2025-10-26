@@ -101,7 +101,7 @@ export default function LivelihoodsPage() {
               <span className="text-green-200 font-medium">Thematic Area</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Livelihoods Development
+              Livelihoods
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100 leading-relaxed">
               Creating sustainable income opportunities and improving economic conditions for vulnerable populations through skill development and enterprise support.

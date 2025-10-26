@@ -297,52 +297,6 @@ export default function EnterpriseMarketingPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise Success Stories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real transformations from our enterprise development and marketing programs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
-                  🏪
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Artisan Collective Growth</h3>
-                  <p className="text-gray-600 mb-4">
-                    "HAPEF helped our handicraft collective access online markets. Our sales increased by 400% and we now export to 5 countries."
-                  </p>
-                  <div className="text-sm text-purple-600 font-medium">Handicraft Collective Leader</div>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
-                  🌾
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Farmer Producer Organization</h3>
-                  <p className="text-gray-600 mb-4">
-                    "Through market linkage support, our FPO now supplies directly to supermarket chains, eliminating middlemen and increasing farmer income by 60%."
-                  </p>
-                  <div className="text-sm text-purple-600 font-medium">FPO Chairman</div>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
