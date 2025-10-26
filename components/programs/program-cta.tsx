@@ -40,13 +40,13 @@ export function ProgramCTA({
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <Phone className="h-4 w-4 text-green-600" />
                 </div>
-                <span className="text-gray-700">Call us: +91 XXXX XXXXXX</span>
+                <span className="text-gray-700">Call us: +91 8240374731</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <Mail className="h-4 w-4 text-green-600" />
                 </div>
-                <span className="text-gray-700">Email: programs@hapef.org</span>
+                <span className="text-gray-700">Email: info.hapef@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">

@@ -254,7 +254,7 @@ export default function StrategicPartnershipsPage() {
               Partnership Framework
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our structured approach to building and maintaining effective partnerships.
+              Our structured approach to build and maintain effective partnerships.
             </p>
           </div>
 
@@ -299,51 +299,6 @@ export default function StrategicPartnershipsPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Partnership Success Stories
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Real examples of how strategic partnerships have amplified our development impact.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
-                  🏛️
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Government Collaboration</h3>
-                  <p className="text-gray-600 mb-4">
-                    "Our partnership with HAPEF helped us reach 10,000 farmers with climate-smart agriculture techniques, exceeding our target by 150%."
-                  </p>
-                  <div className="text-sm text-orange-600 font-medium">State Agriculture Department</div>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
-                  🏢
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Corporate Partnership</h3>
-                  <p className="text-gray-600 mb-4">
-                    "Through our CSR partnership with HAPEF, we've created sustainable livelihood opportunities for 500 women entrepreneurs in rural areas."
-                  </p>
-                  <div className="text-sm text-orange-600 font-medium">Corporate CSR Head</div>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
