@@ -208,28 +208,6 @@ export function Recognition() {
           </div>
         </div>
 
-        {/* Recognition Stats */}
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-6">Recognition Impact</h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-3xl font-bold mb-2">15+</div>
-              <div className="text-green-100">Awards Received</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">25+</div>
-              <div className="text-green-100">Media Features</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">10+</div>
-              <div className="text-green-100">Key Partnerships</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-2">5+</div>
-              <div className="text-green-100">Government Collaborations</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

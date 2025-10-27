@@ -211,7 +211,7 @@ export default function StrategicPartnershipsPage() {
               Aligning with Sustainable Development Goals
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {highlightImages.map((src, idx) => (
               <div key={idx} className="relative aspect-square rounded-lg overflow-hidden ring-1 ring-gray-200">
                 <Image src={src} alt={`Highlight ${idx + 1}`} fill className="object-cover" />
