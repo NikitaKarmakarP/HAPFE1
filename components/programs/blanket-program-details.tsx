@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Users, MapPin, Heart, Calendar } from "lucide-react"
+import { Users, MapPin, Heart, Calendar } from "lucide-react"
 
 export function BlanketProgramDetails() {
   const phases = [
@@ -34,17 +34,6 @@ export function BlanketProgramDetails() {
     },
   ]
 
-  const benefits = [
-    "Immediate relief from cold weather conditions",
-    "Improved health outcomes for vulnerable populations",
-    "Enhanced dignity and comfort for families",
-    "Community bonding through collective care",
-    "Reduced healthcare costs due to cold-related illnesses",
-    "Support for elderly and children most at risk",
-    "Strengthened community trust and relationships",
-    "Annual tradition of care and compassion",
-  ]
-
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,32 +66,6 @@ export function BlanketProgramDetails() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Program Benefits</h3>
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative">
-            <img
-              src="/bw.jpg"
-              alt="Program Benefits"
-              className="rounded-2xl shadow-xl"
-            />
-            <div className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-lg border border-blue-100">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-1">2</div>
-                <div className="text-sm text-gray-600">Years Running</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

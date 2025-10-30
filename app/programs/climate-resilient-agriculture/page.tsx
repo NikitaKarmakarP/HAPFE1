@@ -7,10 +7,10 @@ import { ContactSection } from "@/components/contact-section"
 
 export default function ClimateResilientAgriculturePage() {
   const programData = {
-    title: "Climate-Resilient Agriculture & BRC",
+    title: "Climate-Resilient Agriculture",
     subtitle: "Building Resilient Communities Through Sustainable Agriculture",
     description:
-      "Our Climate-Resilient Agriculture and Building Resilient Communities (BRC) program empowers farmers with sustainable practices, climate adaptation strategies, and community-based solutions to address environmental challenges.",
+      "Our Climate-Resilient Agriculture program empowers farmers with sustainable practices, climate adaptation strategies, and community-based solutions to build resilient communities and address environmental challenges.",
     image: "/cl1.jpg",
     stats: [
       { number: "2,500+", label: "Farmers Trained" },

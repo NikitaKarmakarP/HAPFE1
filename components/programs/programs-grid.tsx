@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sprout, Gift, Leaf, Users } from "lucide-react"
+import { ArrowRight, Sprout, Sparkles, Leaf, Users } from "lucide-react"
 import Link from "next/link"
 
 export function ProgramsGrid() {
@@ -17,7 +17,7 @@ export function ProgramsGrid() {
       color: "green",
     },
     {
-      icon: Gift,
+      icon: Sparkles,
       title: "Christmas Blanket Distribution",
       description:
         "Annual initiative providing warm blankets to vulnerable families during winter months, ensuring comfort and protection from harsh weather conditions.",

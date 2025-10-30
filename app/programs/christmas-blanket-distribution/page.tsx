@@ -1,7 +1,5 @@
 import { ProgramHero } from "@/components/programs/program-hero"
 import { BlanketProgramDetails } from "@/components/programs/blanket-program-details"
-import { BlanketProgramImpact } from "@/components/programs/blanket-program-impact"
-import { ProgramTestimonials } from "@/components/programs/program-testimonials"
 import { ProgramCTA } from "@/components/programs/program-cta"
 import { ContactSection } from "@/components/contact-section"
 
@@ -24,9 +22,10 @@ export default function ChristmasBlanketDistributionPage() {
     <main className="min-h-screen">
       <ProgramHero data={programData} />
       <BlanketProgramDetails />
-      <BlanketProgramImpact />
-      <ProgramTestimonials />
-      <ProgramCTA />
+      <ProgramCTA
+        title="Will You Bring Hope this Winter?"
+        description="Join our Blanket Distribution Drive and become part of a growing network of compassionate individuals supporting rural communities, empowered by your contributions."
+      />
       <ContactSection />
     </main>
   )
