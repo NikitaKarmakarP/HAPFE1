@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Users, BookOpen, Wrench, TrendingUp } from "lucide-react"
+import { CheckCircle, Users, BookOpen, Sprout, TrendingUp } from "lucide-react"
 
 export function ProgramDetails({
   benefitsImage,
@@ -10,35 +10,36 @@ export function ProgramDetails({
 } = {}) {
   const phases = [
     {
-      title: "Training & Education",
+      title: "Capacity Building",
       description:
-        "Comprehensive 2-week training program covering mushroom cultivation techniques, business basics, and quality control.",
+        "Comprehensive training on sustainable agricultural practices, climate adaptation strategies, and community mobilization.",
       icon: BookOpen,
-      duration: "2 weeks",
+      duration: "Ongoing",
       color: "green",
     },
     {
-      title: "Setup Support",
+      title: "Farm-Level Implementation",
       description:
-        "Assistance with infrastructure setup, equipment procurement, and initial seed funding for mushroom cultivation units.",
-      icon: Wrench,
-      duration: "1 month",
+        "Hands-on support for farmers to adopt climate-resilient practices, including soil health improvement and water conservation.",
+      icon: Sprout,
+      duration: "Season-based",
+      color: "emerald",
+    },
+    {
+      title: "Community Engagement",
+      description:
+        "Community-based initiatives promoting climate-resilient agriculture, including farmer field schools and community seed banks.",
+      icon: Users,
+      duration: "Year-round",
       color: "blue",
     },
     {
-      title: "Mentorship",
-      description: "Ongoing guidance from agricultural experts and successful mushroom farmers for the first 6 months.",
-      icon: Users,
-      duration: "6 months",
-      color: "purple",
-    },
-    {
-      title: "Market Linkage",
+      title: "Sustainability & Scaling",
       description:
-        "Connecting farmers with buyers, establishing supply chains, and ensuring sustainable income generation.",
+        "Mentorship, market linkages, and policy advocacy to ensure long-term sustainability and scaling up of climate-resilient agriculture practices.",
       icon: TrendingUp,
-      duration: "Ongoing",
-      color: "emerald",
+      duration: "Long-term",
+      color: "purple",
     },
   ]
 
