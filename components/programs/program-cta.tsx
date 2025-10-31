@@ -70,13 +70,7 @@ export function ProgramCTA({
           </div>
 
           <div className="relative">
-            <img src={image} alt="Successful mushroom farmer" className="rounded-2xl shadow-2xl" />
-            <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg border border-green-100">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600 mb-1">Next Batch</div>
-                <div className="text-sm text-gray-600">Starting March 2024</div>
-              </div>
-            </div>
+            <img src={image} alt="Community blanket distribution" className="rounded-2xl shadow-2xl" />
           </div>
         </div>
       </div>

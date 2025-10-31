@@ -9,7 +9,7 @@ export default function ChristmasBlanketDistributionPage() {
     subtitle: "Providing Warmth and Comfort to Rural Communities",
     description:
       "Our annual Christmas Blanket Distribution program ensures that vulnerable families in rural areas stay warm during harsh winter months, demonstrating our commitment to community welfare.",
-    image: "/bl.jpg",
+    image: "/bi.jpg",
     stats: [
       { number: "1000+", label: "Blankets Distributed" },
       { number: "30", label: "Villages Covered" },
@@ -25,6 +25,7 @@ export default function ChristmasBlanketDistributionPage() {
       <ProgramCTA
         title="Will You Bring Hope this Winter?"
         description="Join our Blanket Distribution Drive and become part of a growing network of compassionate individuals supporting rural communities, empowered by your contributions."
+        image="/bo.jpg"
       />
       <ContactSection />
     </main>
