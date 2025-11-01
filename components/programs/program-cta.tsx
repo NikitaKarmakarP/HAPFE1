@@ -52,7 +52,7 @@ export function ProgramCTA({
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <MapPin className="h-4 w-4 text-green-600" />
                 </div>
-                <span className="text-gray-700">Visit our office in Kolkata</span>
+                <span className="text-gray-700">Participate in Christmas Blanket Distribution instead of visiting our office</span>
               </div>
             </div>
 

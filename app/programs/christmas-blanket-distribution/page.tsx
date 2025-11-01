@@ -25,7 +25,7 @@ export default function ChristmasBlanketDistributionPage() {
       <ProgramCTA
         title="Will You Bring Hope this Winter?"
         description="Join our Blanket Distribution Drive and become part of a growing network of compassionate individuals supporting rural communities, empowered by your contributions."
-        image="/bo.jpg"
+        image="/b59.jpg"
       />
       <ContactSection />
     </main>
