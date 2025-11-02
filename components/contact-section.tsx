@@ -40,7 +40,7 @@ export function ContactSection() {
       icon: MapPin,
       title: "Our Location",
       content: "Bidyadharpur - Madsar Natunpally, Near Naba Sakti Sangha Club, P.O + P.S - Sonarpur, Kolkata - 700150",
-      description: "Visit us at our headquarters in the heart of West Bengal",
+      description: "",
       color: "from-emerald-500 to-green-600",
       bgColor: "from-emerald-50 to-green-50",
       link: "https://maps.google.com/maps?q=Bidyadharpur+Madsar+Natunpally+Near+Naba+Sakti+Sangha+Club+Sonarpur+Kolkata+700150",
@@ -50,7 +50,7 @@ export function ContactSection() {
       icon: Phone,
       title: "Call Us",
       content: "+91 8240374731",
-      description: "Available Monday to Friday, 9 AM to 6 PM",
+      description: "",
       color: "from-blue-500 to-indigo-600",
       bgColor: "from-blue-50 to-indigo-50",
       link: "tel:+918240374731",
@@ -60,7 +60,7 @@ export function ContactSection() {
       icon: Mail,
       title: "Email Us",
       content: "info.hapef@gmail.com",
-      description: "We'll respond within 24 hours",
+      description: "",
       color: "from-purple-500 to-pink-600",
       bgColor: "from-purple-50 to-pink-50",
       link: "mailto:info.hapef@gmail.com",
@@ -227,11 +227,7 @@ export function ContactSection() {
                     Contact Us Now
                   </Button>
                 </Link>
-                
-                <div className="flex items-center gap-2 text-white/80">
-                  <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>
-                  <span className="text-sm">Usually responds within 2 hours</span>
-                </div>
+
               </div>
             </div>
           </div>

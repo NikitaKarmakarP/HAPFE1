@@ -34,7 +34,7 @@ export function ProgramsGrid() {
     },
     {
       icon: Leaf,
-      title: "Climate-Resilient Agriculture & BRC",
+      title: "Climate-Resilient Agriculture",
       description:
         "Building resilient communities through sustainable agricultural practices, climate adaptation strategies and Bio-Resource Center initiatives.",
       features: [
