@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Users, MapPin, Heart, Calendar } from "lucide-react"
+import { Users, MapPin, Heart } from "lucide-react"
 
 export function BlanketProgramDetails() {
   const phases = [
@@ -8,30 +8,21 @@ export function BlanketProgramDetails() {
       description:
         "Identifying vulnerable families and assessing their needs through community surveys and local partnerships.",
       icon: Users,
-      duration: "October",
       color: "blue",
     },
     {
       title: "Resource Mobilization",
       description: "Procuring high-quality blankets and coordinating with donors and volunteers for distribution.",
       icon: Heart,
-      duration: "November",
       color: "red",
     },
     {
       title: "Distribution Drive",
       description: "Organized distribution events in villages, ensuring blankets reach the most vulnerable families.",
       icon: MapPin,
-      duration: "December",
       color: "green",
     },
-    {
-      title: "Follow-up Support",
-      description: "Monitoring the impact and providing additional support where needed during winter months.",
-      icon: Calendar,
-      duration: "January",
-      color: "purple",
-    },
+
   ]
 
   return (
@@ -56,11 +47,6 @@ export function BlanketProgramDetails() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{phase.title}</h3>
                 <p className="text-gray-600 text-sm mb-3 leading-relaxed">{phase.description}</p>
-                <span
-                  className={`inline-block px-3 py-1 bg-${phase.color}-100 text-${phase.color}-700 rounded-full text-xs font-medium`}
-                >
-                  {phase.duration}
-                </span>
               </CardContent>
             </Card>
           ))}

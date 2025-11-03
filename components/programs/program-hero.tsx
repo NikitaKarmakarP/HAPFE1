@@ -26,7 +26,7 @@ export function ProgramHero({ data }: ProgramHeroProps) {
           <div>
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-green-200 shadow-sm mb-6">
               <Sprout className="h-4 w-4 text-green-600" />
-              <span className="text-sm font-medium text-green-800">Flagship Program</span>
+              <span className="text-sm font-medium text-green-800">Active Program</span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{data.title}</h1>

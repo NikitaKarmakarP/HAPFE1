@@ -66,53 +66,7 @@ export default function ClimateResilientAgriculturePage() {
       "This is an ongoing program that started in 2019 and continues to expand to new regions based on community needs and climate vulnerability assessments.",
   }
 
-  const impact = {
-    title: "Transforming Agriculture for Climate Resilience",
-    description:
-      "Our comprehensive approach to climate-resilient agriculture has created lasting change in farming communities, improving both environmental sustainability and economic outcomes.",
-    metrics: [
-      {
-        value: "2,500+",
-        label: "Farmers Trained",
-        description: "Across 15 villages in climate-smart practices",
-      },
-      {
-        value: "40%",
-        label: "Average Yield Increase",
-        description: "Through improved farming techniques and crop varieties",
-      },
-      {
-        value: "60%",
-        label: "Water Usage Reduction",
-        description: "Via efficient irrigation and conservation methods",
-      },
-      {
-        value: "25",
-        label: "Indigenous Seed Varieties",
-        description: "Preserved and promoted through community seed banks",
-      },
-    ],
-    stories: [
-      {
-        title: "Sustainable Water Management Success",
-        description:
-          "Implementation of drip irrigation systems has reduced water consumption by 50% while increasing crop yields in drought-prone areas.",
-        image: "/placeholder.svg?height=300&width=400&text=Water+Management",
-      },
-      {
-        title: "Community Seed Bank Initiative",
-        description:
-          "Local seed banks have preserved 25 indigenous varieties, ensuring food security and maintaining agricultural biodiversity.",
-        image: "/placeholder.svg?height=300&width=400&text=Seed+Bank",
-      },
-      {
-        title: "Women Farmers Leadership",
-        description:
-          "Over 800 women farmers have become community leaders in climate-smart agriculture, training other farmers in their villages.",
-        image: "/placeholder.svg?height=300&width=400&text=Women+Farmers",
-      },
-    ],
-  }
+
 
   const testimonials = [
     {
@@ -150,13 +104,13 @@ export default function ClimateResilientAgriculturePage() {
       text: "Learn More",
       href: "/contact",
     },
+    image: "/cl3.jpg",
   }
 
   return (
     <main className="min-h-screen">
       <ProgramHero data={programData} />
       <ProgramDetails {...details} benefitsImage="/cl2.jpg" benefitsImageAlt="Climate-resilient agriculture benefits" />
-      <ProgramImpact {...impact} />
       <ProgramTestimonials testimonials={testimonials} />
       <ProgramCTA {...ctaData} />
       <ContactSection />

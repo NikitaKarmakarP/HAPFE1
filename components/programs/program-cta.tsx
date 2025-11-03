@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Phone, Mail, MapPin } from "lucide-react"
+import { ArrowRight, Phone, Mail } from "lucide-react"
 
 type CTAButton = {
   text: string
@@ -48,12 +48,7 @@ export function ProgramCTA({
                 </div>
                 <span className="text-gray-700">Email: info.hapef@gmail.com</span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                  <MapPin className="h-4 w-4 text-green-600" />
-                </div>
-                <span className="text-gray-700">Participate in Christmas Blanket Distribution instead of visiting our office</span>
-              </div>
+
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
