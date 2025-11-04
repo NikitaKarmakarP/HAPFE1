@@ -141,7 +141,7 @@ export default function ConvergencePage() {
   ]
 
   const ctaData = {
-    title: "Join the Convergence Movement",
+    title: "Empowering Change through Convergence",
     description:
       "Support our integrated approach to development that maximizes impact by bringing together multiple programs, partners, and resources for sustainable change.",
     primaryButton: {
