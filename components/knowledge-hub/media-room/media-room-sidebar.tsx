@@ -17,11 +17,6 @@ export function MediaRoomSidebar() {
       type: "Media Coverage",
     },
     {
-      title: "Community Training Workshop Photos",
-      date: "2024-01-08",
-      type: "Photo Gallery",
-    },
-    {
       title: "Mushroom Farming Success Story Video",
       date: "2024-01-05",
       type: "Video",

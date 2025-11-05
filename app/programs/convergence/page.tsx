@@ -1,7 +1,6 @@
 import { ProgramHero } from "@/components/programs/program-hero"
 import { ProgramDetails } from "@/components/programs/program-details"
 import { ProgramImpact } from "@/components/programs/program-impact"
-import { ProgramTestimonials } from "@/components/programs/program-testimonials"
 import { ProgramCTA } from "@/components/programs/program-cta"
 import { ContactSection } from "@/components/contact-section"
 
@@ -116,30 +115,6 @@ export default function ConvergencePage() {
     ],
   }
 
-  const testimonials = [
-    {
-      name: "Dr. Priya Sharma",
-      role: "District Collector, Bankura",
-      content:
-        "The Convergence program has revolutionized how we implement development schemes. The integrated approach has significantly improved outcomes and reduced administrative burden.",
-      image: "/placeholder.svg?height=80&width=80&text=PS",
-    },
-    {
-      name: "Ramesh Mondal",
-      role: "Village Panchayat President",
-      content:
-        "Through Convergence, our village has accessed multiple government schemes simultaneously. We now have better roads, water supply, and livelihood opportunities all working together.",
-      image: "/placeholder.svg?height=80&width=80&text=RM",
-    },
-    {
-      name: "Anjali Roy",
-      role: "SHG Federation Leader",
-      content:
-        "The program helped us understand how different schemes complement each other. Our women's groups now effectively utilize multiple programs for maximum benefit to our members.",
-      image: "/placeholder.svg?height=80&width=80&text=AR",
-    },
-  ]
-
   const ctaData = {
     title: "Empowering Change through Convergence",
     description:
@@ -159,7 +134,6 @@ export default function ConvergencePage() {
       <ProgramHero data={programData} />
       <ProgramDetails {...details} benefitsImage="/c1.jpg" benefitsImageAlt="Program Benefits" />
       <ProgramImpact {...impact} />
-      <ProgramTestimonials testimonials={testimonials} />
       <ProgramCTA {...ctaData} />
       <ContactSection />
     </main>
