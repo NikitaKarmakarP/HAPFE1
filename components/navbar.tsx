@@ -449,13 +449,7 @@ export default function Navbar() {
                       <div className="p-4">
                         <h5 className="font-medium text-gray-900 mb-3">Media Room</h5>
                         <div className="space-y-1">
-                          <Link
-                            href="/knowledge-hub/media-room/press-releases"
-                            className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
-                          >
-                            <div className="font-medium text-gray-900 group-hover/link:text-green-600 text-sm">Press Releases</div>
-                            <div className="text-xs text-gray-500">Latest announcements and updates</div>
-                          </Link>
+
                           <Link
                             href="/knowledge-hub/media-room/photo-gallery"
                             className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
@@ -822,16 +816,7 @@ export default function Navbar() {
 
                       {isMediaRoomOpen && (
                         <div className="mt-1 pl-4 space-y-1">
-                          <Link
-                            href="/knowledge-hub/media-room/press-releases"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                              Press Releases
-                            </div>
-                          </Link>
+
                           <Link
                             href="/knowledge-hub/media-room/photo-gallery"
                             className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"

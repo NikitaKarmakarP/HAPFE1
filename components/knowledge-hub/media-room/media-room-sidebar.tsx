@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 
 export function MediaRoomSidebar() {
   const mediaStats = [
-    { label: "Press Releases", count: 24, icon: FileText },
     { label: "Photos", count: 156, icon: ImageIcon },
     { label: "Videos", count: 12, icon: Video },
     { label: "Media Coverage", count: 38, icon: Newspaper },
