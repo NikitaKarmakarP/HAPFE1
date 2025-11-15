@@ -133,7 +133,6 @@ export default function ConvergencePage() {
     <main className="min-h-screen">
       <ProgramHero data={programData} />
       <ProgramDetails {...details} benefitsImage="/c1.jpg" benefitsImageAlt="Program Benefits" />
-      <ProgramImpact {...impact} />
       <ProgramCTA {...ctaData} />
       <ContactSection />
     </main>
