@@ -19,11 +19,10 @@ interface Photo {
 }
 
 export function PhotoGalleryGrid() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
+  const [selectedCategory, setSelectedCategory] = useState("Programs")
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
 
   const categories = [
-    "All",
     "Programs",
     "Community Events",
     "Training Sessions",
@@ -149,7 +148,7 @@ export function PhotoGalleryGrid() {
     <div>
       {/* Category Filter */}
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Browse by Category</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Sections</h2>
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
             <Button

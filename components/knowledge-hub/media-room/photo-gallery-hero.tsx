@@ -21,24 +21,6 @@ export function PhotoGalleryHero() {
             Explore our visual journey through impactful moments, community transformations, and the faces behind our
             mission. Each photograph tells a story of hope, progress, and positive change.
           </p>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-blue-100">
-              <Camera className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-blue-600 mb-1">500+</div>
-              <div className="text-sm text-gray-600">Photos</div>
-            </div>
-            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-blue-100">
-              <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-blue-600 mb-1">5</div>
-              <div className="text-sm text-gray-600">Years Documented</div>
-            </div>
-            <div className="bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-blue-100">
-              <MapPin className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-              <div className="text-2xl font-bold text-blue-600 mb-1">25+</div>
-              <div className="text-sm text-gray-600">Locations</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

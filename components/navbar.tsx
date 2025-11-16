@@ -457,13 +457,7 @@ export default function Navbar() {
                             <div className="font-medium text-gray-900 group-hover/link:text-green-600 text-sm">Photo Gallery</div>
                             <div className="text-xs text-gray-500">Images from our programs and events</div>
                           </Link>
-                          <Link
-                            href="/knowledge-hub/media-room/video-library"
-                            className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
-                          >
-                            <div className="font-medium text-gray-900 group-hover/link:text-green-600 text-sm">Video Library</div>
-                            <div className="text-xs text-gray-500">Training videos and documentaries</div>
-                          </Link>
+
                           <Link
                             href="/knowledge-hub/media-room/media-coverage"
                             className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
