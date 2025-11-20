@@ -75,11 +75,6 @@ export function ProgramDetails({
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{phase.title}</h3>
                 <p className="text-gray-600 text-sm mb-3 leading-relaxed">{phase.description}</p>
-                <span
-                  className={`inline-block px-3 py-1 bg-${phase.color}-100 text-${phase.color}-700 rounded-full text-xs font-medium`}
-                >
-                  {phase.duration}
-                </span>
               </CardContent>
             </Card>
           ))}

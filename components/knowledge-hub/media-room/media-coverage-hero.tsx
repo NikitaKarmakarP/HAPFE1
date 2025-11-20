@@ -13,41 +13,6 @@ export function MediaCoverageHero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Media Coverage</h1>
-
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-purple-100">
-            Discover how HAPEF's work is making headlines across various media platforms
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Newspaper className="h-8 w-8" />
-              </div>
-              <div className="text-2xl font-bold mb-1">50+</div>
-              <div className="text-purple-200">Print Articles</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Tv className="h-8 w-8" />
-              </div>
-              <div className="text-2xl font-bold mb-1">25+</div>
-              <div className="text-purple-200">TV Features</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Radio className="h-8 w-8" />
-              </div>
-              <div className="text-2xl font-bold mb-1">15+</div>
-              <div className="text-purple-200">Radio Interviews</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Globe className="h-8 w-8" />
-              </div>
-              <div className="text-2xl font-bold mb-1">100+</div>
-              <div className="text-purple-200">Online Articles</div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
