@@ -1,4 +1,5 @@
-"use client"
+Our Story
+Our Journey"use client"
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Sprout, Users, Target, Sparkles, Award, Globe, MapPin, Star } from "lucide-react"

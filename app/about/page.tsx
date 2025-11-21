@@ -1,7 +1,6 @@
 import { AboutHero } from "@/components/about/about-hero"
 import { Leadership } from "@/components/about/leadership"
 import { Timeline } from "@/components/about/timeline"
-import { Recognition } from "@/components/about/recognition"
 import { ContactSection } from "@/components/contact-section"
 
 export default function AboutPage() {
@@ -18,10 +17,9 @@ export default function AboutPage() {
       {/* Content sections */}
       <div className="relative z-10">
         <AboutHero />
-        
+
         <Timeline />
         <Leadership />
-        <Recognition />
         <ContactSection />
       </div>
     </main>

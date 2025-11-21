@@ -168,13 +168,13 @@ export default function Navbar() {
 
                   {/* Recognition */}
                   <Link
-                    href="/about#recognition"
+                    href="/about#media-coverage"
                     className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group/link mb-1"
                   >
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
                       <div className="font-medium text-gray-800 group-hover/link:text-red-600">
-                        Recognition & Awards
+                        Media Coverage
                       </div>
                     </div>
                   </Link>
@@ -663,13 +663,13 @@ export default function Navbar() {
                     </div>
 
                     <Link
-                      href="/about#recognition"
+                      href="/about#media-coverage"
                       className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
                       <div className="flex items-center">
                         <div className="w-1.5 h-1.5 bg-red-600 rounded-full mr-2"></div>
-                        Recognition & Awards
+                        Media Coverage
                       </div>
                     </Link>
                   </div>

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Mail, Linkedin, GraduationCap, Calendar, Users, Award, Target, X, MapPin, Phone, Globe, Star, Sparkles } from "lucide-react"
+import { Mail, Linkedin, GraduationCap, Calendar, Users, Award, Target, X, MapPin, Phone, Globe, Star, Sparkles, Tv, Monitor } from "lucide-react"
 
 const executiveTeam = [
   {
@@ -521,11 +521,25 @@ export function Leadership() {
 
         {/* Our Notable Interns */}
         <div id="notable-interns" className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Words From Our Interns</h3>
-            <p className="text-lg text-gray-600">
+          <div className="text-center mb-12 relative">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/90 to-emerald-50/90 backdrop-blur-sm px-6 py-3 rounded-full border border-emerald-200 shadow-lg mb-6">
+              <Users className="h-6 w-6 text-emerald-600 animate-pulse" />
+              <span className="text-sm font-semibold text-emerald-800 tracking-wide uppercase">Words From Our Interns</span>
+              <Star className="h-5 w-5 text-emerald-500" />
+            </div>
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600">
+                Words From Our Interns
+              </span>
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Exceptional individuals who have made significant contributions to our mission
             </p>
+            <div className="mt-4 flex items-center justify-center gap-2">
+              <span className="w-12 h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></span>
+              <span className="w-2 h-2 rounded-full bg-emerald-500/70 shadow-md"></span>
+              <span className="w-12 h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent"></span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -645,6 +659,86 @@ export function Leadership() {
             </div>
           </div>
         </div>
+
+        {/* Media Coverage Section */}
+        <div className="mt-20 mb-16">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-200 shadow-lg mb-8">
+              <Monitor className="h-6 w-6 text-blue-600 animate-pulse" />
+              <span className="text-sm font-semibold text-blue-800 tracking-wide uppercase">Media Coverage</span>
+              <Tv className="h-5 w-5 text-blue-500" />
+            </div>
+            <h3 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600">
+                Media Coverage
+              </span>
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Our work has been featured in leading media outlets, showcasing our impact on rural communities across India.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Featured on ETV Bharat Jharkhand */}
+            <div className="group bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 backdrop-blur-sm border border-blue-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+              <div className="flex items-start gap-6">
+                <div className="relative">
+                  <div className="p-4 bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                    <Tv className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-blue-400 rounded-2xl animate-ping opacity-20"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-cyan-400 to-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                      Featured on ETV Bharat Jharkhand
+                    </h4>
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      Television
+                    </span>
+                  </div>
+                  <div className="text-blue-600 font-semibold mb-3 text-sm uppercase tracking-wide">
+                    March 2024
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    HAPEF's rural development work and community impact highlighted on regional television.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Documentary on DD National */}
+            <div className="group bg-gradient-to-br from-white via-teal-50/30 to-green-50/30 backdrop-blur-sm border border-teal-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+              <div className="flex items-start gap-6">
+                <div className="relative">
+                  <div className="p-4 bg-gradient-to-br from-teal-500 via-teal-600 to-green-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+                    <Monitor className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-teal-400 rounded-2xl animate-ping opacity-20"></div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-green-400 to-teal-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h4 className="text-xl font-bold text-gray-900 group-hover:text-teal-600 transition-colors duration-300">
+                      Documentary on DD National
+                    </h4>
+                    <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
+                      Television
+                    </span>
+                  </div>
+                  <div className="text-teal-600 font-semibold mb-3 text-sm uppercase tracking-wide">
+                    January 2023
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">
+                    30-minute documentary showcasing HAPEF's impact on rural communities aired nationally.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       {/* Member Details Modal */}
       <Dialog open={!!selectedMember} onOpenChange={(open) => { if (!open) closeMemberDetails() }}>
         <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-2xl border border-transparent bg-white/90 backdrop-blur-xl shadow-2xl ring-1 ring-black/5">
