@@ -19,17 +19,7 @@ interface Photo {
 }
 
 export function PhotoGalleryGrid() {
-  const [selectedCategory, setSelectedCategory] = useState("Programs")
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
-
-  const categories = [
-    "Programs",
-    "Community Events",
-    "Training Sessions",
-    "Infrastructure",
-    "Leadership",
-    "Celebrations",
-  ]
 
   const photos: Photo[] = [
     {
@@ -133,9 +123,6 @@ export function PhotoGalleryGrid() {
     },
   ]
 
-  const filteredPhotos =
-    selectedCategory === "All" ? photos : photos.filter((photo) => photo.category === selectedCategory)
-
   const openLightbox = (photo: Photo) => {
     setSelectedPhoto(photo)
   }
@@ -146,63 +133,62 @@ export function PhotoGalleryGrid() {
 
   return (
     <div>
-      {/* Category Filter */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore Sections</h2>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              size="sm"
-              onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? "bg-green-600 hover:bg-green-700" : ""}
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
-      </div>
-
-      {/* Photo Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {filteredPhotos.map((photo) => (
-          <Card key={photo.id} className="group hover:shadow-xl transition-all duration-300 cursor-pointer">
+      {/* Enhanced Photo Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
+        {photos.map((photo, index) => (
+          <Card key={photo.id} className="group hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 bg-gradient-to-br from-white via-white to-gray-50/50 border-0 shadow-lg overflow-hidden">
             <CardContent className="p-0">
-              <div className="relative overflow-hidden rounded-t-lg">
+              <div className="relative overflow-hidden rounded-t-xl">
                 <img
                   src={photo.image || "/placeholder.svg"}
                   alt={photo.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700"
                   onClick={() => openLightbox(photo)}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                  <Eye className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Enhanced overlay with gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="h-8 w-8 text-white" />
+                  </div>
                 </div>
-                <Badge className="absolute top-2 left-2 bg-green-600">{photo.category}</Badge>
+                {/* Beautiful category badge */}
+                <div className="absolute top-3 left-3">
+                  <Badge className="bg-gradient-to-r from-emerald-500 to-green-500 text-white border-0 shadow-lg backdrop-blur-sm px-3 py-1">
+                    {photo.category}
+                  </Badge>
+                </div>
+                {/* Decorative corner element */}
+                <div className="absolute top-3 right-3 w-3 h-3 bg-white/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="p-4">
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-1">{photo.title}</h3>
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{photo.description}</p>
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+              <div className="p-6 bg-gradient-to-br from-white to-gray-50/30">
+                <h3 className="font-bold text-gray-900 mb-3 line-clamp-1 text-lg group-hover:text-emerald-700 transition-colors duration-300">{photo.title}</h3>
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">{photo.description}</p>
+                <div className="flex items-center justify-between text-xs text-gray-500 border-t border-gray-100 pt-3">
                   <div className="flex items-center gap-1">
-                    <Calendar className="h-3 w-3" />
-                    <span>{new Date(photo.date).toLocaleDateString()}</span>
+                    <Calendar className="h-3 w-3 text-emerald-500" />
+                    <span className="font-medium">{new Date(photo.date).toLocaleDateString()}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    <span className="truncate">{photo.location}</span>
+                    <MapPin className="h-3 w-3 text-blue-500" />
+                    <span className="truncate font-medium">{photo.location}</span>
                   </div>
                 </div>
+                {/* Subtle bottom accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
             </CardContent>
           </Card>
         ))}
       </div>
 
-      {/* Load More Button */}
+      {/* Enhanced Load More Button */}
       <div className="text-center">
-        <Button variant="outline" size="lg">
+        <Button
+          variant="outline"
+          size="lg"
+          className="bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200 hover:border-emerald-300 hover:from-emerald-100 hover:to-blue-100 text-emerald-700 hover:text-emerald-800 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        >
+          <Eye className="h-5 w-5 mr-2" />
           Load More Photos
         </Button>
       </div>

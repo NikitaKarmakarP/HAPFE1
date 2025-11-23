@@ -20,10 +20,19 @@ export function OurStory() {
             <span className="text-sm font-semibold text-emerald-800 tracking-wide uppercase">Our Story</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">
-              Our Journey
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 relative">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 animate-gradient-x">
+              Our Strategic Impact
             </span>
+            {/* Animated underline */}
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 rounded-full animate-pulse"></div>
+            {/* Decorative sparkles */}
+            <div className="absolute -top-2 -left-4 text-yellow-400 animate-bounce">
+              <Sparkles className="h-5 w-5" />
+            </div>
+            <div className="absolute -top-1 -right-4 text-emerald-400 animate-bounce" style={{animationDelay: '0.5s'}}>
+              <Sparkles className="h-4 w-4" />
+            </div>
           </h2>
         </div>
 
