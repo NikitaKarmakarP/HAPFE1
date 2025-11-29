@@ -1,37 +1,30 @@
 "use client"
 
-import { useState } from "react"
-import { Calendar, Clock, MapPin, Users, Filter, Search } from "lucide-react"
+import { Calendar, Clock, MapPin, Users } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 
 export function UpcomingEventsList() {
-  const [selectedCategory, setSelectedCategory] = useState("All Events")
-  const [searchTerm, setSearchTerm] = useState("")
 
-  const categories = [
-    "All Events",
-    "Training Workshops",
-    "Community Meetings",
-    "Health Camps",
-    "Cultural Events",
-    "Awareness Programs",
-    "Skill Development",
-    "Networking Events",
+  const upcomingEvents = [
+    {
+      id: 1,
+      title: "Blanket Distribution Drive",
+      description: "A community-driven initiative to provide warmth and comfort to those in need during the winter season.",
+      date: "2025-01-01",
+      dateRange: "1-7 January",
+      time: "10:00 AM - 2:00 PM",
+      location: "Hiranpur, Pakur",
+      participants: 50,
+      category: "Community Meetings",
+      featured: true,
+      registrationOpen: true,
+      image: "/placeholder.jpg"
+    }
   ]
 
-  const upcomingEvents = []
-
-  const filteredEvents = upcomingEvents.filter((event) => {
-    const matchesCategory = selectedCategory === "All Events" || event.category === selectedCategory
-    const matchesSearch =
-      event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.location.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+  const filteredEvents = upcomingEvents
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -47,128 +40,97 @@ export function UpcomingEventsList() {
   }
 
   return (
-    <div className="space-y-6">
-      {/* Search and Filter */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border">
-        <div className="flex flex-col md:flex-row gap-4 mb-6">
-          <div className="flex-1">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input
-                placeholder="Search events..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4 text-gray-500" />
-            <span className="text-sm text-gray-600">Filter:</span>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <Button
-              key={category}
-              variant={selectedCategory === category ? "default" : "outline"}
-              size="sm"
-              onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? "bg-green-600 hover:bg-green-700" : ""}
-            >
-              {category}
-            </Button>
-          ))}
-        </div>
-      </div>
-
-      {/* Events List */}
-      <div className="space-y-6">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-gray-50 to-white py-12 px-4">
+      <div className="w-full max-w-4xl">
         {filteredEvents.map((event) => (
           <Card
             key={event.id}
-            className={`overflow-hidden hover:shadow-lg transition-shadow ${event.featured ? "ring-2 ring-green-200" : ""}`}
+            className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white border-0 ring-2 ring-green-500"
           >
-            <div className="md:flex">
-              <div className="md:w-1/3">
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative overflow-hidden h-64 md:h-full">
                 <img
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
-                  className="w-full h-48 md:h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className={getCategoryColor(event.category)}>{event.category}</Badge>
-                      {event.featured && <Badge className="bg-orange-100 text-orange-800">Featured</Badge>}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div className="flex items-center text-gray-600">
-                    <Calendar className="h-4 w-4 mr-2 text-green-600" />
-                    <span className="text-sm">
-                      {new Date(event.date).toLocaleDateString("en-US", {
-                        weekday: "long",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="h-4 w-4 mr-2 text-green-600" />
-                    <span className="text-sm">{event.time}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2 text-green-600" />
-                    <span className="text-sm">{event.location}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Users className="h-4 w-4 mr-2 text-green-600" />
-                    <span className="text-sm">{event.participants} participants expected</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex gap-2">
-                    <Button size="sm" className="bg-green-600 hover:bg-green-700">
-                      Learn More
-                    </Button>
-                    {event.registrationOpen && (
-                      <Button size="sm" variant="outline">
-                        Register Now
-                      </Button>
+              
+              <div className="p-8 md:p-10 bg-gradient-to-br from-white via-green-50 to-green-50 flex flex-col justify-center">
+                <div className="mb-6">
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <Badge className={`${getCategoryColor(event.category)} text-sm font-semibold px-4 py-1`}>
+                      {event.category}
+                    </Badge>
+                    {event.featured && (
+                      <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white text-sm font-semibold px-4 py-1">
+                        ⭐ Featured
+                      </Badge>
                     )}
                   </div>
-                  {!event.registrationOpen && <span className="text-sm text-gray-500">Registration Closed</span>}
+                  <h2 className="text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                    {event.title}
+                  </h2>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    {event.description}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mb-8 p-6 bg-white rounded-xl border-2 border-green-100">
+                  <div className="flex items-start gap-3">
+                    <Calendar className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-500 font-semibold">DATE</p>
+                      <p className="text-base font-bold text-gray-900">{event.dateRange}</p>
+                      <p className="text-sm text-gray-600">Wednesday, January 1, 2025</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-500 font-semibold">TIME</p>
+                      <p className="text-base font-bold text-gray-900">{event.time}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-500 font-semibold">LOCATION</p>
+                      <p className="text-base font-bold text-gray-900">{event.location}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Users className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-xs text-gray-500 font-semibold">EXPECTED</p>
+                      <p className="text-base font-bold text-gray-900">{event.participants}</p>
+                      <p className="text-sm text-gray-600">participants</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <Button
+                    size="lg"
+                    className="flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-base py-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
+                  >
+                    Learn More
+                  </Button>
+                  {event.registrationOpen && (
+                    <Button
+                      size="lg"
+                      className="flex-1 border-2 border-green-600 bg-white text-green-600 hover:bg-green-50 font-bold text-base py-6 rounded-lg shadow-md hover:shadow-lg transition-all"
+                    >
+                      Register Now
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
           </Card>
         ))}
       </div>
-
-      {filteredEvents.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-gray-500 mb-4">No events found matching your criteria.</div>
-          <Button
-            variant="outline"
-            onClick={() => {
-              setSelectedCategory("All Events")
-              setSearchTerm("")
-            }}
-          >
-            Clear Filters
-          </Button>
-        </div>
-      )}
     </div>
   )
 }
