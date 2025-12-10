@@ -38,10 +38,8 @@ export default function StrategicPartnershipsPage() {
   ]
 
   const impacts = [
-    { number: "50+", label: "Active Partners" },
-    { number: "₹10Cr+", label: "Resources Mobilized" },
-    { number: "25", label: "Joint Programs" },
-    { number: "95%", label: "Partnership Satisfaction" }
+    { number: "20+", label: "Organized Programs" },
+    { number: "700+", label: "Families Benefited" }
   ]
 
   // Thematic Impact Highlights - SDG images
@@ -235,7 +233,7 @@ export default function StrategicPartnershipsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex justify-center gap-16">
             {impacts.map((impact, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{impact.number}</div>

@@ -39,9 +39,7 @@ export default function LivelihoodsPage() {
 
   const impacts = [
     { number: "5,000+", label: "People Trained" },
-    { number: "1,200+", label: "Businesses Created" },
-    { number: "₹2.5Cr+", label: "Income Generated" },
-    { number: "75%", label: "Success Rate" }
+    { number: "1,200+", label: "Businesses Created" }
   ]
 
   // Thematic Impact Highlights - SDG images

@@ -39,10 +39,8 @@ export default function EnterpriseMarketingPage() {
   ]
 
   const impacts = [
-    { number: "800+", label: "Enterprises Supported" },
-    { number: "₹5Cr+", label: "Revenue Generated" },
-    { number: "150+", label: "Market Linkages Created" },
-    { number: "90%", label: "Business Sustainability Rate" }
+    { number: "10+", label: "Enterprises Linkage Supported" },
+    { number: "500+", label: "Impacted Families" }
   ]
 
   // Thematic Impact Highlights - SDG images
@@ -204,7 +202,7 @@ export default function EnterpriseMarketingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex justify-center gap-16">
             {impacts.map((impact, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{impact.number}</div>
