@@ -12,10 +12,9 @@ export default function ConvergencePage() {
       "The Convergence program brings together various development initiatives, government schemes, and community resources to create comprehensive solutions that address multiple challenges simultaneously in rural communities.",
     image: "/c2.jpg",
     stats: [
-      { number: "50+", label: "Programs Integrated" },
-      { number: "25", label: "Partner Organizations" },
-      { number: "10,000+", label: "Beneficiaries Reached" },
-      { number: "12", label: "Districts Covered" },
+      { number: "10+", label: "Programs Integrated" },
+      { number: "700+", label: "Beneficiaries Reached" },
+      { number: "2", label: "Districts Covered" },
     ],
   }
 

@@ -201,7 +201,6 @@ export default function LivelihoodsPage() {
 
 
 
-
       {/* Impact Statistics */}
       <section className="py-20 bg-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +213,7 @@ export default function LivelihoodsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex justify-center gap-8 md:gap-16">
             {impacts.map((impact, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{impact.number}</div>

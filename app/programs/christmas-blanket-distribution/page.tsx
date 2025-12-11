@@ -11,9 +11,9 @@ export default function ChristmasBlanketDistributionPage() {
       "Our annual Christmas Blanket Distribution program ensures that vulnerable families in rural areas stay warm during harsh winter months, demonstrating our commitment to community welfare.",
     image: "/bi.jpg",
     stats: [
-      { number: "1000+", label: "Blankets Distributed" },
-      { number: "30", label: "Villages Covered" },
-      { number: "500+", label: "Families Helped" },
+      { number: "60+", label: "Blankets Distributed" },
+      { number: "15", label: "Villages Covered" },
+      { number: "60+", label: "Families Helped" },
       { number: "100%", label: "Success Rate" },
     ],
   }

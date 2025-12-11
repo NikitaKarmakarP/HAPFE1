@@ -13,10 +13,10 @@ export default function ClimateResilientAgriculturePage() {
       "Our Climate-Resilient Agriculture program empowers farmers with sustainable practices, climate adaptation strategies, and community-based solutions to build resilient communities and address environmental challenges.",
     image: "/cl1.jpg",
     stats: [
-      { number: "2,500+", label: "Farmers Trained" },
-      { number: "15", label: "Villages Covered" },
-      { number: "40%", label: "Yield Increase" },
-      { number: "8", label: "Climate Techniques" },
+      { number: "4000+", label: "Farmers Trained" },
+      { number: "40", label: "Villages Covered" },
+      { number: "5+", label: "Demonstration Villages" },
+      { number: "80%", label: "Adoption Rates" },
     ],
   }
 
