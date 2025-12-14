@@ -392,13 +392,6 @@ export function AboutHero() {
                   </div>
                   <p className="text-gray-600">Ensuring every family has access to nutritious food</p>
                 </div>
-
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg border border-purple-100">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-purple-600 mb-2">500+</div>
-                    <div className="text-sm font-semibold text-purple-700 uppercase tracking-wide">Families Empowered</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -29,10 +29,8 @@ export default function EmpoweringCommunitiesPage() {
   ]
 
   const impacts = [
-    { number: "150+", label: "Communities Empowered" },
-    { number: "2,500+", label: "Leaders Trained" },
-    { number: "50+", label: "Community Organizations Formed" },
-    { number: "85%", label: "Sustainability Rate" }
+    { number: "5000+", label: "Communities Empowered" },
+    { number: "500+", label: "Leaders Trained" }
   ]
 
   // Thematic Impact Highlights - SDG images
@@ -183,7 +181,7 @@ export default function EmpoweringCommunitiesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {impacts.map((impact, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold mb-2">{impact.number}</div>

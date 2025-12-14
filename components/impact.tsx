@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { TrendingUp, Users, MapPin, Award, Sprout, Heart } from "lucide-react"
+import { Users, MapPin, Award, Sprout, Heart } from "lucide-react"
 
 // Custom hook for intersection observer
 function useInView(threshold = 0.1) {
@@ -66,7 +66,7 @@ export function Impact() {
   const stats = [
     {
       icon: Users,
-      number: 500,
+      number: 5000,
       suffix: "+",
       label: "Families Empowered",
       description: "Rural families supported through our various programs",
@@ -74,7 +74,7 @@ export function Impact() {
     },
     {
       icon: MapPin,
-      number: 50,
+      number: 40,
       suffix: "+",
       label: "Villages Reached",
       description: "Communities across Hiranpur Block under Pakur District and beyond",
@@ -82,7 +82,7 @@ export function Impact() {
     },
     {
       icon: Sprout,
-      number: 200,
+      number: 500,
       suffix: "+",
       label: "Farmers Trained",
       description: "In sustainable agriculture and mushroom cultivation",
@@ -90,19 +90,11 @@ export function Impact() {
     },
     {
       icon: Heart,
-      number: 1000,
+      number: 60,
       suffix: "+",
       label: "Blankets Distributed",
       description: "Providing warmth during winter months",
       color: "from-red-500 to-red-600"
-    },
-    {
-      icon: TrendingUp,
-      number: 75,
-      suffix: "%",
-      label: "Income Increase",
-      description: "Average income improvement for participating families",
-      color: "from-orange-500 to-orange-600"
     },
     {
       icon: Award,
