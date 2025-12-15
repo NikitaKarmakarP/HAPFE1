@@ -15,7 +15,6 @@ export default function MushroomEntrepreneurshipPage() {
       { number: "200+", label: "Families Trained" },
       { number: "300%", label: "Average Income Increase" },
       { number: "25", label: "Villages Covered" },
-      { number: "85%", label: "Success Rate" },
     ],
   }
 
