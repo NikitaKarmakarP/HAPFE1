@@ -134,7 +134,7 @@ export function AboutHero() {
 
 
         {/* Our Story Section - Enhanced Beautiful Design */}
-        <div className="mt-32 relative overflow-hidden">
+        <div id="our-story" className="mt-32 relative overflow-hidden">
           {/* Beautiful background decorations */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-blue-300 rounded-full opacity-40 animate-pulse"></div>

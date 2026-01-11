@@ -449,7 +449,7 @@ export function Leadership() {
         </div>
 
         {/* Our Interns */}
-        <div id="interns" className="mb-20 scroll-mt-28">
+        <div id="our-interns" className="mb-20 scroll-mt-28">
           <div className="text-center mb-12 relative">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/90 to-orange-50/90 backdrop-blur-sm px-6 py-3 rounded-full border border-orange-200 shadow-md mb-6">
               <Sparkles className="h-5 w-5 text-orange-600" />
@@ -520,7 +520,7 @@ export function Leadership() {
         </div>
 
         {/* Our Notable Interns */}
-        <div id="notable-interns" className="mb-20">
+        <div id="our-notable-interns" className="mb-20">
           <div className="text-center mb-12 relative">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/90 to-emerald-50/90 backdrop-blur-sm px-6 py-3 rounded-full border border-emerald-200 shadow-lg mb-6">
               <Users className="h-6 w-6 text-emerald-600 animate-pulse" />

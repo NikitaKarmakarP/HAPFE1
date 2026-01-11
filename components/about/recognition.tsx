@@ -104,7 +104,7 @@ export function Recognition() {
 
   return (
     <section
-      id="recognition"
+      id="media-coverage"
       className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden"
     >
       {/* Background Elements */}
