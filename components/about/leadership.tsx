@@ -69,17 +69,6 @@ const boardMembers = [
     experience: "Entrepreneurship Development Leader",
     specialization: "Skill Development & Innovation",
   },
-  {
-    name: "Twinkle Mukherjee",
-    role: "Co-founder & Director",
-    designation: "Co-founder & Director",
-    image: "/placeholder.jpg",
-    bio: "Passionate advocate for women empowerment and community development through sustainable livelihood programs.",
-    email: "twinkle@hapef.org",
-    linkedin: "#",
-    experience: "Women Empowerment Advocate",
-    specialization: "Community Development & Gender Equality",
-  },
 ]
 
 const advisoryBoard = [
@@ -320,7 +309,7 @@ export function Leadership() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {boardMembers.map((member, index) => (
               <Card
                 key={index}

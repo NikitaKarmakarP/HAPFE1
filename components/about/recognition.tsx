@@ -46,39 +46,6 @@ export function Recognition() {
     },
   ]
 
-  const mediaFeatures = [
-    {
-      title: "Featured on ETV Bharat Jharkhand",
-      date: "March 2024",
-      description: "HAPEF's rural development work and community impact highlighted on regional television.",
-      type: "Television",
-    },
-    {
-      title: "Featured in The Times of India",
-      date: "March 2023",
-      description: "HAPEF's mushroom entrepreneurship program highlighted as a model for rural development.",
-      type: "Newspaper",
-    },
-    {
-      title: "Documentary on DD National",
-      date: "January 2023",
-      description: "30-minute documentary showcasing HAPEF's impact on rural communities aired nationally.",
-      type: "Television",
-    },
-    {
-      title: "Interview on All India Radio",
-      date: "December 2022",
-      description: "Founder's interview discussing innovative approaches to poverty eradication.",
-      type: "Radio",
-    },
-    {
-      title: "Featured in Rural Development Magazine",
-      date: "November 2022",
-      description: "Cover story on HAPEF's climate-resilient agriculture initiatives.",
-      type: "Magazine",
-    },
-  ]
-
   const partnerships = [
     {
       name: "Ministry of Rural Development",
@@ -130,7 +97,7 @@ export function Recognition() {
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our dedication to rural development and community empowerment has been recognized by prestigious
-            organizations and featured in leading media outlets across India.
+            organizations across India.
           </p>
         </div>
 
@@ -163,28 +130,6 @@ export function Recognition() {
                 </div>
               )
             })}
-          </div>
-        </div>
-
-        {/* Media Features */}
-        <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Media Coverage</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {mediaFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-lg font-semibold text-gray-900 flex-1">{feature.title}</h4>
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium ml-2">
-                    {feature.type}
-                  </span>
-                </div>
-                <p className="text-sm text-blue-600 font-medium mb-2">{feature.date}</p>
-                <p className="text-gray-700">{feature.description}</p>
-              </div>
-            ))}
           </div>
         </div>
 
