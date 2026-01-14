@@ -28,10 +28,10 @@ export function ImpactHero() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
             <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">500+</div>
+            <div className="text-4xl font-bold text-gray-900 mb-2">5000+</div>
             <div className="text-sm text-gray-600">Families Empowered</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
@@ -39,14 +39,9 @@ export function ImpactHero() {
             <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
             <div className="text-sm text-gray-600">Villages Reached</div>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-green-100 text-center">
-            <TrendingUp className="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">300%</div>
-            <div className="text-sm text-gray-600">Average Income Increase</div>
-          </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100 text-center">
             <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">10+</div>
+            <div className="text-4xl font-bold text-gray-900 mb-2">3+</div>
             <div className="text-sm text-gray-600">Years of Service</div>
           </div>
         </div>
