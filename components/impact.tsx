@@ -98,7 +98,7 @@ export function Impact() {
     },
     {
       icon: Award,
-      number: 2,
+      number: 3,
       suffix: "+",
       label: "Years of Service",
       description: "Dedicated to rural community development",

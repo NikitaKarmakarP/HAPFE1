@@ -174,7 +174,7 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                  2+
+                  3+
                 </div>
                 <div className="text-sm text-gray-600 font-medium">Years of Service</div>
               </div>

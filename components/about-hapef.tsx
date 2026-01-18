@@ -203,7 +203,7 @@ export function AboutHapef() {
               <div className="absolute -top-4 -right-4 z-10 animate-bounce">
                 <div className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg transform rotate-12 hover:rotate-0 transition-transform duration-300">
                   <div className="text-center">
-                    <div className="text-2xl font-bold">2+</div>
+                    <div className="text-2xl font-bold">3+</div>
                     <div className="text-sm font-medium">Years of Service</div>
                   </div>
                 </div>

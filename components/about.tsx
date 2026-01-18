@@ -83,7 +83,7 @@ export function About() {
             {/* Years of Service Badge - Enhanced */}
             <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-green-100/80 hover:scale-110 transition-all duration-500 cursor-pointer group">
               <div className="text-center">
-                <div className="text-3xl font-black text-green-600 group-hover:animate-bounce mb-1">2+</div>
+                <div className="text-3xl font-black text-green-600 group-hover:animate-bounce mb-1">3+</div>
                 <div className="text-sm text-gray-600 font-semibold tracking-wide">Years of Service</div>
               </div>
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
@@ -216,7 +216,7 @@ export function About() {
             {/* Floating Stats */}
             <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-green-100 animate-float-card hover:scale-110 transition-all duration-300 cursor-pointer group">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 group-hover:animate-bounce">2+</div>
+                <div className="text-3xl font-bold text-green-600 group-hover:animate-bounce">3+</div>
                 <div className="text-sm text-gray-600">Years of Service</div>
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>

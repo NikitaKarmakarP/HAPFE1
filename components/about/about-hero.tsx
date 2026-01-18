@@ -699,7 +699,7 @@ export function AboutHero() {
                     </div>
                   </div>
                   <div className="text-4xl lg:text-5xl font-bold text-purple-600 mb-3">
-                    2+
+                    3+
                   </div>
                   <div className="text-lg font-semibold text-gray-900 mb-1">Years of Service</div>
                   <div className="text-sm text-gray-600">Continuous community impact</div>

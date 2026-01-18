@@ -34,7 +34,7 @@ export function ProgramsStats() {
     {
       icon: Calendar,
       title: "Program Duration",
-      value: "2+",
+      value: "3+",
       description: "Years of continuous program implementation",
       color: "orange",
     },

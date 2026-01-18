@@ -1,45 +1,59 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image"
-import { MapPin, Users, Sprout } from "lucide-react"
+import { MapPin, Globe, Sparkles, Navigation } from "lucide-react"
 
 export function ImpactMap() {
   const regions = [
     {
       name: "Pakur District",
       state: "Hiranpur Block, Jharkhand",
-      villages: 45,
-      families: 800,
-      programs: ["Mushroom Entrepreneurship", "Blanket Distribution", "Climate Agriculture"],
-      coordinates: { lat: 24.6333, lng: 87.8333 },
+      color: "from-green-500 to-emerald-600",
+      bgLight: "bg-green-50",
+      iconColor: "text-green-600",
+      borderColor: "border-green-100",
+      description: "Focusing on resilient agriculture and community empowerment in remote tribal regions."
     },
     {
       name: "Kolkata Region",
-      state: "West Bengal",
-      villages: 15,
-      families: 300,
-      programs: ["Training Hub", "Resource Center"],
-      coordinates: { lat: 22.5726, lng: 88.3639 },
+      state: "South 24 Parganas, West Bengal",
+      color: "from-blue-500 to-indigo-600",
+      bgLight: "bg-blue-50",
+      iconColor: "text-blue-600",
+      borderColor: "border-blue-100",
+      description: "Supporting rural families through training hubs and resource centers in West Bengal."
     },
-
   ]
 
   return (
-    <section id="geographic-impact" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Geographic Impact</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our programs span across multiple regions, creating a network of sustainable development and community empowerment. We focus primarily on Pakur, Jharkhand and South 24 Parganas, West Bengal, measuring our reach across regions and communities we serve.
+    <section id="geographic-impact" className="py-24 bg-white relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-green-50 rounded-full blur-3xl opacity-50 animate-pulse"></div>
+        <div className="absolute bottom-0 -left-24 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full mb-6">
+            <Globe className="h-4 w-4 text-emerald-600 animate-spin-slow" />
+            <span className="text-sm font-semibold text-emerald-800 uppercase tracking-wider">Our Presence</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Geographic Impact</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Our programs span across multiple regions, creating a network of sustainable development and community empowerment. We focus primarily on Pakur, Jharkhand and South 24 Parganas, West Bengal.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <div className="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center mb-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Map Section */}
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-gradient-to-r from-green-100 to-blue-100 rounded-[2.5rem] blur-xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="relative aspect-square md:aspect-video lg:aspect-square bg-white rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.1234567890123!2d87.8333!3d24.6333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM4JzAwLjAiTiA4N8KwNTAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7368.123456789!2d87.8333!3d24.6333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDM4JzAwLjAiTiA4N8KwNTAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -47,48 +61,44 @@ export function ImpactMap() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="HAPEF Impact Areas Map"
+                className="grayscale-[20%] contrast-[110%] group-hover:grayscale-0 transition-all duration-700"
               ></iframe>
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-emerald-100 flex items-center gap-2">
+                <Navigation className="h-4 w-4 text-emerald-600" />
+                <span className="text-xs font-bold text-gray-800">Operational Areas</span>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-6">
-
-
+          {/* Regions Section */}
+          <div className="space-y-8">
             {regions.map((region, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-green-100 rounded-xl">
-                      <MapPin className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">{region.name}</h3>
-                      <p className="text-gray-600 mb-3">{region.state}</p>
-
-                      <div className="grid grid-cols-2 gap-4 mb-4">
-                        <div className="flex items-center gap-2">
-                          <Users className="h-4 w-4 text-blue-600" />
-                          <span className="text-sm text-gray-600">{region.families} families</span>
+              <Card 
+                key={index} 
+                className={`group border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden rounded-3xl transform hover:-translate-y-2`}
+              >
+                <CardContent className="p-0">
+                  <div className="flex flex-col md:flex-row h-full">
+                    <div className={`w-full md:w-4 bg-gradient-to-b ${region.color}`}></div>
+                    <div className="flex-1 p-8">
+                      <div className="flex items-start justify-between mb-6">
+                        <div className={`p-4 ${region.bgLight} rounded-2xl group-hover:scale-110 transition-transform duration-500`}>
+                          <MapPin className={`h-8 w-8 ${region.iconColor}`} />
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Sprout className="h-4 w-4 text-green-600" />
-                          <span className="text-sm text-gray-600">{region.villages} villages</span>
-                        </div>
+                        <Sparkles className="h-6 w-6 text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
-
-                      <div className="mb-3">
-                        <h4 className="text-sm font-medium text-gray-900 mb-2">Active Programs:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {region.programs.map((program, idx) => (
-                            <span
-                              key={idx}
-                              className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium"
-                            >
-                              {program}
-                            </span>
-                          ))}
-                        </div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                        {region.name}
+                      </h3>
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                        <p className="text-emerald-700 font-semibold text-sm tracking-wide uppercase">
+                          {region.state}
+                        </p>
                       </div>
+                      <p className="text-gray-600 leading-relaxed">
+                        {region.description}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -97,30 +107,17 @@ export function ImpactMap() {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 lg:p-12">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Expanding Our Reach</h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-              We're continuously expanding our programs to reach more communities. Our goal is to cover 100 villages and
-              impact 5,000 families by 2025.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">85</div>
-                <div className="text-sm text-gray-600">Current Villages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">1,550</div>
-                <div className="text-sm text-gray-600">Current Families</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">2025</div>
-                <div className="text-sm text-gray-600">Target Year</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
+      `}</style>
     </section>
   )
 }
