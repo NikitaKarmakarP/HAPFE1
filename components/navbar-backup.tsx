@@ -29,7 +29,7 @@ export default function Navbar() {
       href: "/programs/christmas-blanket-distribution",
     },
     {
-      title: "Climate-Resilient Agriculture & BRC",
+      title: "Climate-Resilient Agriculture",
       href: "/programs/climate-resilient-agriculture",
     },
     {

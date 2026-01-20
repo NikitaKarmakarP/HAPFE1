@@ -90,7 +90,7 @@ export function Impact() {
     },
     {
       icon: Heart,
-      number: 60,
+      number: 100,
       suffix: "+",
       label: "Blankets Distributed",
       description: "Providing warmth during winter months",

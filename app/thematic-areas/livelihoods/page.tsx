@@ -38,8 +38,8 @@ export default function LivelihoodsPage() {
   ]
 
   const impacts = [
-    { number: "5,000+", label: "People Trained" },
-    { number: "1,200+", label: "Businesses Created" }
+    { number: "5,000+", label: "Communities Impacted" },
+    { number: "500+", label: "Farmers Trained" }
   ]
 
   // Thematic Impact Highlights - SDG images

@@ -22,7 +22,7 @@ export default function ClimateResilientAgriculturePage() {
 
   const details = {
     overview:
-      "The Climate-Resilient Agriculture & BRC program addresses the urgent need for sustainable farming practices in the face of climate change. We work directly with farming communities to implement drought-resistant crops, water conservation techniques, and soil health management strategies.",
+      "The Climate-Resilient Agriculture program addresses the urgent need for sustainable farming practices in the face of climate change. We work directly with farming communities to implement drought-resistant crops, water conservation techniques, and soil health management strategies.",
     objectives: [
       "Promote climate-smart agricultural practices",
       "Build community resilience to climate shocks",

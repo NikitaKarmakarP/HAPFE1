@@ -21,7 +21,7 @@ export function ImpactMap() {
       bgLight: "bg-blue-50",
       iconColor: "text-blue-600",
       borderColor: "border-blue-100",
-      description: "Supporting rural families through training hubs and resource centers in West Bengal."
+      description: "Empowering rural families in South 24 Parganas, West Bengal, through sustainable livelihood initiatives"
     },
   ]
 
