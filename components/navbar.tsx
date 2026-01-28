@@ -806,16 +806,7 @@ export default function Navbar() {
                               Photo Gallery
                             </div>
                           </Link>
-                          <Link
-                            href="/knowledge-hub/media-room/video-library"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                              Video Library
-                            </div>
-                          </Link>
+
                           <Link
                             href="/knowledge-hub/media-room/media-coverage"
                             className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
