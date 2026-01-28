@@ -768,6 +768,70 @@ export default function Navbar() {
                 )}
               </div>
 
+              {/* Mobile Our Impact Section */}
+              <div className="px-3 py-2">
+                <button
+                  onClick={() => setIsOurImpactOpen(!isOurImpactOpen)}
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-green-600 font-medium"
+                >
+                  Our Impact
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isOurImpactOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {isOurImpactOpen && (
+                  <div className="mt-2 pl-4">
+                    {/* Impact Stats */}
+                    <Link
+                      href="/impact#impact-by-numbers"
+                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
+                        Impact Stats
+                      </div>
+                    </Link>
+
+                    {/* Stories of Transformation */}
+                    <Link
+                      href="/impact#stories-of-transformation"
+                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                        Stories of Transformation
+                      </div>
+                    </Link>
+
+                    {/* Impact Map */}
+                    <Link
+                      href="/impact#geographic-impact"
+                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
+                        Impact Map
+                      </div>
+                    </Link>
+
+                    {/* View Complete Impact */}
+                    <div className="pt-2 mt-2 border-t border-gray-200">
+                      <Link
+                        href="/impact"
+                        className="block py-2 text-sm text-green-600 hover:text-green-700 font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          View Complete Impact
+                          <ChevronRight className="ml-1 h-3 w-3" />
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
               {/* Knowledge Hub Mobile */}
               <div>
                 <button
@@ -872,70 +936,7 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Mobile Our Impact Section */}
-              <div className="px-3 py-2">
-                <button
-                  onClick={() => setIsOurImpactOpen(!isOurImpactOpen)}
-                  className="flex items-center justify-between w-full text-gray-700 hover:text-green-600 font-medium"
-                >
-                  Our Impact
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isOurImpactOpen ? "rotate-180" : ""}`} />
-                </button>
 
-                {isOurImpactOpen && (
-                  <div className="mt-2 pl-4">
-                    {/* Impact Stats */}
-                    <Link
-                      href="/impact#impact-by-numbers"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                        Impact Stats
-                      </div>
-                    </Link>
-
-                    {/* Stories of Transformation */}
-                    <Link
-                      href="/impact#stories-of-transformation"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
-                        Stories of Transformation
-                      </div>
-                    </Link>
-
-                    {/* Impact Map */}
-                    <Link
-                      href="/impact#geographic-impact"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
-                        Impact Map
-                      </div>
-                    </Link>
-
-                    {/* View Complete Impact */}
-                    <div className="pt-2 mt-2 border-t border-gray-200">
-                      <Link
-                        href="/impact"
-                        className="block py-2 text-sm text-green-600 hover:text-green-700 font-medium"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          View Complete Impact
-                          <ChevronRight className="ml-1 h-3 w-3" />
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                )}
-              </div>
 
               {/* Get Involved Mobile */}
               <Link
