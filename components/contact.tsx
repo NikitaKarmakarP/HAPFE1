@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import Link from "next/link"
 
 export function Contact() {
   return (
@@ -13,7 +14,7 @@ export function Contact() {
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-yellow-400 rounded-full blur-2xl"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mb-6">
@@ -24,9 +25,9 @@ export function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mb-6 rounded-full"></div>
           <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-            Ready to create lasting impact? Join HAPEF in transforming lives and communities. Whether you're looking to 
-            <span className="font-semibold text-green-600"> volunteer</span>, 
-            <span className="font-semibold text-blue-600"> partner</span>, or 
+            Ready to create lasting impact? Join HAPEF in transforming lives and communities. Whether you're looking to
+            <span className="font-semibold text-green-600"> volunteer</span>,
+            <span className="font-semibold text-blue-600"> partner</span>, or
             <span className="font-semibold text-purple-600"> support our mission</span> - every connection matters.
           </p>
         </div>
@@ -188,18 +189,22 @@ export function Contact() {
                 <span className="font-semibold text-purple-600"> corporations</span>, and individuals who share our vision.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
-                >
-                  Become a Partner
-                </Button>
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
-                >
-                  Volunteer With Us
-                </Button>
+                <Link href="/get-involved/partner">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                  >
+                    Become a Partner
+                  </Button>
+                </Link>
+                <Link href="/get-involved/volunteer">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                  >
+                    Volunteer With Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -89,7 +89,7 @@ export function Hero() {
 
             {/* Main Heading with Staggered Animation */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
                 <span
                   className={`block transition-all duration-1000 delay-200 ${isVisible ? "animate-slide-in-left" : "opacity-0 -translate-x-10"}`}
                 >
@@ -101,7 +101,7 @@ export function Hero() {
                   Rural Communities
                 </span>
                 <span
-                  className={`block text-4xl lg:text-5xl text-gray-700 transition-all duration-1000 delay-600 ${isVisible ? "animate-slide-in-left" : "opacity-0 -translate-x-10"}`}
+                  className={`block text-3xl md:text-4xl lg:text-5xl text-gray-700 transition-all duration-1000 delay-600 ${isVisible ? "animate-slide-in-left" : "opacity-0 -translate-x-10"}`}
                 >
                   Through Sustainable Development
                 </span>
@@ -190,34 +190,34 @@ export function Hero() {
                 <img
                   src="/bag1.jpg"
                   alt="HAPEF empowering rural communities through sustainable agriculture and community development programs"
-                  className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-[300px] lg:h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 {/* Subtle overlay for better text contrast on floating cards */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/* Floating Cards with Enhanced Animations */}
-              <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-green-100 animate-float-card hover:scale-110 transition-all duration-300 cursor-pointer group/card">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center group-hover/card:rotate-12 transition-transform duration-300">
-                    <Sprout className="h-6 w-6 text-white group-hover/card:animate-bounce" />
+              <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 bg-white p-3 md:p-6 rounded-2xl shadow-xl border border-green-100 animate-float-card hover:scale-110 transition-all duration-300 cursor-pointer group/card max-w-[160px] md:max-w-none">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center group-hover/card:rotate-12 transition-transform duration-300">
+                    <Sprout className="h-4 w-4 md:h-6 md:w-6 text-white group-hover/card:animate-bounce" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">Resilient Agriculture</div>
-                    <div className="text-sm text-gray-600">Millet Cultivation</div>
+                    <div className="font-bold text-gray-900 text-xs md:text-base">Resilient Agriculture</div>
+                    <div className="text-[10px] md:text-sm text-gray-600">Millet Cultivation</div>
                   </div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:animate-ping transition-opacity duration-300"></div>
               </div>
 
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-blue-100 animate-float-card-delayed hover:scale-110 transition-all duration-300 cursor-pointer group/card">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover/card:rotate-12 transition-transform duration-300">
-                    <Users className="h-6 w-6 text-white group-hover/card:animate-bounce" />
+              <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-white p-3 md:p-6 rounded-2xl shadow-xl border border-blue-100 animate-float-card-delayed hover:scale-110 transition-all duration-300 cursor-pointer group/card max-w-[160px] md:max-w-none">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-8 h-8 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover/card:rotate-12 transition-transform duration-300">
+                    <Users className="h-4 w-4 md:h-6 md:w-6 text-white group-hover/card:animate-bounce" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">Community Participation</div>
-                    <div className="text-sm text-gray-600">Sustainable Income</div>
+                    <div className="font-bold text-gray-900 text-xs md:text-base">Community</div>
+                    <div className="text-[10px] md:text-sm text-gray-600">Sustainable Income</div>
                   </div>
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-pink-400 rounded-full opacity-0 group-hover/card:opacity-100 group-hover/card:animate-ping transition-opacity duration-300"></div>
@@ -257,7 +257,7 @@ export function Hero() {
             >
               <X className="h-6 w-6 text-white" />
             </button>
-            
+
             {/* Video */}
             <div className="aspect-video">
               <video
@@ -271,10 +271,10 @@ export function Hero() {
               </video>
             </div>
           </div>
-          
+
           {/* Click outside to close */}
-          <div 
-            className="absolute inset-0 -z-10" 
+          <div
+            className="absolute inset-0 -z-10"
             onClick={closeVideoModal}
           ></div>
         </div>

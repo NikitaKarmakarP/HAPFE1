@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Building, Users, Sprout, Globe, Heart, Target, Zap, Star, Sparkles, ArrowRight, Map } from "lucide-react"
+import Link from "next/link"
 
 // Custom hook for intersection observer
 function useInView(threshold = 0.1) {
@@ -70,15 +71,15 @@ export function WorkingAreas() {
             <Map className="h-5 w-5 text-blue-600 animate-pulse" />
             <span className="text-sm font-semibold text-blue-800 tracking-wide">OUR REACH & IMPACT</span>
           </div>
-          
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-gray-900">Our Working</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-green-600 to-teal-600 animate-gradient-x">
               Areas
             </span>
           </h2>
-          
+
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
             HAPEF operates across multiple regions in India, with our registered office at
             <span className="font-semibold text-blue-700"> Kolkata</span>,
@@ -96,11 +97,11 @@ export function WorkingAreas() {
           <Card className="group overflow-hidden bg-white/80 backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.01] relative">
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
+
             <CardHeader className="relative bg-gradient-to-r from-blue-600 via-green-600 to-emerald-600 text-white p-8">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-xl"></div>
-              
+
               <CardTitle className="flex items-center justify-center gap-3 text-2xl font-bold relative z-10">
                 <div className="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                   <Map className="h-8 w-8 animate-pulse" />
@@ -111,7 +112,7 @@ export function WorkingAreas() {
                 </div>
               </CardTitle>
             </CardHeader>
-            
+
             <CardContent className="p-0 relative">
               <div className="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
                 <img
@@ -119,11 +120,11 @@ export function WorkingAreas() {
                   alt="HAPEF Working Areas in India"
                   className="w-full h-full object-contain transition-transform duration-700 bg-white"
                 />
-                
+
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              
+
               <div className="p-8 relative">
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Headquarters Info */}
@@ -178,14 +179,18 @@ export function WorkingAreas() {
                       <p className="font-semibold text-gray-900">2 States • 40+ Villages • 5,000+ Lives Impacted</p>
                     </div>
                     <div className="flex gap-3">
-                      <Button variant="outline" size="sm" className="group/btn border-blue-200 hover:border-blue-400 hover:bg-blue-50">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        <span>View Headquarters</span>
-                      </Button>
-                      <Button variant="outline" size="sm" className="group/btn border-green-200 hover:border-green-400 hover:bg-green-50">
-                        <Sprout className="h-4 w-4 mr-2" />
-                        <span>Explore Programs</span>
-                      </Button>
+                      <Link href="/contact">
+                        <Button variant="outline" size="sm" className="group/btn border-blue-200 hover:border-blue-400 hover:bg-blue-50">
+                          <MapPin className="h-4 w-4 mr-2" />
+                          <span>View Headquarters</span>
+                        </Button>
+                      </Link>
+                      <Link href="/programs">
+                        <Button variant="outline" size="sm" className="group/btn border-green-200 hover:border-green-400 hover:bg-green-50">
+                          <Sprout className="h-4 w-4 mr-2" />
+                          <span>Explore Programs</span>
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -214,7 +219,7 @@ export function WorkingAreas() {
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-green-200/20 rounded-full blur-xl"></div>
-              
+
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -232,7 +237,7 @@ export function WorkingAreas() {
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-blue-200/20 rounded-full blur-xl"></div>
-              
+
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -250,7 +255,7 @@ export function WorkingAreas() {
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-purple-200/20 rounded-full blur-xl"></div>
-              
+
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -268,7 +273,7 @@ export function WorkingAreas() {
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-orange-200/20 rounded-full blur-xl"></div>
-              
+
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -295,10 +300,12 @@ export function WorkingAreas() {
                 <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
                 <span className="text-green-700">Pakur, JH</span>
               </div>
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <span>Expand Our Reach</span>
-                <Zap className="h-4 w-4 ml-2" />
-              </Button>
+              <Link href="/get-involved/partner">
+                <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <span>Expand Our Reach</span>
+                  <Zap className="h-4 w-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

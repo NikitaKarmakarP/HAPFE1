@@ -37,7 +37,7 @@ export function CallToAction() {
   return (
     <section
       id="cta-section"
-      className="py-24 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden"
+      className="py-12 md:py-24 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 relative overflow-hidden"
       style={{
         background: `
           radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 50%),
@@ -97,7 +97,7 @@ export function CallToAction() {
         <div
           className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "animate-fade-in-up" : "opacity-0 translate-y-10"}`}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             <span className="block animate-slide-in-left">Join Our Mission to</span>
             <span className="block animate-slide-in-right delay-300">Transform Rural Lives</span>
           </h2>
@@ -122,7 +122,7 @@ export function CallToAction() {
               icon: Users,
               title: "Volunteer",
               description: "Share your skills and time to directly contribute to our community development programs.",
-              link: "#",
+              link: "/get-involved/volunteer",
               buttonText: "Join as Volunteer",
               color: "blue",
               delay: "delay-400",
@@ -132,7 +132,7 @@ export function CallToAction() {
               title: "Partner",
               description:
                 "Collaborate with us to amplify impact through strategic partnerships and joint initiatives.",
-              link: "#",
+              link: "/get-involved/partner",
               buttonText: "Become a Partner",
               color: "purple",
               delay: "delay-600",
@@ -140,7 +140,7 @@ export function CallToAction() {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${isVisible ? `animate-slide-in-up ${item.delay}` : "opacity-0 translate-y-10"}`}
+              className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 text-center border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 ${isVisible ? `animate-slide-in-up ${item.delay}` : "opacity-0 translate-y-10"}`}
             >
               <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative">
                 <item.icon className="h-8 w-8 text-white group-hover:animate-pulse" />
@@ -168,16 +168,18 @@ export function CallToAction() {
           <p className="text-green-100 mb-8 text-lg animate-pulse">
             Ready to make a difference? Get in touch with us today.
           </p>
-          <Button
-            size="lg"
-            variant="outline"
-            className="group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <span className="flex items-center gap-2">
-              Contact Us Now
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span className="flex items-center gap-2">
+                Contact Us Now
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
 

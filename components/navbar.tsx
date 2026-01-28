@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isNewsEventsOpen, setIsNewsEventsOpen] = useState(false)
   const [isAboutUsOpen, setIsAboutUsOpen] = useState(false)
   const [isLeadershipOpen, setIsLeadershipOpen] = useState(false)
-  const [isGetInvolvedOpen, setIsGetInvolvedOpen] = useState(false)
+
   const [isThematicAreasOpen, setIsThematicAreasOpen] = useState(false)
   const [isOurImpactOpen, setIsOurImpactOpen] = useState(false)
   const [isOurInternsOpen, setIsOurInternsOpen] = useState(false)
@@ -44,9 +44,9 @@ export default function Navbar() {
         <div className="flex justify-between h-16 md:h-20">
           <div className="flex items-center -ml-6 sm:-ml-8 lg:-ml-12">
             <Link href="/" className="flex items-center space-x-1">
-              <img 
-                src="/Logo.png" 
-                alt="HAPEF Logo" 
+              <img
+                src="/Logo.png"
+                alt="HAPEF Logo"
                 className="w-16 h-16 md:w-20 md:h-20 object-contain"
               />
               <span className="font-bold text-xl md:text-2xl text-gray-900">HAPEF</span>
@@ -58,7 +58,7 @@ export default function Navbar() {
             <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">
               Home
             </Link>
-            
+
             {/* About Us Dropdown */}
             <div className="relative group">
               <button className="flex items-center text-gray-700 hover:text-green-600 transition-colors py-2">
@@ -947,74 +947,13 @@ export default function Navbar() {
               </div>
 
               {/* Get Involved Mobile */}
-              <div>
-                <button
-                  onClick={() => setIsGetInvolvedOpen(!isGetInvolvedOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-green-600"
-                >
-                  <span>Get Involved</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${isGetInvolvedOpen ? "rotate-180" : ""}`} />
-                </button>
-
-                {isGetInvolvedOpen && (
-                  <div className="mt-1 pl-4 space-y-1">
-                    <Link
-                      href="/get-involved/volunteer"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
-                        Volunteer
-                      </div>
-                    </Link>
-
-                    <Link
-                      href="/get-involved/internship"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                        Internship
-                      </div>
-                    </Link>
-
-                    <Link
-                      href="/get-involved/partner"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
-                        Partner with Us
-                      </div>
-                    </Link>
-
-                    <Link
-                      href="/get-involved/corporate-csr"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full mr-2"></div>
-                        Corporate CSR
-                      </div>
-                    </Link>
-
-                    <Link
-                      href="/get-involved/fundraising"
-                      className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-orange-600 rounded-full mr-2"></div>
-                        Fundraising Events
-                      </div>
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/get-involved"
+                className="block px-3 py-2 text-gray-700 hover:text-green-600"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Involved
+              </Link>
 
               <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-green-600">
                 Contact Us

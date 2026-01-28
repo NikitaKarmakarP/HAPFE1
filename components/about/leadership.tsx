@@ -169,9 +169,9 @@ const interns = [
 ]
 
 export function Leadership() {
-  const [selectedMember, setSelectedMember] = useState(null)
+  const [selectedMember, setSelectedMember] = useState<any>(null)
 
-  const openMemberDetails = (member) => {
+  const openMemberDetails = (member: any) => {
     setSelectedMember(member)
   }
 
@@ -195,7 +195,7 @@ export function Leadership() {
             <Sparkles className="h-6 w-6 text-blue-600 animate-pulse" />
             <span className="text-blue-800 font-semibold text-lg">Meet Our Leaders</span>
           </div>
-          <h2 className="text-6xl lg:text-7xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-8">
             <span className="text-gray-900">Our </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient-x">
               Leadership
@@ -214,7 +214,7 @@ export function Leadership() {
               <Star className="h-5 w-5 text-green-600" />
               <span className="text-green-800 font-medium">Executive Leadership</span>
             </div>
-            <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
                 Core Leadership
               </span>
@@ -233,7 +233,7 @@ export function Leadership() {
               >
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 <CardContent className="p-8 relative z-10">
                   <div className="relative mb-6">
                     <div className="w-32 h-32 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-green-400 to-emerald-600 p-1 group-hover:scale-110 transition-transform duration-300">
@@ -256,9 +256,9 @@ export function Leadership() {
 
 
                   <div className="flex justify-center space-x-3">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="flex items-center gap-2 bg-transparent border-green-200 hover:bg-green-50 hover:border-green-300 transition-all duration-300"
                       onClick={(e) => {
                         e.stopPropagation()
@@ -267,9 +267,9 @@ export function Leadership() {
                     >
                       <Mail className="h-4 w-4 text-green-600" />
                     </Button>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="flex items-center gap-2 bg-transparent border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300"
                       onClick={(e) => {
                         e.stopPropagation()
@@ -299,7 +299,7 @@ export function Leadership() {
               <Award className="h-5 w-5 text-blue-600" />
               <span className="text-blue-800 font-medium">Board of Directors</span>
             </div>
-            <h3 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 Strategic Governance
               </span>
@@ -318,7 +318,7 @@ export function Leadership() {
               >
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
+
                 <CardContent className="p-6 relative z-10">
                   <div className="relative mb-6">
                     <div className="w-28 h-28 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-indigo-600 p-1 group-hover:scale-110 transition-transform duration-300">
@@ -337,9 +337,9 @@ export function Leadership() {
                   </div>
 
                   <div className="flex justify-center space-x-2">
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="flex items-center gap-1 bg-transparent border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 px-3 py-1"
                       onClick={(e) => {
                         e.stopPropagation()
@@ -348,9 +348,9 @@ export function Leadership() {
                     >
                       <Mail className="h-3 w-3 text-blue-600" />
                     </Button>
-                    <Button 
-                      size="sm" 
-                      variant="outline" 
+                    <Button
+                      size="sm"
+                      variant="outline"
                       className="flex items-center gap-1 bg-transparent border-indigo-200 hover:bg-indigo-50 hover:border-indigo-300 transition-all duration-300 px-3 py-1"
                       onClick={(e) => {
                         e.stopPropagation()
@@ -381,7 +381,7 @@ export function Leadership() {
               <span className="text-sm font-semibold text-purple-700 tracking-wider uppercase">Advisory Board</span>
               <Star className="h-4 w-4 text-purple-500" />
             </div>
-            <h3 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-600 to-rose-600 drop-shadow-sm mb-4">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-600 to-rose-600 drop-shadow-sm mb-4">
               Advisory Board
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -445,7 +445,7 @@ export function Leadership() {
               <span className="text-sm font-semibold text-orange-700 tracking-wider uppercase">Our Interns</span>
               <Users className="h-4 w-4 text-orange-500" />
             </div>
-            <h3 className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-700 via-amber-600 to-rose-600 drop-shadow-sm mb-4">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-700 via-amber-600 to-rose-600 drop-shadow-sm mb-4">
               Our Interns
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -516,7 +516,7 @@ export function Leadership() {
               <span className="text-sm font-semibold text-emerald-800 tracking-wide uppercase">Words From Our Interns</span>
               <Star className="h-5 w-5 text-emerald-500" />
             </div>
-            <h3 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600">
                 Words From Our Interns
               </span>
@@ -650,14 +650,14 @@ export function Leadership() {
         </div>
 
         {/* Media Coverage Section */}
-        <div className="mt-20 mb-16">
+        <div id="media-coverage" className="mt-20 mb-16 scroll-mt-28">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-white/90 to-blue-50/90 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-200 shadow-lg mb-8">
               <Monitor className="h-6 w-6 text-blue-600 animate-pulse" />
               <span className="text-sm font-semibold text-blue-800 tracking-wide uppercase">Media Coverage</span>
               <Tv className="h-5 w-5 text-blue-500" />
             </div>
-            <h3 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600">
                 Media Coverage
               </span>
@@ -728,72 +728,72 @@ export function Leadership() {
           </div>
         </div>
 
-      {/* Member Details Modal */}
-      <Dialog open={!!selectedMember} onOpenChange={(open) => { if (!open) closeMemberDetails() }}>
-        <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-2xl border border-transparent bg-white/90 backdrop-blur-xl shadow-2xl ring-1 ring-black/5">
-          {/* Decorative gradient glows */}
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute -top-16 -right-16 h-56 w-56 bg-gradient-to-tr from-blue-400/20 via-indigo-400/20 to-purple-400/20 blur-2xl rounded-full" />
-            <div className="absolute -bottom-12 -left-12 h-56 w-56 bg-gradient-to-tr from-emerald-400/20 via-blue-400/20 to-teal-400/20 blur-2xl rounded-full" />
-          </div>
-
-          {/* Close button */}
-          <button
-            aria-label="Close"
-            onClick={closeMemberDetails}
-            className="absolute top-3 right-3 inline-flex items-center justify-center rounded-full p-2 hover:bg-gray-100 focus:outline-none"
-          >
-            <X className="h-5 w-5 text-gray-600" />
-          </button>
-
-          <div className="grid grid-cols-1 md:grid-cols-3">
-            {/* Photo & quick actions */}
-            <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 p-8 flex flex-col items-center justify-center">
-              <div className="relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-indigo-500/30 blur-lg" />
-                <div className="relative w-44 h-44 rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
-                  <img
-                    src={(selectedMember?.image as string) || "/placeholder.jpg"}
-                    alt={(selectedMember?.name as string) || "Member"}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-
+        {/* Member Details Modal */}
+        <Dialog open={!!selectedMember} onOpenChange={(open) => { if (!open) closeMemberDetails() }}>
+          <DialogContent className="max-w-4xl p-0 overflow-hidden rounded-2xl border border-transparent bg-white/90 backdrop-blur-xl shadow-2xl ring-1 ring-black/5">
+            {/* Decorative gradient glows */}
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute -top-16 -right-16 h-56 w-56 bg-gradient-to-tr from-blue-400/20 via-indigo-400/20 to-purple-400/20 blur-2xl rounded-full" />
+              <div className="absolute -bottom-12 -left-12 h-56 w-56 bg-gradient-to-tr from-emerald-400/20 via-blue-400/20 to-teal-400/20 blur-2xl rounded-full" />
             </div>
 
-            {/* Details */}
-            <div className="md:col-span-2 p-8">
-              <DialogHeader>
-                <DialogTitle className="text-3xl font-extrabold tracking-tight">
-                  <span className="text-gray-900">{selectedMember?.name}</span>
-                </DialogTitle>
-                <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 px-3 py-1">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-blue-700">
-                    {(selectedMember as any)?.role || (selectedMember as any)?.designation}
-                  </span>
-                </div>
-              </DialogHeader>
+            {/* Close button */}
+            <button
+              aria-label="Close"
+              onClick={closeMemberDetails}
+              className="absolute top-3 right-3 inline-flex items-center justify-center rounded-full p-2 hover:bg-gray-100 focus:outline-none"
+            >
+              <X className="h-5 w-5 text-gray-600" />
+            </button>
 
-              <div className="mt-5">
-                <p className="text-gray-700 leading-relaxed text-[15px] whitespace-pre-line">
-                  {(selectedMember as any)?.details || selectedMember?.bio}
-                </p>
+            <div className="grid grid-cols-1 md:grid-cols-3">
+              {/* Photo & quick actions */}
+              <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 p-8 flex flex-col items-center justify-center">
+                <div className="relative">
+                  <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-indigo-500/30 blur-lg" />
+                  <div className="relative w-44 h-44 rounded-full overflow-hidden ring-4 ring-white shadow-2xl">
+                    <img
+                      src={(selectedMember?.image as string) || "/placeholder.jpg"}
+                      alt={(selectedMember?.name as string) || "Member"}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+
               </div>
 
+              {/* Details */}
+              <div className="md:col-span-2 p-8">
+                <DialogHeader>
+                  <DialogTitle className="text-3xl font-extrabold tracking-tight">
+                    <span className="text-gray-900">{selectedMember?.name}</span>
+                  </DialogTitle>
+                  <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 px-3 py-1">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+                      {(selectedMember as any)?.role || (selectedMember as any)?.designation}
+                    </span>
+                  </div>
+                </DialogHeader>
+
+                <div className="mt-5">
+                  <p className="text-gray-700 leading-relaxed text-[15px] whitespace-pre-line">
+                    {(selectedMember as any)?.details || selectedMember?.bio}
+                  </p>
+                </div>
 
 
 
 
-              {/* Divider */}
-              <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
 
-              {/* Secondary quick actions removed per request */}
+                {/* Divider */}
+                <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+
+                {/* Secondary quick actions removed per request */}
+              </div>
             </div>
-          </div>
-        </DialogContent>
-      </Dialog>
+          </DialogContent>
+        </Dialog>
 
       </div>
     </section>
