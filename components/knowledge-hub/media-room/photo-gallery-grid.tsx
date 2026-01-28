@@ -27,7 +27,7 @@ export function PhotoGalleryGrid() {
       id: "1",
       title: "Mushroom Cultivation Training",
       description: "Farmers learning modern mushroom cultivation techniques in our training facility.",
-      image: "/placeholder.svg?height=400&width=600&text=Mushroom+Training",
+      image: "/m.jpg",
       category: "Programs",
       date: "2024-01-15",
       location: "Birbhum District",

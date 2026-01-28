@@ -17,10 +17,10 @@ interface ProgramCTAProps {
 export function ProgramCTA({
   title = "Ready to Transform Your Community?",
   description =
-    "Join our mushroom entrepreneurship program and become part of a growing network of successful rural entrepreneurs.",
+  "Join our mushroom entrepreneurship program and become part of a growing network of successful rural entrepreneurs.",
   primaryButton = { text: "Apply Now", href: "#" },
   secondaryButton = { text: "Learn More", href: "#" },
-  image = "/en.jpg",
+  image = "/o.jpg",
 }: ProgramCTAProps = {}) {
   const [firstLine, secondLine] = title.split("\n")
 
