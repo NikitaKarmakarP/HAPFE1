@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "HAPEF - Humanitarian Aid for Poverty Eradication Foundation",
   description:
     "Empowering rural communities through sustainable agriculture, mushroom farming, and community development programs in India.",
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

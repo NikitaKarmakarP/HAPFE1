@@ -458,7 +458,7 @@ export function Leadership() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {interns.map((intern, index) => (
               <Card
                 key={index}
@@ -485,23 +485,7 @@ export function Leadership() {
                     <p className="text-xs text-gray-400 mb-3">{intern.duration}</p>
                   </div>
 
-                  <div className="mb-4">
-                    <div className="flex items-center justify-center text-xs text-gray-500">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      Started: {intern.startDate}
-                    </div>
-                  </div>
 
-                  <div className="flex justify-center space-x-3">
-                    <Button size="sm" variant="outline" className="flex items-center gap-2 bg-transparent">
-                      <Mail className="h-4 w-4" />
-                      <span className="sr-only">Email {intern.name}</span>
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex items-center gap-2 bg-transparent">
-                      <Linkedin className="h-4 w-4" />
-                      <span className="sr-only">LinkedIn {intern.name}</span>
-                    </Button>
-                  </div>
                 </CardContent>
               </Card>
             ))}
