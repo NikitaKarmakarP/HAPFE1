@@ -20,6 +20,7 @@ interface Photo {
 
 export function PhotoGalleryGrid() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null)
+  const [visibleCount, setVisibleCount] = useState(6)
 
   const photos: Photo[] = [
     {
@@ -121,11 +122,15 @@ export function PhotoGalleryGrid() {
     setSelectedPhoto(null)
   }
 
+  const loadMore = () => {
+    setVisibleCount((prev) => prev + 6)
+  }
+
   return (
     <div>
       {/* Enhanced Photo Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
-        {photos.map((photo, index) => (
+        {photos.slice(0, visibleCount).map((photo, index) => (
           <Card key={photo.id} className="group hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 bg-gradient-to-br from-white via-white to-gray-50/50 border-0 shadow-lg overflow-hidden">
             <CardContent className="p-0">
               <div className="relative overflow-hidden rounded-t-xl">
@@ -163,16 +168,19 @@ export function PhotoGalleryGrid() {
       </div>
 
       {/* Enhanced Load More Button */}
-      <div className="text-center">
-        <Button
-          variant="outline"
-          size="lg"
-          className="bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200 hover:border-emerald-300 hover:from-emerald-100 hover:to-blue-100 text-emerald-700 hover:text-emerald-800 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-        >
-          <Eye className="h-5 w-5 mr-2" />
-          Load More Photos
-        </Button>
-      </div>
+      {visibleCount < photos.length && (
+        <div className="text-center">
+          <Button
+            variant="outline"
+            size="lg"
+            className="bg-gradient-to-r from-emerald-50 to-blue-50 border-2 border-emerald-200 hover:border-emerald-300 hover:from-emerald-100 hover:to-blue-100 text-emerald-700 hover:text-emerald-800 font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            onClick={loadMore}
+          >
+            <Eye className="h-5 w-5 mr-2" />
+            Load More Photos
+          </Button>
+        </div>
+      )}
 
       {/* Lightbox Modal */}
       {selectedPhoto && (
