@@ -13,7 +13,6 @@ export default function MushroomEntrepreneurshipPage() {
     image: "/mo.jpg",
     stats: [
       { number: "200+", label: "Families Trained" },
-      { number: "300%", label: "Average Income Increase" },
       { number: "25", label: "Villages Covered" },
     ],
   }

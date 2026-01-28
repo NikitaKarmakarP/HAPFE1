@@ -46,9 +46,9 @@ export function PhotoGalleryGrid() {
     },
     {
       id: "3",
-      title: "Women's Self-Help Group Meeting",
+      title: "SHG Meeting",
       description: "Monthly meeting of women's self-help group discussing microfinance and business opportunities.",
-      image: "/placeholder.svg?height=400&width=600&text=SHG+Meeting",
+      image: "/sh.jpg",
       category: "Programs",
       date: "2024-01-25",
       location: "Bankura District",
@@ -59,7 +59,7 @@ export function PhotoGalleryGrid() {
       id: "4",
       title: "Climate-Smart Agriculture Workshop",
       description: "Farmers participating in hands-on training for drought-resistant farming techniques.",
-      image: "/placeholder.svg?height=400&width=600&text=Climate+Agriculture",
+      image: "/tr.jpg",
       category: "Training Sessions",
       date: "2024-02-01",
       location: "Hooghly District",
@@ -70,7 +70,7 @@ export function PhotoGalleryGrid() {
       id: "5",
       title: "New Water Pump Installation",
       description: "Installation of solar-powered water pump system for irrigation in drought-affected area.",
-      image: "/placeholder.svg?height=400&width=600&text=Water+Pump",
+      image: "/inf.jpg",
       category: "Infrastructure",
       date: "2024-02-05",
       location: "Murshidabad District",
@@ -79,7 +79,7 @@ export function PhotoGalleryGrid() {
     },
     {
       id: "6",
-      title: "Leadership Team Meeting",
+      title: "Leadership Team Celebrations",
       description: "Quarterly leadership team meeting discussing program strategies and community feedback.",
       image: "/placeholder.svg?height=400&width=600&text=Leadership+Meeting",
       category: "Leadership",
@@ -88,22 +88,12 @@ export function PhotoGalleryGrid() {
       photographer: "Admin Team",
       tags: ["leadership", "strategy", "meeting", "planning"],
     },
-    {
-      id: "7",
-      title: "Children's Education Program",
-      description: "Children participating in our after-school education and skill development program.",
-      image: "/placeholder.svg?height=400&width=600&text=Education+Program",
-      category: "Programs",
-      date: "2024-02-15",
-      location: "Nadia District",
-      photographer: "Teacher Priya",
-      tags: ["education", "children", "skills", "development"],
-    },
+
     {
       id: "8",
       title: "Annual Celebration Event",
       description: "Community celebration marking the 5th anniversary of HAPEF with cultural performances.",
-      image: "/placeholder.svg?height=400&width=600&text=Anniversary+Celebration",
+      image: "/cle.jpg",
       category: "Celebrations",
       date: "2024-02-20",
       location: "Community Center, Kolkata",
@@ -114,7 +104,7 @@ export function PhotoGalleryGrid() {
       id: "9",
       title: "Organic Farming Training",
       description: "Demonstration of organic composting and natural pest control methods for sustainable farming.",
-      image: "/placeholder.svg?height=400&width=600&text=Organic+Farming",
+      image: "/t2.jpg",
       category: "Training Sessions",
       date: "2024-02-25",
       location: "Bardhaman District",
@@ -162,17 +152,8 @@ export function PhotoGalleryGrid() {
               </div>
               <div className="p-6 bg-gradient-to-br from-white to-gray-50/30">
                 <h3 className="font-bold text-gray-900 mb-3 line-clamp-1 text-lg group-hover:text-emerald-700 transition-colors duration-300">{photo.title}</h3>
-                <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed">{photo.description}</p>
-                <div className="flex items-center justify-between text-xs text-gray-500 border-t border-gray-100 pt-3">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-3 w-3 text-emerald-500" />
-                    <span className="font-medium">{new Date(photo.date).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3 text-blue-500" />
-                    <span className="truncate font-medium">{photo.location}</span>
-                  </div>
-                </div>
+
+                {/* Date and Location removed as per user request */}
                 {/* Subtle bottom accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
               </div>
@@ -228,7 +209,7 @@ export function PhotoGalleryGrid() {
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-gray-400" />
                     <span className="text-gray-600">Date:</span>
-                    <span className="font-medium">{new Date(selectedPhoto.date).toLocaleDateString()}</span>
+                    <span className="font-medium">{new Date(selectedPhoto.date).toLocaleDateString('en-GB')}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-gray-400" />

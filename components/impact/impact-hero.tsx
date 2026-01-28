@@ -36,7 +36,7 @@ export function ImpactHero() {
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
             <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
+            <div className="text-4xl font-bold text-gray-900 mb-2">40+</div>
             <div className="text-sm text-gray-600">Villages Reached</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100 text-center">
