@@ -112,8 +112,8 @@ export function FeaturedWork() {
                     <div className="text-xs text-gray-600">Families Trained</div>
                   </div>
                   <div className="text-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="font-bold text-2xl text-green-600 animate-count-up">300%</div>
-                    <div className="text-xs text-gray-600">Income Increase</div>
+                    <div className="font-bold text-2xl text-green-600 animate-count-up">25</div>
+                    <div className="text-xs text-gray-600">Villages Covered</div>
                   </div>
                 </div>
                 <Link href="/programs/mushroom-entrepreneurship">

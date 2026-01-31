@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Mail, Linkedin, GraduationCap, Calendar, Users, Award, Target, X, MapPin, Phone, Globe, Star, Sparkles, Tv, Monitor } from "lucide-react"
+import { Mail, Linkedin, GraduationCap, Calendar, Users, Award, Target, X, MapPin, Phone, Globe, Star, Sparkles, Tv, Monitor, Quote } from "lucide-react"
 
 const executiveTeam = [
   {
@@ -28,8 +28,8 @@ const boardMembers = [
     image: "/bappa.jpg",
     bio: "Visionary leader driving HAPEF's mission to transform rural communities through sustainable development and innovative solutions.",
     details: `Bappa Mridha is the Founder and Director of HAPEF. He holds a Master’s degree in Agriculture and Rural Development from the Ramakrishna Mission Vivekananda Educational and Research Institute, and is currently pursuing a Master of Social Work from IGNOU. With over five years of experience in the livelihood and regenerative agriculture sectors, his expertise includes smallholder agriculture, entrepreneurship, natural resource management, and the formation of farmer collectives for agri-value chain integration. He is currently associated with PRADAN and has previously contributed to various CSR initiatives and government development projects.`,
-    email: "bappa@hapef.org",
-    linkedin: "#",
+    email: "bappa.hapef@gmail.com",
+    linkedin: "https://www.linkedin.com/in/bappa-mridha-42b73a207/",
     experience: "Rural Development Pioneer",
     specialization: "Community Empowerment & Leadership",
   },
@@ -41,7 +41,7 @@ const boardMembers = [
     bio: "Co-founder & Director with experience spanning government and non-profit sectors.",
     details: `Annyesha Purkait is the Co-founder and Director of HAPEF. She is currently working as a Young Professional at the National Institute of Disaster Management (NIDM), Ministry of Home Affairs, Government of India. She holds a Master’s degree in Environment and Disaster Management from the Ramakrishna Mission Vivekananda Educational and Research Institute and is presently pursuing a Master of Social Work from IGNOU. With over three years of hands-on experience across both government and non-profit sectors, she has worked extensively on project coordination, training design and delivery, stakeholder engagement and disaster risk reduction & environmental advocacy. She was previously associated with SwitchON Foundation, where she built clean air networks and before that with Sarva Seva Samity Sanstha (4S India), where she oversaw multi-state operations.`,
     email: "annyesha@hapef.org",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/annyesha-purkait-2a561a1b8/",
     experience: "Program Development, DRR, Environmental Advocacy",
     specialization: "Stakeholder Engagement & Training",
   },
@@ -65,7 +65,7 @@ const boardMembers = [
     bio: "Co-founder and Director of HAPEF, dedicated to transforming the agricultural landscape.",
     details: `Bapi Mridha, Co-founder and Director of HAPEF, is a visionary leader dedicated to transforming the agricultural landscape. He holds a Diploma degree in Agriculture Science and Management from the University of Kalyani and is currently pursuing a Master of Social Work from IGNOU, further enhancing his expertise in creating sustainable impact. With extensive experience in livelihood and regenerative agriculture sectors, he has  expertise in smallholder agriculture, entrepreneurship, climate-resilient agriculture, and farmer collective formation. Currently, he is associated with PRADAN, driving innovative solutions to empower rural communities.`,
     email: "bapi@hapef.org",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/bapi-mridha-3561b829a/",
     experience: "Entrepreneurship Development Leader",
     specialization: "Skill Development & Innovation",
   },
@@ -102,17 +102,17 @@ const advisoryBoard = [
 
 const interns = [
   {
-    name: "Jhuma Ghosh Nandi",
+    name: "Sneha Roy",
     role: "Development Internship Trainee",
-    university: "B.Com (Accounts Hons), MBA (Finance); pursuing MSW (Child and Women Development)",
-    duration: "6 months",
-    image: "/ju.jpg",
-    bio: "Development Internship Trainee at HAPEF; 20+ years' experience across accounting, finance, taxation, budgeting, procurement, and audit.",
-    details: `Jhuma Ghosh Nandi is the Development Internship Trainee at HAPEF. She holds B.Com (Accounts Hons), MBA (Finance) degree. Now she is studying for MSW on Child and Women Development. She has completed short term certification courses from National Institute of Financial Management-Faridabad , Administrative Staff College of India-Hyderabad and National Institute of Rural Development and Panchayati Raj-Hyderabad. She is now working in an organisation under the Panchayats & Rural Development Department, Govt. of WB. Jhuma is specialised on accounting, financial management, taxation, budget, procurement and audit related issues. She is also a trainer in State Level. Jhuma is proficient in tally, pfms, MS office, ommas, e-office, google sheet etc. With over 20 years, she has experienced with different scheme/project/program viz. Pradhan Mantri Gram Sadak Yojana (PMGSY), Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS), Self Help Group (SHG), Department For International Development(DFID) under UK govt. funded project, Rashtriya Gram Swaraj Abhiyan (RGSA) etc. She has experienced with Rayners College London, UK.`,
+    university: "Jadavpur University (M.A in Sociology)",
+    duration: "2 months",
+    image: "/oo.jpg",
+    bio: "Sociology student skilled in research methodology, fieldwork, data analysis, and community mobilization.",
+    details: `Sneha Roy is pursuing her M.A in Sociology from Jadavpur University, with a strong academic foundation in research methodology, fieldwork, and data analysis. Her internship experience includes working on migration cases, hands-on experience with a community-led Bio-Resource Unit, and mushroom farming. She's gained hands-on experience in community mobilization, sustainable agriculture, and rural entrepreneurship through her work with Self-Help Groups and village institutions, building a strong foundation in rural development and inclusive community participation.`,
     email: "",
     linkedin: "#",
-    focus: ["Accounting", "Financial Management", "Taxation", "Budgeting", "Procurement", "Audit", "Training"],
-    startDate: "January 2024",
+    focus: ["Research Methodology", "Fieldwork", "Data Analysis", "Community Mobilization", "Sustainable Agriculture"],
+    startDate: "May 2024",
   },
   {
     name: "Nikita Karmakar",
@@ -123,7 +123,7 @@ const interns = [
     bio: "",
     details: `Nikita Karmakar is the Development Internship Trainee (Full-stack Developer) at HAPEF. She holds a B.Tech in Computer Science & Engineering from Netaji Subhash Engineering College (Garia). Nikita's expertise includes programming languages like Java, JavaScript, and Python, as well as front-end and back-end development frameworks. She's proficient in databases like MongoDB and MySQL, and tools like Git, GitHub, and Docker. Nikita also has knowledge of machine learning with TensorFlow and OpenCV. With strong analytical and collaboration skills, she handles website designing, content creation, and documentation, leveraging her technical skills to drive innovation and adaptability in her role.`,
     email: "nikita.intern@hapef.org",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nikita-karmakar/",
     focus: ["JavaScript", "React", "Node.js", "MongoDB", "MySQL"],
     startDate: "February 2024",
   },
@@ -162,7 +162,7 @@ const interns = [
     bio: "Worked on migration-affected cases, co-developed a Bio-Resource Unit, and conducted sessions on organic farming and financial planning.",
     details: `Debasish Saha is a Development Internship Trainee at HAPEF. He is pursuing Master of Social Work (MSW) from IGNOU. During his 30-day field internship, he worked on migration-affected cases, co-developed a community-led Bio-Resource Unit, and conducted sessions on organic farming and financial planning for grassroots communities. He gained hands-on experience in community mobilization, participatory planning, and livelihood promotion while working with Self-Help Groups (SHGs) and village institutions. This exposure enhanced his skills in sustainable agriculture, rural entrepreneurship, and inclusive community development. Through this internship, he built a strong foundation in rural development practice, with a focus on sustainable agriculture, livelihood enhancement, and inclusive community participation.`,
     email: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/debasish-saha/",
     focus: ["Community Mobilization", "Participatory Planning", "Livelihood Promotion", "Sustainable Agriculture", "Rural Entrepreneurship", "Inclusive Development"],
     startDate: "—",
   }
@@ -485,6 +485,21 @@ export function Leadership() {
                     <p className="text-xs text-gray-400 mb-3">{intern.duration}</p>
                   </div>
 
+                  <div className="flex justify-center space-x-3">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex items-center gap-2 bg-transparent hover:bg-orange-50 hover:text-orange-600 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(intern.linkedin || '#', '_blank');
+                      }}
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span className="sr-only">LinkedIn {intern.name}</span>
+                    </Button>
+                  </div>
+
 
                 </CardContent>
               </Card>
@@ -517,90 +532,90 @@ export function Leadership() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+
               {
-                name: "Rajesh Kumar",
-                role: "Research & Development Intern",
-                university: "IIT Kharagpur",
-                duration: "8 months",
-                image: "/placeholder.svg?height=300&width=300",
-                bio: "Led innovative research in sustainable agriculture techniques, contributing to our climate-resilient farming programs.",
-                email: "rajesh.notable@hapef.org",
-                linkedin: "#",
-                focus: ["Agricultural Innovation", "Research Methodology", "Climate Adaptation"],
-                achievements: "Published 2 research papers, Developed new farming technique",
-                startDate: "June 2023",
+                name: "Nikita Karmakar",
+                role: "Development Internship Trainee (Full-stack Developer)",
+                university: "Netaji Subhash Engineering College (Garia)",
+                image: "/nikita.jpg",
+                quote: "Working here provided me with incredible hands-on experience in full-stack development. I was able to contribute to real-world projects that directly impact rural livelihoods.",
+                startDate: "February 2026",
+                linkedin: "https://www.linkedin.com/in/nikita-karmakar/",
               },
               {
-                name: "Priya Sharma",
-                role: "Community Engagement Intern",
-                university: "JNU Delhi",
-                duration: "6 months",
-                image: "/placeholder.svg?height=300&width=300",
-                bio: "Spearheaded community outreach programs, establishing partnerships with 15+ local organizations.",
-                email: "priya.notable@hapef.org",
+                name: "Jhuma Ghosh Nandi",
+                role: "Development Internship Trainee",
+                university: "B.Com (Accounts Hons), MBA (Finance); pursuing MSW (Child and Women Development)",
+                image: "/oo.jpg",
+                quote: "I had the privilege of spearheading community outreach programs. Establishing partnerships with over 15 local organizations has shown me the power of collaboration.",
+                startDate: "6 months",
                 linkedin: "#",
-                focus: ["Community Relations", "Partnership Development", "Social Impact"],
-                achievements: "15+ partnerships established, Community impact award",
-                startDate: "August 2023",
               },
               {
                 name: "Amit Ghosh",
                 role: "Digital Innovation Intern",
                 university: "ISI Kolkata",
-                duration: "7 months",
                 image: "/placeholder.svg?height=300&width=300",
-                bio: "Developed digital solutions for rural communities, creating mobile apps for farmer education and support.",
-                email: "amit.notable@hapef.org",
-                linkedin: "#",
-                focus: ["Digital Solutions", "Mobile Development", "Rural Technology"],
-                achievements: "3 mobile apps developed, Tech innovation recognition",
+                quote: "I was able to apply my technical skills to real-world problems. Developing mobile apps for farmer education has been a rewarding journey in bridging the digital divide.",
                 startDate: "July 2023",
+                linkedin: "#",
               },
             ].map((intern, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-emerald-50 to-white"
+                className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm relative overflow-hidden"
               >
-                <CardContent className="p-6">
-                  <div className="relative mb-6">
-                    <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-emerald-400 to-emerald-600 p-1">
-                      <img
-                        src={intern.image || "/placeholder.svg"}
-                        alt={intern.name}
-                        className="w-full h-full rounded-full object-cover bg-white cursor-pointer"
-                        onClick={() => openMemberDetails(intern)}
-                      />
+                {/* Decorative Quote Icon Background */}
+                <div className="absolute top-2 right-4 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                  <Quote className="h-24 w-24 text-emerald-600 rotate-12" />
+                </div>
+
+                <CardContent className="p-8 relative z-10 flex flex-col h-full">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="relative">
+                      <div className="w-16 h-16 rounded-full overflow-hidden ring-4 ring-emerald-50 shadow-md">
+                        <img
+                          src={intern.image}
+                          alt={intern.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 bg-emerald-500 rounded-full p-1 border-2 border-white">
+                        <Quote className="h-3 w-3 text-white" />
+                      </div>
                     </div>
-
-                  </div>
-
-                  <div className="text-center mb-4">
-                    <h4 className="text-xl font-bold text-gray-900 mb-1">{intern.name}</h4>
-                    <p className="text-emerald-600 font-medium mb-1">{intern.role}</p>
-                    <p className="text-sm text-gray-500 mb-1">{intern.university}</p>
-                    <p className="text-xs text-gray-400 mb-3">{intern.duration}</p>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="text-xs text-center text-emerald-600 font-medium mb-2">
-                      <Award className="h-3 w-3 inline mr-1" />
-                      {intern.achievements}
-                    </div>
-                    <div className="flex items-center justify-center text-xs text-gray-500">
-                      <Calendar className="h-3 w-3 mr-1" />
-                      Started: {intern.startDate}
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 leading-tight">{intern.name}</h4>
+                      <p className="text-sm text-emerald-600 font-medium">{intern.role}</p>
+                      <p className="text-xs text-gray-400">{intern.university}</p>
                     </div>
                   </div>
 
-                  <div className="flex justify-center space-x-3">
-                    <Button size="sm" variant="outline" className="flex items-center gap-2 bg-transparent">
-                      <Mail className="h-4 w-4" />
-                      <span className="sr-only">Email {intern.name}</span>
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex items-center gap-2 bg-transparent">
-                      <Linkedin className="h-4 w-4" />
-                      <span className="sr-only">LinkedIn {intern.name}</span>
-                    </Button>
+                  <div className="relative flex-grow">
+                    <Quote className="absolute -top-2 -left-2 h-4 w-4 text-emerald-300 opacity-50 transform -scale-x-100" />
+                    <p className="text-gray-700 italic leading-relaxed pl-4 border-l-2 border-emerald-200">
+                      "{intern.quote}"
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <Calendar className="h-3 w-3 mr-1 text-emerald-400" />
+                      {intern.startDate}
+                    </div>
+                    <div className="flex gap-2">
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        className="h-6 w-6 rounded-full hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(intern.linkedin || '#', '_blank');
+                        }}
+                      >
+                        <Linkedin className="h-3 w-3" />
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

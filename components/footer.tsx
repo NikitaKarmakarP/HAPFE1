@@ -111,7 +111,7 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-300 text-sm mb-4 md:mb-0">
-              © 2024 HAPEF - Humanitarian Aid for Poverty Eradication Foundation. All rights reserved.
+              © 2026 HAPEF - Humanitarian Aid for Poverty Eradication Foundation. All rights reserved.
             </div>
             <div className="flex items-center gap-4">
               <span className="text-gray-400 text-sm">Follow us:</span>

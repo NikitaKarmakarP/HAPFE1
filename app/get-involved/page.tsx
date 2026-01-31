@@ -9,14 +9,14 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
   Users,
   Briefcase,
@@ -221,7 +221,7 @@ export default function GetInvolvedPage() {
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </Button>
-              
+
               <Button
                 variant="outline"
                 size="lg"
@@ -329,7 +329,7 @@ export default function GetInvolvedPage() {
                           </Badge>
                         )}
                       </div>
-                      
+
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
                         <div className="flex items-center gap-1">
                           <Briefcase className="h-4 w-4" />
@@ -348,15 +348,15 @@ export default function GetInvolvedPage() {
                           {job.salary}
                         </div>
                       </div>
-                      
+
                       <p className="text-gray-700 mb-4">{job.description}</p>
-                      
+
                       <div className="flex items-center gap-4 text-sm text-gray-500">
                         <span>{job.experience}</span>
                         <span>Posted {job.posted}</span>
                       </div>
                     </div>
-                    
+
                     <div className="lg:ml-8">
                       <Button className="w-full lg:w-auto bg-emerald-600 hover:bg-emerald-700">
                         View Details
@@ -583,8 +583,8 @@ export default function GetInvolvedPage() {
                   </Select>
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-lg"
                 >
                   <Send className="h-5 w-5 mr-2" />
@@ -676,7 +676,7 @@ export default function GetInvolvedPage() {
                   <Mail className="h-8 w-8 text-emerald-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-                <p className="text-emerald-600 font-medium">careers@hapef.org</p>
+                <p className="text-emerald-600 font-medium">info.hapef@gmail.com</p>
               </CardContent>
             </Card>
 
@@ -686,7 +686,7 @@ export default function GetInvolvedPage() {
                   <Phone className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-blue-600 font-medium">+91 98765 43210</p>
+                <p className="text-blue-600 font-medium">+91 8240374731</p>
               </CardContent>
             </Card>
 
@@ -707,7 +707,7 @@ export default function GetInvolvedPage() {
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Stay connected with us on social media to get the latest updates about new positions, team events, and our impact in rural communities.
             </p>
-            
+
             <div className="flex justify-center space-x-4">
               <a href="#" className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors">
                 <Facebook className="w-6 h-6 text-blue-600" />

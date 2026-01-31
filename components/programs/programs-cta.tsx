@@ -66,11 +66,11 @@ export function ProgramsCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <div className="flex items-center gap-2 text-white">
               <Phone className="h-5 w-5" />
-              <span>+91 XXXX XXXXXX</span>
+              <span>+91 8240374731</span>
             </div>
             <div className="flex items-center gap-2 text-white">
               <Mail className="h-5 w-5" />
-              <span>programs@hapef.org</span>
+              <span>info.hapef@gmail.com</span>
             </div>
           </div>
           <Button

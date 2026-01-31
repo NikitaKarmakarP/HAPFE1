@@ -32,12 +32,12 @@ export function ContactHero() {
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-green-100 text-center">
             <Phone className="h-12 w-12 text-green-600 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-gray-900 mb-2">Call Us</h3>
-            <p className="text-gray-600">+91 XXXX XXXXXX</p>
+            <p className="text-gray-600">+91 8240374731</p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
             <Mail className="h-12 w-12 text-blue-600 mx-auto mb-4" />
             <h3 className="text-lg font-bold text-gray-900 mb-2">Email Us</h3>
-            <p className="text-gray-600">info@hapef.org</p>
+            <p className="text-gray-600">info.hapef@gmail.com</p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
             <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />

@@ -97,11 +97,11 @@ export function MediaRoomSidebar() {
           <div className="space-y-2 text-sm">
             <div>
               <span className="font-medium">Media Relations</span>
-              <p className="text-gray-600">media@hapef.org</p>
+              <p className="text-gray-600">info.hapef@gmail.com</p>
             </div>
             <div>
               <span className="font-medium">Phone</span>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
+              <p className="text-gray-600">+91 8240374731</p>
             </div>
             <div>
               <span className="font-medium">Office Hours</span>

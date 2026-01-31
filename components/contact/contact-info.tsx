@@ -26,7 +26,7 @@ export function ContactInfo() {
             <Phone className="h-7 w-7 text-green-600 flex-shrink-0" />
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Phone</h4>
-              <p className="text-gray-700 text-base">+91&nbsp;XXXX&nbsp;XXXXXX</p>
+              <p className="text-gray-700 text-base">+91 8240374731</p>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ export function ContactInfo() {
             <Mail className="h-7 w-7 text-green-600 flex-shrink-0" />
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Email</h4>
-              <p className="text-gray-700 text-base">info@hapef.org</p>
+              <p className="text-gray-700 text-base">info.hapef@gmail.com</p>
             </div>
           </div>
 
