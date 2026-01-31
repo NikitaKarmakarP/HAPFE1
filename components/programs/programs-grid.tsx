@@ -11,7 +11,7 @@ export function ProgramsGrid() {
       description:
         "Comprehensive training and resources for oyster and button mushroom cultivation, helping rural families generate sustainable income through modern farming techniques.",
       features: ["Capacity building training", "Seed funding support", "Market linkage", "Technical guidance"],
-      stats: { beneficiaries: "4000+", villages: "40", success: "90%" },
+      stats: { beneficiaries: "200+", villages: "25+", success: "90%" },
       image: "/mu.jpg",
       href: "/programs/mushroom-entrepreneurship",
       color: "green",
@@ -67,11 +67,22 @@ export function ProgramsGrid() {
   ]
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-green-50 to-transparent rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 text-green-700 text-sm font-semibold tracking-wide uppercase mb-6 shadow-sm">
+            <Sprout className="h-4 w-4" />
+            <span>Impact Initiatives</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600">Programs</span>
+          </h2>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Each program is designed with specific objectives and measurable outcomes to ensure maximum impact on rural
             communities.
           </p>
@@ -117,16 +128,18 @@ export function ProgramsGrid() {
                   <div className="flex items-center gap-6">
                     <div className="text-center">
                       <div className={`font-bold text-lg text-${program.color}-600`}>{program.stats.beneficiaries}</div>
-                      <div className="text-xs text-gray-600">Beneficiaries</div>
+                      <div className="text-xs text-gray-600">Families Trained</div>
                     </div>
                     <div className="text-center">
                       <div className={`font-bold text-lg text-${program.color}-600`}>{program.stats.villages}</div>
                       <div className="text-xs text-gray-600">Villages</div>
                     </div>
-                    <div className="text-center">
-                      <div className={`font-bold text-lg text-${program.color}-600`}>{program.stats.success}</div>
-                      <div className="text-xs text-gray-600">Success Rate</div>
-                    </div>
+                    {program.stats.success && (
+                      <div className="text-center">
+                        <div className={`font-bold text-lg text-${program.color}-600`}>{program.stats.success}</div>
+                        <div className="text-xs text-gray-600">Success Rate</div>
+                      </div>
+                    )}
                   </div>
                 </div>
 

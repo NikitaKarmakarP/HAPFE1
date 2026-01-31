@@ -48,11 +48,22 @@ export function ProgramsStats() {
   ]
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Program Impact</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+    <section className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-b from-blue-50 to-transparent rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold tracking-wide uppercase mb-6 shadow-sm">
+            <TrendingUp className="h-4 w-4" />
+            <span>Measurable Outcomes</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+            Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Impact</span>
+          </h2>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our programs have created measurable, lasting impact across multiple dimensions of rural development.
           </p>
         </div>

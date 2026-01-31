@@ -10,6 +10,14 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
   MapPin,
   Phone,
   Mail,
@@ -35,6 +43,42 @@ import {
 } from "lucide-react"
 
 export default function GetInvolvedPage() {
+  const [formPosition, setFormPosition] = useState("")
+  const [formExperience, setFormExperience] = useState("")
+  const [formSource, setFormSource] = useState("")
+  const [formFileName, setFormFileName] = useState("")
+
+  const handleApplicationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      position: formPosition,
+      experience: formExperience,
+      coverLetter: formData.get("coverLetter"),
+      portfolio: formData.get("portfolio"),
+      source: formSource,
+    }
+
+    const subject = `Job Application: ${data.position} - ${data.firstName} ${data.lastName}`
+    const body = `
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Position: ${data.position}
+Experience: ${data.experience}
+Portfolio: ${data.portfolio}
+Source: ${data.source}
+
+Cover Letter:
+${data.coverLetter}
+    `.trim()
+
+    window.location.href = `mailto:info.hapef@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
   const [selectedDepartment, setSelectedDepartment] = useState("All Departments")
   const [selectedType, setSelectedType] = useState("All Types")
   const [selectedLocation, setSelectedLocation] = useState("All Locations")
@@ -42,64 +86,16 @@ export default function GetInvolvedPage() {
   const jobPositions = [
     {
       id: 1,
-      title: "Program Manager - Rural Development",
+      title: "Development Intership Trainee",
       department: "Programs",
-      location: "Kolkata, West Bengal",
-      type: "Full-time",
-      salary: "₹8-12 LPA",
-      experience: "5-8 years experience",
-      posted: "1/15/2024",
+      location: "Pakur, Jharkhand",
+      type: "Duration - Two Months, Onsite",
+      salary: "Unpaid",
+      experience: "Degree - Any Graduate or Post Graduate",
+      posted: "1/02/2026",
       urgent: true,
-      description: "Lead and manage rural development programs focusing on sustainable agriculture and community empowerment."
-    },
-    {
-      id: 2,
-      title: "Agricultural Specialist",
-      department: "Agriculture",
-      location: "Remote",
-      type: "Full-time",
-      salary: "₹6-9 LPA",
-      experience: "3-5 years experience",
-      posted: "1/10/2024",
-      urgent: false,
-      remote: true,
-      description: "Provide technical expertise in sustainable agriculture practices and mushroom cultivation techniques."
-    },
-    {
-      id: 3,
-      title: "Community Outreach Coordinator",
-      department: "Community Development",
-      location: "Multiple Locations",
-      type: "Full-time",
-      salary: "₹4-6 LPA",
-      experience: "2-4 years experience",
-      posted: "1/8/2024",
-      urgent: true,
-      description: "Build relationships with rural communities and coordinate outreach programs."
-    },
-    {
-      id: 4,
-      title: "Marketing & Communications Intern",
-      department: "Communications",
-      location: "Kolkata, West Bengal",
-      type: "Internship",
-      salary: "₹15,000/month",
-      experience: "0-1 years experience",
-      posted: "1/5/2024",
-      urgent: false,
-      description: "Support marketing and communications efforts to raise awareness about our programs."
-    },
-    {
-      id: 5,
-      title: "Finance & Operations Manager",
-      department: "Finance",
-      location: "Kolkata, West Bengal",
-      type: "Full-time",
-      salary: "₹7-10 LPA",
-      experience: "4-6 years experience",
-      posted: "1/3/2024",
-      urgent: false,
-      description: "Manage financial operations, budgeting, and ensure compliance with NGO regulations."
+      remote: false,
+      description: "Manage rural development programs focusing on sustainable agriculture and community empowerment."
     }
   ]
 
@@ -170,7 +166,6 @@ export default function GetInvolvedPage() {
       description: "Work in a collaborative and inclusive team culture",
       features: [
         "Flexible work arrangements",
-        "Health and wellness benefits",
         "Inclusive and diverse workplace"
       ]
     }
@@ -237,7 +232,7 @@ export default function GetInvolvedPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-600 mb-2">25+</div>
+                <div className="text-3xl font-bold text-emerald-600 mb-2">10+</div>
                 <div className="text-sm text-gray-600 font-medium">Team Members</div>
               </div>
               <div className="text-center">
@@ -245,7 +240,7 @@ export default function GetInvolvedPage() {
                 <div className="text-sm text-gray-600 font-medium">Remote Friendly</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">1</div>
                 <div className="text-sm text-gray-600 font-medium">Open Positions</div>
               </div>
             </div>
@@ -343,10 +338,7 @@ export default function GetInvolvedPage() {
                           <Clock className="h-4 w-4" />
                           {job.type}
                         </div>
-                        <div className="flex items-center gap-1">
-                          <DollarSign className="h-4 w-4" />
-                          {job.salary}
-                        </div>
+
                       </div>
 
                       <p className="text-gray-700 mb-4">{job.description}</p>
@@ -358,9 +350,61 @@ export default function GetInvolvedPage() {
                     </div>
 
                     <div className="lg:ml-8">
-                      <Button className="w-full lg:w-auto bg-emerald-600 hover:bg-emerald-700">
-                        View Details
-                      </Button>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button className="w-full lg:w-auto bg-emerald-600 hover:bg-emerald-700">
+                            View Details
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+                          <DialogHeader>
+                            <div className="flex items-center gap-2 mb-2">
+                              <Badge variant="outline" className="border-emerald-200 text-emerald-700 bg-emerald-50">{job.department}</Badge>
+                              {job.urgent && <Badge className="bg-red-100 text-red-800 hover:bg-red-100 border-0">Urgent</Badge>}
+                            </div>
+                            <DialogTitle className="text-2xl font-bold text-gray-900">{job.title}</DialogTitle>
+                            <DialogDescription className="text-gray-500 flex flex-wrap gap-x-4 gap-y-2 mt-2">
+                              <span className="flex items-center gap-1"><MapPinIcon className="h-4 w-4" /> {job.location}</span>
+                              <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> {job.type}</span>
+                            </DialogDescription>
+                          </DialogHeader>
+
+                          <div className="space-y-6 py-4">
+                            <div>
+                              <h4 className="font-semibold text-gray-900 mb-2">About the Role</h4>
+                              <p className="text-gray-600 leading-relaxed">{job.description}</p>
+                            </div>
+
+                            <div>
+                              <h4 className="font-semibold text-gray-900 mb-2">Key Responsibilities</h4>
+                              <ul className="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>Support the planning and execution of rural development projects.</li>
+                                <li>Engage with local communities to understand their needs and challenges.</li>
+                                <li>Assist in data collection, monitoring, and reporting of program impact.</li>
+                                <li>Coordinate with field staff and stakeholders to ensure smooth operations.</li>
+                                <li>Contribute to the creation of training materials and workshops.</li>
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="font-semibold text-gray-900 mb-2">Requirements</h4>
+                              <div className="bg-gray-50 p-4 rounded-lg space-y-2 text-sm text-gray-600">
+                                <p><span className="font-medium text-gray-900">Experience:</span> {job.experience}</p>
+                                <p><span className="font-medium text-gray-900">Education:</span> Graduate or Post Graduate degree in Social Work, Rural Development, Agriculture, or related fields.</p>
+                                <p><span className="font-medium text-gray-900">Skills:</span> Strong communication, empathy, basic computer literacy, and willingness to work in rural settings.</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="flex justify-end gap-3 pt-4 border-t">
+                            <Button className="bg-emerald-600 hover:bg-emerald-700 w-full sm:w-auto" onClick={() => {
+                              document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' });
+                            }}>
+                              Apply Now
+                            </Button>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </div>
                 </CardContent>
@@ -368,9 +412,7 @@ export default function GetInvolvedPage() {
             ))}
           </div>
 
-          <div className="text-center text-gray-600">
-            Showing 5 of 5 positions
-          </div>
+
         </div>
       </section>
 
@@ -424,6 +466,9 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
+
+      {/* ... */}
+
       {/* Quick Application Form */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -438,7 +483,7 @@ export default function GetInvolvedPage() {
 
           <Card className="shadow-xl">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleApplicationSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
@@ -446,6 +491,7 @@ export default function GetInvolvedPage() {
                     </Label>
                     <Input
                       id="firstName"
+                      name="firstName"
                       type="text"
                       className="mt-1"
                       placeholder="Enter your first name"
@@ -458,6 +504,7 @@ export default function GetInvolvedPage() {
                     </Label>
                     <Input
                       id="lastName"
+                      name="lastName"
                       type="text"
                       className="mt-1"
                       placeholder="Enter your last name"
@@ -473,6 +520,7 @@ export default function GetInvolvedPage() {
                     </Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       className="mt-1"
                       placeholder="Enter your email"
@@ -485,6 +533,7 @@ export default function GetInvolvedPage() {
                     </Label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
                       className="mt-1"
                       placeholder="Enter your phone number"
@@ -497,17 +546,12 @@ export default function GetInvolvedPage() {
                     <Label htmlFor="position" className="text-sm font-medium text-gray-700">
                       Position of Interest *
                     </Label>
-                    <Select>
+                    <Select value={formPosition} onValueChange={setFormPosition}>
                       <SelectTrigger className="mt-1">
                         <SelectValue placeholder="Select a position" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="program-manager">Program Manager - Rural Development</SelectItem>
-                        <SelectItem value="agricultural-specialist">Agricultural Specialist</SelectItem>
-                        <SelectItem value="community-coordinator">Community Outreach Coordinator</SelectItem>
-                        <SelectItem value="marketing-intern">Marketing & Communications Intern</SelectItem>
-                        <SelectItem value="finance-manager">Finance & Operations Manager</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                        <SelectItem value="development-internship-trainee">Development Internship Trainee</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -515,7 +559,7 @@ export default function GetInvolvedPage() {
                     <Label htmlFor="experience" className="text-sm font-medium text-gray-700">
                       Years of Experience *
                     </Label>
-                    <Select>
+                    <Select value={formExperience} onValueChange={setFormExperience}>
                       <SelectTrigger className="mt-1">
                         <SelectValue placeholder="Select experience level" />
                       </SelectTrigger>
@@ -533,11 +577,31 @@ export default function GetInvolvedPage() {
                   <Label htmlFor="resume" className="text-sm font-medium text-gray-700">
                     Resume/CV *
                   </Label>
-                  <div className="mt-1 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-400 transition-colors">
+                  <label
+                    htmlFor="resume-upload"
+                    className="mt-1 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-400 transition-colors cursor-pointer block bg-gray-50/50 hover:bg-white"
+                  >
+                    <input
+                      id="resume-upload"
+                      type="file"
+                      className="hidden"
+                      accept=".pdf,.doc,.docx"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0]
+                        if (file) setFormFileName(file.name)
+                      }}
+                    />
                     <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                    <p className="text-sm text-gray-600">Click to upload or drag and drop</p>
-                    <p className="text-xs text-gray-500">PDF, DOC, or DOCX (max 5MB)</p>
-                  </div>
+                    {formFileName ? (
+                      <p className="text-sm text-emerald-600 font-medium break-all">{formFileName}</p>
+                    ) : (
+                      <>
+                        <p className="text-sm text-gray-600">Click to upload or drag and drop</p>
+                        <p className="text-xs text-gray-500">PDF, DOC, or DOCX (max 5MB)</p>
+                      </>
+                    )}
+                    <p className="text-xs text-amber-600 mt-2 font-medium">(Note: Attach your resume manually in the email draft)</p>
+                  </label>
                 </div>
 
                 <div>
@@ -546,6 +610,7 @@ export default function GetInvolvedPage() {
                   </Label>
                   <Textarea
                     id="coverLetter"
+                    name="coverLetter"
                     className="mt-1"
                     rows={4}
                     placeholder="Tell us why you're interested in this position and how you can contribute to our mission..."
@@ -558,6 +623,7 @@ export default function GetInvolvedPage() {
                   </Label>
                   <Input
                     id="portfolio"
+                    name="portfolio"
                     type="url"
                     className="mt-1"
                     placeholder="https://your-portfolio.com"
@@ -568,7 +634,7 @@ export default function GetInvolvedPage() {
                   <Label htmlFor="hearAbout" className="text-sm font-medium text-gray-700">
                     How did you hear about us?
                   </Label>
-                  <Select>
+                  <Select value={formSource} onValueChange={setFormSource}>
                     <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select an option" />
                     </SelectTrigger>

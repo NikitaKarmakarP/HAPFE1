@@ -9,8 +9,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import Link from "next/link"
 
-export function ImpactStories() {
+export function ImpactStories({ hideViewAll = false }: { hideViewAll?: boolean }) {
   const stories = [
     {
       name: "Punam Devi",
@@ -36,18 +37,7 @@ export function ImpactStories() {
       beforeIncome: "₹25,000",
       afterIncome: "₹45,000",
     },
-    {
-      name: "Sunita Kumari",
-      location: "Pakur District, Jharkhand",
-      program: "Community Leadership",
-      story:
-        "I was just a housewife with no voice in community decisions. Through HAPEF's leadership program, I learned to speak up, organize, and lead. Today, I'm the village head and have initiated several development projects. I've helped establish a women's self-help group that now has 50 members.",
-      image: "/placeholder.svg?height=100&width=100",
-      impact: "Community leader",
-      rating: 5,
-      beforeIncome: "₹0",
-      afterIncome: "₹12,000",
-    },
+
   ]
 
   return (
@@ -75,7 +65,7 @@ export function ImpactStories() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
           {stories.map((story, index) => (
             <Card
               key={index}
@@ -104,31 +94,7 @@ export function ImpactStories() {
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-5 border border-gray-100 shadow-inner group-hover:border-green-100 transition-colors">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Monthly Income</span>
-                      <span className="text-xs font-bold text-white bg-green-500 px-2 py-0.5 rounded-full">{story.impact}</span>
-                    </div>
 
-                    <div className="flex items-center justify-between relative">
-                      {/* Connecting Line */}
-                      <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-200 -z-10"></div>
-
-                      <div className="text-center bg-white px-2 relative z-0">
-                        <div className="text-xs text-gray-400 mb-1 font-medium">Before</div>
-                        <div className="font-bold text-gray-600 text-lg">{story.beforeIncome}</div>
-                      </div>
-
-                      <div className="w-8 h-8 rounded-full bg-white border border-green-100 flex items-center justify-center shadow-sm text-green-500">
-                        <ArrowRight className="h-4 w-4" />
-                      </div>
-
-                      <div className="text-center bg-white px-2 relative z-0">
-                        <div className="text-xs text-green-600 mb-1 font-bold">After</div>
-                        <div className="font-bold text-green-700 text-xl">{story.afterIncome}</div>
-                      </div>
-                    </div>
-                  </div>
 
                   <div className="mt-6 flex items-center justify-between">
                     <div className="flex gap-0.5">
@@ -190,15 +156,19 @@ export function ImpactStories() {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-gray-900 hover:bg-green-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-          >
-            View All Success Stories
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
+        {!hideViewAll && (
+          <div className="text-center">
+            <Link href="/impact/stories">
+              <Button
+                size="lg"
+                className="bg-gray-900 hover:bg-green-700 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                View All Success Stories
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   )
