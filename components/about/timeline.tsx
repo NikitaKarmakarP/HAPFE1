@@ -59,18 +59,30 @@ export function Timeline() {
       </div>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Enhanced Header */}
-        <div className="relative text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            <span className="inline-flex items-center gap-2">
-              <Sparkles className="h-6 w-6 text-emerald-500" />
-              <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">
+        {/* Enhanced Header */}
+        <div className="relative text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-emerald-100 shadow-sm mb-6 animate-fade-in-up">
+            <Calendar className="h-4 w-4 text-emerald-600" />
+            <span className="text-sm font-bold text-emerald-800 tracking-wider uppercase">Our Journey</span>
+          </div>
+
+          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6 relative z-10">
+            <span className="relative inline-block">
+              <span className="absolute -inset-1 bg-gradient-to-r from-emerald-200 to-indigo-200 blur-xl opacity-30"></span>
+              <span className="relative bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 bg-clip-text text-transparent">
                 Our Milestones
               </span>
             </span>
           </h2>
-          <div className="mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-emerald-400 to-indigo-400 mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A timeline of dedicated service, continuous growth, and measurable impact in rural communities.
+
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-transparent to-emerald-400"></div>
+            <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></div>
+            <div className="h-1 w-12 rounded-full bg-gradient-to-r from-emerald-400 to-transparent"></div>
+          </div>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
+            A timeline of <span className="font-semibold text-emerald-700">dedicated service</span>, <span className="font-semibold text-blue-700">continuous growth</span>, and <span className="font-semibold text-indigo-700">measurable impact</span> in rural communities.
           </p>
         </div>
 

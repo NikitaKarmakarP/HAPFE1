@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -633,17 +634,21 @@ export function Leadership() {
               experience in creating meaningful change.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
-                <GraduationCap className="mr-2 h-5 w-5" />
-                Apply for Internship
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
-              >
-                Learn About Our Programs
-              </Button>
+              <Link href="/get-involved/internship">
+                <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-100">
+                  <GraduationCap className="mr-2 h-5 w-5" />
+                  Apply for Internship
+                </Button>
+              </Link>
+              <Link href="/programs">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-orange-600 bg-transparent"
+                >
+                  Learn About Our Programs
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

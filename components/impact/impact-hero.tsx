@@ -29,20 +29,52 @@ export function ImpactHero() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
-            <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">5000+</div>
-            <div className="text-sm text-gray-600">Families Empowered</div>
+          {/* Families Empowered */}
+          <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-6 inline-block relative">
+              <div className="absolute inset-0 bg-blue-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
+              <div className="relative w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <Users className="h-10 w-10 text-white transform group-hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-indigo-600 mb-3 tracking-tight">
+              5000+
+            </div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-blue-700 transition-colors">Families Empowered</div>
+            <div className="text-sm text-gray-500 font-medium">Direct beneficiaries</div>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
-            <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">40+</div>
-            <div className="text-sm text-gray-600">Villages Reached</div>
+
+          {/* Villages Reached */}
+          <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-6 inline-block relative">
+              <div className="absolute inset-0 bg-purple-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
+              <div className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-fuchsia-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+                <MapPin className="h-10 w-10 text-white transform group-hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-fuchsia-600 mb-3 tracking-tight">
+              40+
+            </div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Villages Reached</div>
+            <div className="text-sm text-gray-500 font-medium">Across multiple states</div>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100 text-center">
-            <Award className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-            <div className="text-4xl font-bold text-gray-900 mb-2">3+</div>
-            <div className="text-sm text-gray-600">Years of Service</div>
+
+          {/* Years of Service */}
+          <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
+            <div className="mb-6 inline-block relative">
+              <div className="absolute inset-0 bg-orange-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
+              <div className="relative w-24 h-24 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <Award className="h-10 w-10 text-white transform group-hover:scale-110 transition-transform duration-300" />
+              </div>
+            </div>
+
+            <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-amber-600 mb-3 tracking-tight">
+              3+
+            </div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-orange-700 transition-colors">Years of Service</div>
+            <div className="text-sm text-gray-500 font-medium">Continuous impact</div>
           </div>
         </div>
       </div>

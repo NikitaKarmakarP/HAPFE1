@@ -89,7 +89,7 @@ export default function StrategicPartnershipsPage() {
           />
           */}
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="max-w-4xl">
             <div className="flex items-center mb-4">
@@ -197,7 +197,6 @@ export default function StrategicPartnershipsPage() {
       </section>
 
 
-
       {/* Thematic Impact Highlights */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +217,6 @@ export default function StrategicPartnershipsPage() {
           </div>
         </div>
       </section>
-      
 
 
       {/* Impact Statistics */}

@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link"
 import { Camera, Users, Heart, Target } from "lucide-react"
 
 export function ImageGallery() {
@@ -51,7 +52,7 @@ export function ImageGallery() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Witness the transformative power of community-driven development through these glimpses of our work 
+            Witness the transformative power of community-driven development through these glimpses of our work
             across rural India, where every interaction creates lasting positive change.
           </p>
         </div>
@@ -61,8 +62,8 @@ export function ImageGallery() {
           {galleryImages.map((image, index) => {
             const IconComponent = image.icon
             return (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="relative overflow-hidden">
@@ -72,7 +73,7 @@ export function ImageGallery() {
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   {/* Overlay Content */}
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex items-center gap-2 mb-2">
@@ -103,16 +104,22 @@ export function ImageGallery() {
             Be Part of Our Story
           </h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Every image tells a story of transformation, hope, and sustainable change. 
+            Every image tells a story of transformation, hope, and sustainable change.
             Join us in creating more such moments of impact across rural India.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg">
+            <Link
+              href="/programs"
+              className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg inline-block"
+            >
               View Our Programs
-            </button>
-            <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-all duration-300">
+            </Link>
+            <Link
+              href="/get-involved"
+              className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-all duration-300 inline-block"
+            >
               Get Involved
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -14,6 +14,12 @@ export function OurPartners() {
 
   const partners = [
     {
+      name: "Government of Jharkhand",
+      category: "Strategic Partnerships",
+      logo: "/jharkhand-govt.png",
+      description: "Partnering for inclusive growth and sustainable development in Jharkhand."
+    },
+    {
       name: "Government of West Bengal",
       category: "Government Partner",
       logo: "🏛️",
@@ -25,18 +31,7 @@ export function OurPartners() {
       logo: "🌍",
       description: "Collaboration on child welfare and education programs in rural communities."
     },
-    {
-      name: "Tata Trusts",
-      category: "Corporate Foundation",
-      logo: "🏢",
-      description: "Supporting livelihood development and women empowerment programs."
-    },
-    {
-      name: "Ford Foundation",
-      category: "International Foundation",
-      logo: "🌐",
-      description: "Funding social justice and community development initiatives."
-    },
+
     {
       name: "State Bank of India",
       category: "Financial Institution",
@@ -96,8 +91,12 @@ export function OurPartners() {
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
                   <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 group h-full">
                     <CardHeader className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                        {partner.logo}
+                      <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                        {partner.logo.startsWith("/") ? (
+                          <img src={partner.logo} alt={partner.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <span className="text-3xl">{partner.logo}</span>
+                        )}
                       </div>
                       <CardTitle className="text-lg leading-tight">
                         {partner.name}
