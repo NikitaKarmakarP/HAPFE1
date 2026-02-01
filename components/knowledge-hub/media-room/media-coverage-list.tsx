@@ -37,92 +37,6 @@ const mediaCoverage = [
     url: "https://example.com/dd-news-video",
     image: "/placeholder.svg?height=150&width=200&text=DD+News+Feature",
   },
-  {
-    id: 3,
-    title: "Empowering Women Through Self-Help Groups",
-    publication: "All India Radio",
-    type: "radio",
-    date: "2024-01-15",
-    summary:
-      "Radio interview with HAPEF's Executive Director discussing women's empowerment initiatives and their community impact.",
-    url: "https://example.com/air-interview",
-    image: "/placeholder.svg?height=150&width=200&text=AIR+Interview",
-  },
-  {
-    id: 4,
-    title: "Rural Development Success: HAPEF's Convergence Model",
-    publication: "The Hindu",
-    type: "print",
-    date: "2024-01-12",
-    summary:
-      "In-depth analysis of HAPEF's convergence approach to rural development and its effectiveness in creating sustainable change.",
-    url: "https://example.com/hindu-article",
-    image: "/placeholder.svg?height=150&width=200&text=Hindu+Article",
-  },
-  {
-    id: 5,
-    title: "Digital Innovation in Rural Healthcare",
-    publication: "News18 Bengal",
-    type: "online",
-    date: "2024-01-10",
-    summary: "Online feature about HAPEF's use of technology to improve healthcare access in remote villages.",
-    url: "https://example.com/news18-article",
-    image: "/placeholder.svg?height=150&width=200&text=News18+Article",
-  },
-  {
-    id: 6,
-    title: "Sustainable Development Goals in Action",
-    publication: "Zee 24 Ghanta",
-    type: "tv",
-    date: "2024-01-08",
-    summary:
-      "Television report on how HAPEF's programs align with and contribute to achieving the UN Sustainable Development Goals.",
-    url: "https://example.com/zee-report",
-    image: "/placeholder.svg?height=150&width=200&text=Zee+Report",
-  },
-  {
-    id: 7,
-    title: "Community-Led Water Conservation Initiatives",
-    publication: "Anandabazar Patrika",
-    type: "print",
-    date: "2024-01-05",
-    summary: "Feature story on HAPEF's water conservation projects and their impact on drought-prone areas.",
-    url: "https://example.com/abp-article",
-    image: "/placeholder.svg?height=150&width=200&text=ABP+Article",
-  },
-  {
-    id: 8,
-    title: "Education for All: HAPEF's Learning Centers",
-    publication: "Akashvani Kolkata",
-    type: "radio",
-    date: "2024-01-03",
-    summary:
-      "Radio program featuring success stories from HAPEF's community learning centers and adult literacy programs.",
-    url: "https://example.com/akashvani-program",
-    image: "/placeholder.svg?height=150&width=200&text=Akashvani+Program",
-  },
-  {
-    id: 9,
-    title: "NGO Innovation Awards: HAPEF Recognized",
-    publication: "Times of India",
-    type: "online",
-    date: "2023-12-28",
-    summary:
-      "Coverage of HAPEF receiving recognition for innovative approaches to rural development and community empowerment.",
-    url: "https://example.com/toi-award",
-    image: "/placeholder.svg?height=150&width=200&text=TOI+Award",
-  },
-  {
-    id: 10,
-    title: "Youth Leadership in Rural Development",
-    publication: "Star Jalsha",
-    type: "tv",
-    date: "2023-12-25",
-    summary:
-      "Television interview with young leaders from HAPEF's internship program discussing their contributions to rural development.",
-    url: "https://example.com/star-jalsha",
-    image: "/placeholder.svg?height=150&width=200&text=Star+Jalsha",
-  },
 ]
 
 export function MediaCoverageList() {
@@ -185,9 +99,8 @@ export function MediaCoverageList() {
                 key={type.id}
                 variant={selectedType === type.id ? "default" : "outline"}
                 onClick={() => setSelectedType(type.id)}
-                className={`flex items-center gap-2 ${
-                  selectedType === type.id ? "bg-green-600 hover:bg-green-700" : ""
-                }`}
+                className={`flex items-center gap-2 ${selectedType === type.id ? "bg-green-600 hover:bg-green-700" : ""
+                  }`}
               >
                 <Icon className="h-4 w-4" />
                 {type.label}

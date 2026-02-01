@@ -127,16 +127,7 @@ export function DonorTestimonials() {
 
                     <CardContent>
                       {/* Program & Donation Info */}
-                      <div className="mb-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
-                        <div className="flex justify-between items-center text-sm">
-                          <span className="text-gray-600">Program:</span>
-                          <span className="font-medium text-green-700">{testimonial.program}</span>
-                        </div>
-                        <div className="flex justify-between items-center text-sm mt-2">
-                          <span className="text-gray-600">Contribution:</span>
-                          <span className="font-bold text-green-600">{testimonial.donationAmount}</span>
-                        </div>
-                      </div>
+
 
                       {/* Donor Info */}
                       <div className="flex items-center">

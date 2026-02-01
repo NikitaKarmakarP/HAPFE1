@@ -46,14 +46,7 @@ export function Recognition() {
     },
   ]
 
-  const partnerships = [
-    {
-      name: "Government of Jharkhand",
-      type: "Strategic Partnership",
-      logo: "/jharkhand-govt.png",
-      description: "Partnering for inclusive growth and sustainable development in Jharkhand.",
-    },
-  ]
+
 
   return (
     <section
@@ -159,73 +152,7 @@ export function Recognition() {
         </div>
 
         {/* Key Partnerships */}
-        <div className="mb-24">
-          <div className="text-center mb-20 relative">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-emerald-100 rounded-full blur-3xl opacity-50 -z-10"></div>
-            <h3 className="relative inline-block text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-800 via-teal-600 to-emerald-900 mb-6 tracking-tight">
-              Strategic Partnerships
-              <div className="absolute -bottom-4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-50"></div>
-            </h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed mt-8">
-              Collaborating with leading institutions to drive impact.
-            </p>
-          </div>
 
-          <div className="flex justify-center px-4">
-            {partnerships.map((partner, index) => (
-              <div
-                key={index}
-                className="group relative bg-white rounded-[3rem] p-2 shadow-2xl hover:shadow-[0_20px_60px_-15px_rgba(16,185,129,0.3)] transition-all duration-700 max-w-5xl w-full"
-              >
-                {/* Outer Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600 rounded-[3rem] opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-700 -z-10"></div>
-
-                <div className="bg-gradient-to-br from-white via-emerald-50/20 to-white rounded-[2.5rem] p-8 md:p-16 h-full flex flex-col md:flex-row items-center gap-12 relative overflow-hidden backdrop-blur-xl border border-white/50">
-
-                  {/* Decorative background logo opacity */}
-                  <div className="absolute -right-24 -top-24 w-[30rem] h-[30rem] bg-gradient-to-br from-emerald-100/30 to-teal-50/30 rounded-full blur-3xl pointer-events-none mix-blend-multiply"></div>
-
-                  <div className="relative shrink-0 group-hover:-translate-y-2 transition-transform duration-700">
-                    <div className="w-48 h-48 md:w-64 md:h-64 bg-white rounded-full shadow-[0_15px_50px_-10px_rgba(0,0,0,0.1)] flex items-center justify-center relative z-10 p-8 border-[6px] border-emerald-50/50">
-                      {/* Actual Govt Logo */}
-                      <div className="relative w-full h-full p-2">
-                        <img
-                          src={partner.logo}
-                          alt="Government of Jharkhand Logo"
-                          className="w-full h-full object-contain filter hover:brightness-110 transition-all duration-500"
-                        />
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold uppercase tracking-[0.25em] px-6 py-2.5 rounded-full shadow-xl whitespace-nowrap z-20 border-2 border-white ring-4 ring-emerald-100">
-                      Official Partner
-                    </div>
-                  </div>
-
-                  <div className="text-center md:text-left flex-1 relative z-10 pt-6 md:pt-0">
-                    <div className="inline-flex items-center gap-3 mb-6 bg-emerald-50 px-5 py-2 rounded-full border border-emerald-100 shadow-sm">
-                      <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                      </span>
-                      <span className="text-emerald-800 font-bold text-xs tracking-widest uppercase">{partner.type}</span>
-                    </div>
-
-                    <h4 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                      {partner.name}
-                    </h4>
-
-                    <div className="relative">
-                      <span className="absolute -left-6 -top-6 text-8xl text-emerald-100 serif font-serif select-none pointer-events-none">"</span>
-                      <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium italic relative z-10 pl-2">
-                        {partner.description}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
       </div>
     </section>
