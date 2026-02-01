@@ -41,44 +41,7 @@ const reports: Report[] = [
       "Enhanced partnerships and resource mobilization",
     ],
   },
-  {
-    year: 2024,
-    slug: "2023-2024",
-    title: "Annual Report 2023-2024",
-    summary:
-      "A comprehensive review of our impact, partnerships, and financial statements for 2023-2024.",
-    pdfUrl: "#",
-    coverImage: "/placeholder.svg",
-    metrics: [
-      { label: "Lives Impacted", value: "10,000+", icon: "users" },
-      { label: "Programs", value: "15", icon: "briefcase" },
-      { label: "Districts", value: "3", icon: "map" },
-    ],
-    highlights: [
-      "Scaled climate-resilient agriculture interventions",
-      "Introduced digital training modules",
-      "Broadened outreach across priority geographies",
-    ],
-  },
-  {
-    year: 2023,
-    slug: "2022-2023",
-    title: "Annual Report 2022-2023",
-    summary:
-      "Year-in-review with key achievements, stories from the ground, and audited figures.",
-    pdfUrl: "#",
-    coverImage: "/placeholder.svg",
-    metrics: [
-      { label: "Lives Impacted", value: "8,500+", icon: "users" },
-      { label: "Programs", value: "12", icon: "briefcase" },
-      { label: "Districts", value: "2", icon: "map" },
-    ],
-    highlights: [
-      "Expanded livelihood initiatives across rural communities",
-      "Launched new capacity-building trainings",
-      "Strengthened partnerships with local institutions",
-    ],
-  },
+
 ]
 
 export function AnnualReportsList() {

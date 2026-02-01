@@ -37,39 +37,7 @@ export function KnowledgeGrid() {
       downloads: 156,
       views: 2100,
     },
-    {
-      type: "Template",
-      title: "Program Application Forms",
-      description: "Standard application forms for all HAPEF programs with guidelines",
-      author: "Priya Sharma",
-      date: "December 2023",
-      category: "Downloads",
-      image: "/placeholder.svg?height=200&width=300",
-      downloads: 89,
-      views: 450,
-    },
-    {
-      type: "Report",
-      title: "Climate-Resilient Agriculture Impact Report 2023",
-      description: "Comprehensive analysis of our climate adaptation program outcomes",
-      author: "Dr. Rajesh Kumar",
-      date: "November 2023",
-      category: "Reports",
-      image: "/placeholder.svg?height=200&width=300",
-      downloads: 312,
-      views: 980,
-    },
-    {
-      type: "Training",
-      title: "Financial Literacy for Rural Entrepreneurs",
-      description: "Essential financial management skills for small-scale rural businesses",
-      author: "HAPEF Team",
-      date: "October 2023",
-      category: "Training",
-      image: "/placeholder.svg?height=200&width=300",
-      downloads: 178,
-      views: 750,
-    },
+
   ]
 
   return (

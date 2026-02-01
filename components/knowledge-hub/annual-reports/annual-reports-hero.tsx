@@ -73,16 +73,16 @@ export function AnnualReportsHero() {
               {/* Mini metrics */}
               <div className="mt-5 grid grid-cols-3 gap-3">
                 <div className="rounded-lg bg-blue-50 p-3 text-center">
-                  <div className="text-xs text-blue-700 font-medium">Lives</div>
-                  <div className="text-lg font-bold text-blue-700">12,500+</div>
+                  <div className="text-xs text-blue-700 font-medium">Lives Impacted</div>
+                  <div className="text-lg font-bold text-blue-700">5000+</div>
                 </div>
                 <div className="rounded-lg bg-green-50 p-3 text-center">
                   <div className="text-xs text-green-700 font-medium">Programs</div>
-                  <div className="text-lg font-bold text-green-700">18</div>
+                  <div className="text-lg font-bold text-green-700">4</div>
                 </div>
                 <div className="rounded-lg bg-purple-50 p-3 text-center">
                   <div className="text-xs text-purple-700 font-medium">Districts</div>
-                  <div className="text-lg font-bold text-purple-700">4</div>
+                  <div className="text-lg font-bold text-purple-700">2</div>
                 </div>
               </div>
 
@@ -90,8 +90,6 @@ export function AnnualReportsHero() {
               <div className="mt-6 flex flex-wrap gap-2">
                 {[
                   { label: "2024-2025", href: "#report-2024-2025" },
-                  { label: "2023-2024", href: "#report-2023-2024" },
-                  { label: "2022-2023", href: "#report-2022-2023" },
                 ].map((y) => (
                   <a
                     key={y.label}

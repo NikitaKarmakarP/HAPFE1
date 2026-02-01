@@ -79,7 +79,7 @@ export function DonateHero() {
             {
               icon: Sprout,
               amount: "₹500",
-              impact: "Trains 1 farmer in mushroom cultivation",
+              impact: "Trained 1 farmer in mushroom cultivation",
               color: "from-green-500 to-emerald-500",
               bgColor: "from-green-50 to-emerald-50",
               delay: "delay-100",
@@ -87,7 +87,7 @@ export function DonateHero() {
             {
               icon: Users,
               amount: "₹2,000",
-              impact: "Supports a family for one month",
+              impact: "Supported a family with mushroom seeds and equipment",
               color: "from-blue-500 to-cyan-500",
               bgColor: "from-blue-50 to-cyan-50",
               delay: "delay-200",
@@ -95,7 +95,7 @@ export function DonateHero() {
             {
               icon: Gift,
               amount: "₹5,000",
-              impact: "Provides blankets for 10 families",
+              impact: "Supported kitchen garden kits to 5 families",
               color: "from-purple-500 to-pink-500",
               bgColor: "from-purple-50 to-pink-50",
               delay: "delay-300",

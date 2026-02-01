@@ -26,7 +26,7 @@ export function ImpactStories({ hideViewAll = false }: { hideViewAll?: boolean }
       afterIncome: "₹3,000",
     },
     {
-      name: "Ram Kumar",
+      name: "Karmela Tudu",
       location: "Hiranpur Block, Jharkhand",
       program: "Climate-Resilient Agriculture",
       story:
