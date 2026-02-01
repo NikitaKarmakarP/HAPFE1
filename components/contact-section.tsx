@@ -95,28 +95,24 @@ export function ContactSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Beautiful Animated Header */}
-        <div 
+        <div
           ref={headerRef}
-          className={`text-center mb-20 transition-all duration-1000 ${
-            headerInView 
-              ? 'opacity-100 translate-y-0' 
+          className={`text-center mb-20 transition-all duration-1000 ${headerInView
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10'
-          }`}
+            }`}
         >
           {/* Badge */}
-          <div className={`inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 px-6 py-3 rounded-full mb-8 shadow-lg transition-all duration-700 ${
-            headerInView ? 'scale-100 rotate-0' : 'scale-95 rotate-3'
-          }`}>
-            <MessageCircle className={`h-5 w-5 text-green-600 transition-all duration-500 ${
-              headerInView ? 'rotate-0' : 'rotate-12'
-            }`} />
+          <div className={`inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-emerald-100 px-6 py-3 rounded-full mb-8 shadow-lg transition-all duration-700 ${headerInView ? 'scale-100 rotate-0' : 'scale-95 rotate-3'
+            }`}>
+            <MessageCircle className={`h-5 w-5 text-green-600 transition-all duration-500 ${headerInView ? 'rotate-0' : 'rotate-12'
+              }`} />
             <span className="text-green-800 font-medium">Let's Connect</span>
           </div>
 
           {/* Main Title */}
-          <h2 className={`text-5xl lg:text-6xl font-bold mb-6 transition-all duration-1000 delay-200 ${
-            headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}>
+          <h2 className={`text-5xl lg:text-6xl font-bold mb-6 transition-all duration-1000 delay-200 ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}>
             <span className="text-gray-900">Get in </span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600">
               Touch
@@ -124,10 +120,9 @@ export function ContactSection() {
           </h2>
 
           {/* Subtitle */}
-          <p className={`text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${
-            headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-          }`}>
-            Have questions or want to learn more about our programs? We'd love to hear from you and 
+          <p className={`text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-400 ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            }`}>
+            Have questions or want to learn more about our programs? We'd love to hear from you and
             explore how we can work together to create positive change.
           </p>
         </div>
@@ -137,18 +132,17 @@ export function ContactSection() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className={`group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-105 hover:-translate-y-3 border border-white/50 overflow-hidden ${
-                cardsInView 
-                  ? 'opacity-100 translate-y-0' 
+              className={`group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-105 hover:-translate-y-3 border border-white/50 overflow-hidden ${cardsInView
+                  ? 'opacity-100 translate-y-0'
                   : 'opacity-0 translate-y-10'
-              }`}
+                }`}
               style={{
                 transitionDelay: `${index * 150}ms`
               }}
             >
               {/* Animated background gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${info.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-              
+
               {/* Decorative corner elements */}
               <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -166,7 +160,7 @@ export function ContactSection() {
 
                 {/* Main content */}
                 <div className="text-center mb-4">
-                  <a 
+                  <a
                     href={info.link}
                     className={`text-lg font-semibold bg-gradient-to-r ${info.color} bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 inline-block`}
                   >
@@ -195,39 +189,45 @@ export function ContactSection() {
         </div>
 
         {/* Enhanced CTA Section */}
-        <div 
+        <div
           ref={ctaRef}
-          className={`text-center transition-all duration-1000 ${
-            ctaInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`text-center transition-all duration-1000 ${ctaInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
           <div className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 rounded-3xl p-12 shadow-2xl relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
             <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-2xl"></div>
-            
+
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-3 mb-6">
                 <Clock className="h-6 w-6 text-white/80" />
                 <span className="text-white/90 font-medium">Quick Response Guaranteed</span>
               </div>
-              
+
               <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Ready to Make a Difference?
               </h3>
-              
+
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Join us in our mission to empower rural communities. Every conversation starts with a simple message.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/contact">
-                  <Button className="bg-white text-green-600 hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-                    <MessageCircle className="h-5 w-5 mr-2 group-hover:animate-bounce" />
-                    Contact Us Now
-                  </Button>
-                </Link>
 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  className="bg-white text-green-600 hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+                  onClick={() => {
+                    const form = document.getElementById('contact-form');
+                    if (form) {
+                      form.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.location.href = '/contact';
+                    }
+                  }}
+                >
+                  <MessageCircle className="h-5 w-5 mr-2 group-hover:animate-bounce" />
+                  Contact Us Now
+                </Button>
               </div>
             </div>
           </div>

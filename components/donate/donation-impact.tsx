@@ -6,12 +6,9 @@ export function DonationImpact() {
     {
       amount: "₹500",
       title: "Supporter",
+      description: "Provides essential seeds and basic tools to a rural farming family for one full season.",
       icon: Sprout,
-      impacts: [
-        "Train 1 farmer in mushroom cultivation",
-        "Provide seeds for sustainable farming",
-        "Support 1 family for a week",
-      ],
+      impacts: [],
       color: "green",
       gradient: "from-green-500 to-emerald-500",
       bgGradient: "from-green-50 to-emerald-50",
@@ -20,12 +17,9 @@ export function DonationImpact() {
     {
       amount: "₹2,000",
       title: "Advocate",
+      description: "Covers comprehensive vocational training and skill development for a women's self-help group.",
       icon: Users,
-      impacts: [
-        "Support a family for one month",
-        "Provide training materials for 5 farmers",
-        "Distribute blankets to 4 families",
-      ],
+      impacts: [],
       color: "blue",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-50 to-cyan-50",
@@ -34,12 +28,9 @@ export function DonationImpact() {
     {
       amount: "₹5,000",
       title: "Champion",
+      description: "Funds the establishment of a community mushroom unit, creating sustainable local employment.",
       icon: Heart,
-      impacts: [
-        "Provide blankets for 10 families",
-        "Set up basic mushroom cultivation unit",
-        "Support community workshop",
-      ],
+      impacts: [],
       color: "purple",
       gradient: "from-purple-500 to-pink-500",
       bgGradient: "from-purple-50 to-pink-50",
@@ -48,12 +39,9 @@ export function DonationImpact() {
     {
       amount: "₹10,000",
       title: "Transformer",
+      description: "Drives large-scale community transformation through multiple livelihoods and infrastructure programs.",
       icon: Home,
-      impacts: [
-        "Set up complete mushroom unit",
-        "Support a family for 6 months",
-        "Train 20 farmers in sustainable practices",
-      ],
+      impacts: [],
       color: "orange",
       gradient: "from-orange-500 to-red-500",
       bgGradient: "from-orange-50 to-red-50",
@@ -93,7 +81,7 @@ export function DonationImpact() {
           {impactLevels.map((level, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 bg-gradient-to-br ${level.bgGradient} hover:scale-105 hover:-translate-y-4`}
+              className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 bg-gradient-to-br ${level.bgGradient} hover:scale-105 hover:-translate-y-4 min-h-[480px] flex flex-col`}
             >
               {/* Glow Effect */}
               <div
@@ -109,46 +97,47 @@ export function DonationImpact() {
                 </div>
               )}
 
-              <CardContent className="p-8 text-center relative z-10">
-                {/* Icon with Enhanced Animation */}
-                <div className="relative mb-8">
-                  <div
-                    className={`w-20 h-20 bg-gradient-to-r ${level.gradient} rounded-3xl flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl`}
-                  >
-                    <level.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="absolute -top-2 -right-2 text-2xl animate-bounce group-hover:animate-spin">
-                    {level.emoji}
-                  </div>
-                  <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
-                </div>
-
-                {/* Amount with Gradient */}
-                <div
-                  className={`text-4xl font-bold bg-gradient-to-r ${level.gradient} bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {level.amount}
-                </div>
-
-                {/* Title with Badge */}
-                <div className="flex items-center justify-center gap-2 mb-6">
-                  <div className="text-xl font-bold text-gray-900">{level.title}</div>
-                  <Star className={`h-5 w-5 text-${level.color}-500 group-hover:animate-spin`} />
-                </div>
-
-                {/* Impact List with Enhanced Styling */}
-                <div className="space-y-3">
-                  {level.impacts.map((impact, idx) => (
+              <CardContent className="p-8 text-center relative z-10 flex-grow flex flex-col justify-between">
+                <div>
+                  {/* Icon with Enhanced Animation */}
+                  <div className="relative mb-8">
                     <div
-                      key={idx}
-                      className="flex items-start gap-3 text-sm text-gray-700 group-hover:text-gray-900 transition-colors duration-300"
+                      className={`w-20 h-20 bg-gradient-to-r ${level.gradient} rounded-3xl flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-xl`}
                     >
-                      <div
-                        className={`w-2 h-2 bg-gradient-to-r ${level.gradient} rounded-full mt-2 flex-shrink-0 group-hover:animate-pulse`}
-                      ></div>
-                      <span className="leading-relaxed font-medium">{impact}</span>
+                      <level.icon className="h-10 w-10 text-white" />
                     </div>
-                  ))}
+                    <div className="absolute -top-2 -right-2 text-2xl animate-bounce group-hover:animate-spin">
+                      {level.emoji}
+                    </div>
+                    <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+
+                  {/* Amount with Gradient */}
+                  <div
+                    className={`text-4xl font-bold bg-gradient-to-r ${level.gradient} bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {level.amount}
+                  </div>
+
+                  {/* Title with Badge */}
+                  <div className="flex items-center justify-center gap-2 mb-6">
+                    <div className="text-xl font-bold text-gray-900">{level.title}</div>
+                    <Star className={`h-5 w-5 text-${level.color}-500 group-hover:animate-spin`} />
+                  </div>
+
+                  {/* Short Description */}
+                  <p className="text-gray-600 font-medium leading-relaxed mb-8">
+                    {level.description}
+                  </p>
+                </div>
+
+                <div className="mt-auto">
+                  <button
+                    className={`w-full py-4 rounded-2xl bg-gradient-to-r ${level.gradient} text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 active:scale-95 flex items-center justify-center gap-2`}
+                  >
+                    Donate {level.amount}
+                    <Sparkles className="h-5 w-5" />
+                  </button>
                 </div>
 
                 {/* Hover Effect Border */}

@@ -21,7 +21,7 @@ export function KnowledgeGrid() {
       title: "Complete Mushroom Cultivation Manual",
       description: "Step-by-step guide for setting up and managing oyster mushroom cultivation units",
       category: "Agriculture",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/mushroom-manual.jpg",
     },
     {
       type: "photo",

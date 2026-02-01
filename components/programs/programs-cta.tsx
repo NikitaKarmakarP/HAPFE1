@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone, Mail } from "lucide-react"
+import Link from "next/link"
 
 export function ProgramsCTA() {
   return (
@@ -33,10 +34,12 @@ export function ProgramsCTA() {
             <p className="text-green-100 mb-6">
               Join our programs as a beneficiary and transform your livelihood through sustainable practices.
             </p>
-            <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
-              Apply Now
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/get-involved">
+              <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
+                Apply Now
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
@@ -44,10 +47,12 @@ export function ProgramsCTA() {
             <p className="text-green-100 mb-6">
               Share your skills and time to directly contribute to our community development programs.
             </p>
-            <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
-              Volunteer
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/get-involved">
+              <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
+                Volunteer
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
@@ -55,10 +60,12 @@ export function ProgramsCTA() {
             <p className="text-green-100 mb-6">
               Collaborate with us to amplify impact through strategic partnerships and joint initiatives.
             </p>
-            <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
-              Partner
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-white text-green-600 hover:bg-green-50 w-full">
+                Partner
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -73,14 +80,16 @@ export function ProgramsCTA() {
               <span>info.hapef@gmail.com</span>
             </div>
           </div>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

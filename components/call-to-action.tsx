@@ -168,18 +168,24 @@ export function CallToAction() {
           <p className="text-green-100 mb-8 text-lg animate-pulse">
             Ready to make a difference? Get in touch with us today.
           </p>
-          <Link href="/contact">
-            <Button
-              size="lg"
-              variant="outline"
-              className="group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span className="flex items-center gap-2">
-                Contact Us Now
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Button>
-          </Link>
+          <Button
+            size="lg"
+            variant="outline"
+            className="group border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg bg-transparent transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+            onClick={() => {
+              const form = document.getElementById('contact-form');
+              if (form) {
+                form.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/contact';
+              }
+            }}
+          >
+            <span className="flex items-center gap-2">
+              Contact Us Now
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </Button>
         </div>
       </div>
 

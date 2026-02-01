@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
+import { useToast } from "@/components/ui/use-toast"
 import {
   Dialog,
   DialogContent,
@@ -39,6 +40,8 @@ import {
   Shield,
   Target,
   CheckCircle,
+  CheckCircle2,
+  Loader2,
   Send
 } from "lucide-react"
 
@@ -538,184 +541,211 @@ export default function GetInvolvedPage() {
 
           <Card className="shadow-xl">
             <CardContent className="p-8">
-              <form className="space-y-6" onSubmit={handleApplicationSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
-                      First Name *
-                    </Label>
-                    <Input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      className="mt-1"
-                      placeholder="Enter your first name"
-                      required
-                    />
+              {isSuccess ? (
+                <div className="py-12 flex flex-col items-center text-center animate-in fade-in zoom-in duration-500">
+                  <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mb-8">
+                    <CheckCircle2 className="h-12 w-12 text-emerald-600" />
                   </div>
-                  <div>
-                    <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
-                      Last Name *
-                    </Label>
-                    <Input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      className="mt-1"
-                      placeholder="Enter your last name"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                      Email *
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      className="mt-1"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-                      Phone Number
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      className="mt-1"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="position" className="text-sm font-medium text-gray-700">
-                      Position of Interest *
-                    </Label>
-                    <Select value={formPosition} onValueChange={setFormPosition}>
-                      <SelectTrigger className="mt-1">
-                        <SelectValue placeholder="Select a position" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="development-internship-trainee">Development Internship Trainee</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div>
-                    <Label htmlFor="experience" className="text-sm font-medium text-gray-700">
-                      Years of Experience *
-                    </Label>
-                    <Select value={formExperience} onValueChange={setFormExperience}>
-                      <SelectTrigger className="mt-1">
-                        <SelectValue placeholder="Select experience level" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="0-1">0-1 years</SelectItem>
-                        <SelectItem value="2-4">2-4 years</SelectItem>
-                        <SelectItem value="5-8">5-8 years</SelectItem>
-                        <SelectItem value="8+">8+ years</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="resume" className="text-sm font-medium text-gray-700">
-                    Resume/CV *
-                  </Label>
-                  <label
-                    htmlFor="resume-upload"
-                    className="mt-1 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-400 transition-colors cursor-pointer block bg-gray-50/50 hover:bg-white"
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Application Received!</h3>
+                  <p className="text-xl text-gray-600 mb-10 max-w-md">
+                    Thank you for your interest in joining HAPEF. Our HR team will review your application and get in touch if your profile matches our requirements.
+                  </p>
+                  <Button
+                    onClick={() => {
+                      setIsSuccess(false)
+                      setFormFileName("")
+                    }}
+                    className="rounded-full bg-emerald-600 hover:bg-emerald-700 px-8 py-6 text-lg shadow-lg hover:shadow-emerald-500/25 transition-all"
                   >
-                    <input
-                      id="resume-upload"
-                      type="file"
-                      className="hidden"
-                      accept=".pdf,.doc,.docx"
-                      onChange={(e) => {
-                        const file = e.target.files?.[0]
-                        if (file) setFormFileName(file.name)
-                      }}
+                    Submit Another Application
+                  </Button>
+                </div>
+              ) : (
+                <form className="space-y-6" onSubmit={handleApplicationSubmit}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="firstName" className="text-sm font-medium text-gray-700">
+                        First Name *
+                      </Label>
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        className="mt-1"
+                        placeholder="Enter your first name"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName" className="text-sm font-medium text-gray-700">
+                        Last Name *
+                      </Label>
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        className="mt-1"
+                        placeholder="Enter your last name"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                        Email *
+                      </Label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        className="mt-1"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
+                        Phone Number
+                      </Label>
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        className="mt-1"
+                        placeholder="Enter your phone number"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="position" className="text-sm font-medium text-gray-700">
+                        Position of Interest *
+                      </Label>
+                      <Select value={formPosition} onValueChange={setFormPosition}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select a position" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="development-internship-trainee">Development Internship Trainee</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <Label htmlFor="experience" className="text-sm font-medium text-gray-700">
+                        Years of Experience *
+                      </Label>
+                      <Select value={formExperience} onValueChange={setFormExperience}>
+                        <SelectTrigger className="mt-1">
+                          <SelectValue placeholder="Select experience level" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="0-1">0-1 years</SelectItem>
+                          <SelectItem value="2-4">2-4 years</SelectItem>
+                          <SelectItem value="5-8">5-8 years</SelectItem>
+                          <SelectItem value="8+">8+ years</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="resume" className="text-sm font-medium text-gray-700">
+                      Resume/CV *
+                    </Label>
+                    <label
+                      htmlFor="resume-upload"
+                      className="mt-1 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-emerald-400 transition-colors cursor-pointer block bg-gray-50/50 hover:bg-white"
+                    >
+                      <input
+                        id="resume-upload"
+                        type="file"
+                        className="hidden"
+                        accept=".pdf,.doc,.docx"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0]
+                          if (file) setFormFileName(file.name)
+                        }}
+                      />
+                      <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
+                      {formFileName ? (
+                        <p className="text-sm text-emerald-600 font-medium break-all">{formFileName}</p>
+                      ) : (
+                        <>
+                          <p className="text-sm text-gray-600">Click to upload or drag and drop</p>
+                          <p className="text-xs text-gray-500">PDF, DOC, or DOCX (max 5MB)</p>
+                        </>
+                      )}
+                    </label>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="coverLetter" className="text-sm font-medium text-gray-700">
+                      Cover Letter
+                    </Label>
+                    <Textarea
+                      id="coverLetter"
+                      name="coverLetter"
+                      className="mt-1"
+                      rows={4}
+                      placeholder="Tell us why you're interested in this position and how you can contribute to our mission..."
                     />
-                    <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
-                    {formFileName ? (
-                      <p className="text-sm text-emerald-600 font-medium break-all">{formFileName}</p>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="portfolio" className="text-sm font-medium text-gray-700">
+                      Portfolio/Website (Optional)
+                    </Label>
+                    <Input
+                      id="portfolio"
+                      name="portfolio"
+                      type="url"
+                      className="mt-1"
+                      placeholder="https://your-portfolio.com"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="hearAbout" className="text-sm font-medium text-gray-700">
+                      How did you hear about us?
+                    </Label>
+                    <Select value={formSource} onValueChange={setFormSource}>
+                      <SelectTrigger className="mt-1">
+                        <SelectValue placeholder="Select an option" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="website">Our Website</SelectItem>
+                        <SelectItem value="linkedin">LinkedIn</SelectItem>
+                        <SelectItem value="indeed">Indeed</SelectItem>
+                        <SelectItem value="referral">Employee Referral</SelectItem>
+                        <SelectItem value="social">Social Media</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-lg disabled:opacity-70 group"
+                  >
+                    {isSubmitting ? (
+                      <Loader2 className="h-5 w-5 animate-spin mx-auto" />
                     ) : (
                       <>
-                        <p className="text-sm text-gray-600">Click to upload or drag and drop</p>
-                        <p className="text-xs text-gray-500">PDF, DOC, or DOCX (max 5MB)</p>
+                        <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                        Submit Application
                       </>
                     )}
-                    <p className="text-xs text-amber-600 mt-2 font-medium">(Note: Attach your resume manually in the email draft)</p>
-                  </label>
-                </div>
+                  </Button>
 
-                <div>
-                  <Label htmlFor="coverLetter" className="text-sm font-medium text-gray-700">
-                    Cover Letter
-                  </Label>
-                  <Textarea
-                    id="coverLetter"
-                    name="coverLetter"
-                    className="mt-1"
-                    rows={4}
-                    placeholder="Tell us why you're interested in this position and how you can contribute to our mission..."
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="portfolio" className="text-sm font-medium text-gray-700">
-                    Portfolio/Website (Optional)
-                  </Label>
-                  <Input
-                    id="portfolio"
-                    name="portfolio"
-                    type="url"
-                    className="mt-1"
-                    placeholder="https://your-portfolio.com"
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="hearAbout" className="text-sm font-medium text-gray-700">
-                    How did you hear about us?
-                  </Label>
-                  <Select value={formSource} onValueChange={setFormSource}>
-                    <SelectTrigger className="mt-1">
-                      <SelectValue placeholder="Select an option" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="website">Our Website</SelectItem>
-                      <SelectItem value="linkedin">LinkedIn</SelectItem>
-                      <SelectItem value="indeed">Indeed</SelectItem>
-                      <SelectItem value="referral">Employee Referral</SelectItem>
-                      <SelectItem value="social">Social Media</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 text-lg"
-                >
-                  <Send className="h-5 w-5 mr-2" />
-                  Submit Application
-                </Button>
-
-                <p className="text-xs text-gray-500 text-center">
-                  By submitting this application, you agree to our privacy policy and consent to being contacted regarding your application.
-                </p>
-              </form>
+                  <p className="text-xs text-gray-500 text-center">
+                    By submitting this application, you agree to our privacy policy and consent to being contacted regarding your application.
+                  </p>
+                </form>
+              )}
             </CardContent>
           </Card>
         </div>
@@ -799,9 +829,15 @@ export default function GetInvolvedPage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Have Questions?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
               Our HR team is here to help. Reach out to us for any questions about our positions, application process, or working at HAPEF.
             </p>
+            <Link href="/contact">
+              <Button size="lg" className="rounded-full bg-emerald-600 hover:bg-emerald-700 px-10 py-6 text-lg shadow-lg hover:shadow-emerald-500/25 transition-all">
+                Contact Us Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
