@@ -154,7 +154,7 @@ export function Hero() {
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
                   5000+
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Families Empowered</div>
+                <div className="text-sm text-gray-600 font-medium">Lives Impacted</div>
               </div>
               <div className="text-center group cursor-pointer">
                 <div className="flex items-center justify-center mb-3">
@@ -163,9 +163,9 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                  40+
+                  4
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Villages Reached</div>
+                <div className="text-sm text-gray-600 font-medium">Programs</div>
               </div>
               <div className="text-center group cursor-pointer">
                 <div className="flex items-center justify-center mb-3">
@@ -174,9 +174,9 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="font-bold text-3xl text-gray-900 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                  3+
+                  2
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Years of Service</div>
+                <div className="text-sm text-gray-600 font-medium">Districts</div>
               </div>
             </div>
           </div>

@@ -37,17 +37,17 @@ export function ProgramsHero() {
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
             <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
             <div className="text-3xl font-bold text-gray-900 mb-2">5000+</div>
-            <div className="text-sm text-gray-600">Beneficiaries</div>
+            <div className="text-sm text-gray-600">Lives Impacted</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
             <Heart className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">40+</div>
-            <div className="text-sm text-gray-600">Villages Covered</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">2</div>
+            <div className="text-sm text-gray-600">Districts Covered</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100 text-center">
             <Handshake className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">2+</div>
-            <div className="text-sm text-gray-600">State Covered</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">2</div>
+            <div className="text-sm text-gray-600">States Reached</div>
           </div>
         </div>
       </div>

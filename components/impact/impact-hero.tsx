@@ -29,7 +29,7 @@ export function ImpactHero() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Families Empowered */}
+          {/* Lives Impacted */}
           <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
             <div className="mb-6 inline-block relative">
               <div className="absolute inset-0 bg-blue-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
@@ -41,11 +41,11 @@ export function ImpactHero() {
             <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-indigo-600 mb-3 tracking-tight">
               5000+
             </div>
-            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-blue-700 transition-colors">Families Empowered</div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-blue-700 transition-colors">Lives Impacted</div>
             <div className="text-sm text-gray-500 font-medium">Direct beneficiaries</div>
           </div>
 
-          {/* Villages Reached */}
+          {/* Programs */}
           <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
             <div className="mb-6 inline-block relative">
               <div className="absolute inset-0 bg-purple-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
@@ -55,13 +55,13 @@ export function ImpactHero() {
             </div>
 
             <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-600 to-fuchsia-600 mb-3 tracking-tight">
-              40+
+              4
             </div>
-            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Villages Reached</div>
-            <div className="text-sm text-gray-500 font-medium">Across multiple states</div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-purple-700 transition-colors">Programs</div>
+            <div className="text-sm text-gray-500 font-medium">Active initiatives</div>
           </div>
 
-          {/* Years of Service */}
+          {/* Districts */}
           <div className="text-center group p-6 transition-all duration-300 hover:-translate-y-1">
             <div className="mb-6 inline-block relative">
               <div className="absolute inset-0 bg-orange-400 blur-xl opacity-20 group-hover:opacity-40 animate-pulse rounded-full"></div>
@@ -71,10 +71,10 @@ export function ImpactHero() {
             </div>
 
             <div className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-orange-500 to-amber-600 mb-3 tracking-tight">
-              3+
+              2
             </div>
-            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-orange-700 transition-colors">Years of Service</div>
-            <div className="text-sm text-gray-500 font-medium">Continuous impact</div>
+            <div className="text-xl font-bold text-gray-800 mb-1 group-hover:text-orange-700 transition-colors">Districts</div>
+            <div className="text-sm text-gray-500 font-medium">Regional presence</div>
           </div>
         </div>
       </div>

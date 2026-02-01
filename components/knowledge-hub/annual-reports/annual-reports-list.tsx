@@ -1,8 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Download, FileCheck2, Calendar, ArrowRight, CheckCircle2, Users, Briefcase, MapPin } from "lucide-react"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { FileCheck2, Calendar, Users, Briefcase, MapPin } from "lucide-react"
 
 type Report = {
   year: number
@@ -29,11 +28,11 @@ const reports: Report[] = [
     summary:
       "Highlights of our programs, outreach, and audited financials for the fiscal year 2024-2025.",
     pdfUrl: "#",
-    coverImage: "/placeholder.svg",
+    coverImage: "/annual-report-cover.jpg",
     metrics: [
-      { label: "Lives Impacted", value: "12,500+", icon: "users" },
-      { label: "Programs", value: "18", icon: "briefcase" },
-      { label: "Districts", value: "4", icon: "map" },
+      { label: "Lives Impacted", value: "5,000+", icon: "users" },
+      { label: "Programs", value: "4", icon: "briefcase" },
+      { label: "Districts", value: "2", icon: "map" },
     ],
     highlights: [
       "Strengthened monitoring and evaluation systems",
@@ -103,35 +102,7 @@ export function AnnualReportsList() {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
-                    <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                      <a href={report.pdfUrl} download>
-                        <Download className="h-4 w-4 mr-2" /> Download PDF
-                      </a>
-                    </Button>
 
-                    <Collapsible>
-                      <CollapsibleTrigger asChild>
-                        <Button variant="outline" className="bg-transparent">
-                          View details
-                          <ArrowRight className="h-4 w-4 ml-2 transition-transform group-data-[state=open]:translate-x-1" />
-                        </Button>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <div className="mt-6 p-4 rounded-lg border bg-gray-50">
-                          <h4 className="font-semibold text-gray-900 mb-3">Key Highlights</h4>
-                          <ul className="space-y-2 text-gray-700">
-                            {report.highlights.map((h, i) => (
-                              <li key={i} className="flex items-start gap-2">
-                                <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" />
-                                <span>{h}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </div>
                 </div>
               </div>
             </CardContent>

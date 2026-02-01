@@ -233,7 +233,7 @@ export function WorkingAreas() {
               </CardContent>
             </Card>
 
-            {/* Villages Reached */}
+            {/* Programs */}
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-blue-200/20 rounded-full blur-xl"></div>
@@ -241,17 +241,17 @@ export function WorkingAreas() {
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="h-8 w-8 text-blue-600" />
+                    <Target className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">40+</div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">4</div>
                 </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Villages Reached</div>
-                <div className="text-sm text-gray-600 leading-relaxed">Across Pakur and South 24 Parganas Districts</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Active Programs</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Scaling rural transformation</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-blue-200 to-indigo-300 rounded-full"></div>
               </CardContent>
             </Card>
 
-            {/* Primary Block */}
+            {/* Districts */}
             <Card className="group text-center bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-0 right-0 w-20 h-20 bg-purple-200/20 rounded-full blur-xl"></div>
@@ -259,12 +259,12 @@ export function WorkingAreas() {
               <CardContent className="p-8 relative">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Target className="h-8 w-8 text-purple-600" />
+                    <MapPin className="h-8 w-8 text-purple-600" />
                   </div>
                   <div className="text-4xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">2</div>
                 </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">Primary Blocks</div>
-                <div className="text-sm text-gray-600 leading-relaxed">Hiranpur and Kultali Blocks</div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Districts Reached</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Pakur and South 24 Parganas</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-purple-200 to-pink-300 rounded-full"></div>
               </CardContent>
             </Card>
@@ -279,10 +279,10 @@ export function WorkingAreas() {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Heart className="h-8 w-8 text-orange-600" />
                   </div>
-                  <div className="text-4xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">5K+</div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2 group-hover:scale-110 transition-transform duration-300">5,000+</div>
                 </div>
-                <div className="text-lg font-semibold text-gray-900 mb-1">People Impacted</div>
-                <div className="text-sm text-gray-600 leading-relaxed"></div>
+                <div className="text-lg font-semibold text-gray-900 mb-1">Lives Impacted</div>
+                <div className="text-sm text-gray-600 leading-relaxed">Direct community beneficiaries</div>
                 <div className="mt-3 h-1 bg-gradient-to-r from-orange-200 to-red-300 rounded-full"></div>
               </CardContent>
             </Card>

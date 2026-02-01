@@ -1,81 +1,11 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Quote, Star } from "lucide-react"
-import Autoplay from "embla-carousel-autoplay"
 import Link from "next/link"
-import { useRef } from "react"
 
 export function DonorTestimonials() {
-  const plugin = useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  )
-
-  const testimonials = [
-    {
-      name: "Dr. Rajesh Kumar",
-      title: "Corporate Foundation Director",
-      organization: "Kumar Industries Foundation",
-      image: "👨‍💼",
-      rating: 5,
-      testimonial: "HAPEF's transparent approach and measurable impact convinced us to become long-term partners. Their work in rural development is truly transformational.",
-      donationAmount: "₹50 Lakhs",
-      program: "Livelihood Development"
-    },
-    {
-      name: "Ms. Priya Sharma",
-      title: "Individual Philanthropist",
-      organization: "Social Impact Investor",
-      image: "👩‍💼",
-      rating: 5,
-      testimonial: "I've been supporting HAPEF for 3 years now. Their community-centered approach and regular updates give me confidence that my donations are making real difference.",
-      donationAmount: "₹2 Lakhs",
-      program: "Education & Skill Development"
-    },
-    {
-      name: "Mr. Amit Patel",
-      title: "CEO",
-      organization: "TechCorp Solutions",
-      image: "👨‍💻",
-      rating: 5,
-      testimonial: "Through our CSR partnership with HAPEF, we've seen incredible results. The digital literacy program we funded has empowered over 1000 rural youth.",
-      donationAmount: "₹75 Lakhs",
-      program: "Digital Literacy Initiative"
-    },
-    {
-      name: "Mrs. Sunita Devi",
-      title: "Retired Teacher",
-      organization: "Individual Donor",
-      image: "👩‍🏫",
-      rating: 5,
-      testimonial: "Even my small monthly contribution feels meaningful with HAPEF. They show exactly how my ₹1000 helps educate children in remote villages.",
-      donationAmount: "₹12,000/year",
-      program: "Child Education Support"
-    },
-    {
-      name: "Dr. Michael Johnson",
-      title: "International Development Expert",
-      organization: "Global Impact Foundation",
-      image: "👨‍⚕️",
-      rating: 5,
-      testimonial: "HAPEF's innovative approaches to community development align perfectly with our global mission. Their impact measurement is world-class.",
-      donationAmount: "$25,000",
-      program: "Environment Sustainability"
-    },
-    {
-      name: "Ms. Kavita Singh",
-      title: "Social Entrepreneur",
-      organization: "Women's Empowerment Fund",
-      image: "👩‍💼",
-      rating: 5,
-      testimonial: "The women's empowerment programs funded through HAPEF have created ripple effects across entire communities. Truly inspiring work!",
-      donationAmount: "₹30 Lakhs",
-      program: "Women Entrepreneurship"
-    }
-  ]
-
   return (
     <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,63 +24,41 @@ export function DonorTestimonials() {
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="mb-16">
-          <Carousel
-            plugins={[plugin.current]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-green-200 transform hover:-translate-y-2 h-full">
-                    <CardHeader>
-                      {/* Quote Icon and Rating */}
-                      <div className="flex justify-between items-start mb-4">
-                        <Quote className="w-8 h-8 text-green-600 opacity-60" />
-                        <div className="flex space-x-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                          ))}
-                        </div>
-                      </div>
+        {/* Testimonials Card (Single) */}
+        <div className="mb-16 max-w-2xl mx-auto">
+          <Card className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+            <CardHeader className="p-8 pb-4">
+              {/* Quote Icon and Rating */}
+              <div className="flex justify-between items-start mb-6">
+                <Quote className="w-10 h-10 text-green-600 opacity-60" />
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
 
-                      {/* Testimonial Text */}
-                      <blockquote className="text-gray-700 text-lg leading-relaxed italic">
-                        "{testimonial.testimonial}"
-                      </blockquote>
-                    </CardHeader>
+              {/* Testimonial Text */}
+              <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed italic font-medium">
+                "I’ve supported HAPEF for three years and have been highly satisfied with their work. I truly appreciate their community-driven approach and consistent communication, which clearly shows the positive change they are making."
+              </blockquote>
+            </CardHeader>
 
-                    <CardContent>
-                      {/* Program & Donation Info */}
-
-
-                      {/* Donor Info */}
-                      <div className="flex items-center">
-                        <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center text-2xl mr-4">
-                          {testimonial.image}
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                          <p className="text-green-600 font-medium text-sm">{testimonial.title}</p>
-                          <p className="text-gray-500 text-sm">{testimonial.organization}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0 bg-white/90 hover:bg-white border-green-200 text-green-600" />
-            <CarouselNext className="right-0 bg-white/90 hover:bg-white border-green-200 text-green-600" />
-          </Carousel>
+            <CardContent className="p-8 pt-4">
+              {/* Donor Info */}
+              <div className="flex items-center p-4 bg-gray-50 rounded-2xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-green-100 rounded-full flex items-center justify-center text-3xl mr-5 shadow-inner">
+                  👨‍💼
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-xl">Sougata Nandi</h4>
+                  <p className="text-green-600 font-semibold">Individual Donor</p>
+                  <p className="text-gray-500 text-sm">Long-term Supporter</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-
-        {/* Impact Stats removed from homepage */}
 
         {/* Call to Action */}
         <div className="text-center">
