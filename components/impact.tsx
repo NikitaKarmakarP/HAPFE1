@@ -58,6 +58,56 @@ function useCountUp(end: number, duration = 2000, shouldStart = false) {
   return count
 }
 
+function ImpactStatCard({ stat, index, inView }: { stat: any, index: number, inView: boolean }) {
+  const count = useCountUp(stat.number, 2000, inView)
+
+  return (
+    <Card
+      className={`text-center border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group relative overflow-hidden ${inView
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-10'
+        }`}
+      style={{
+        transitionDelay: `${index * 100}ms`
+      }}
+    >
+      {/* Animated background gradient */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+
+      <CardContent className="p-8 relative">
+        {/* Animated icon container */}
+        <div className={`p-6 bg-gradient-to-br ${stat.color} rounded-3xl w-fit mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+          <stat.icon className="h-14 w-14 text-white transition-all duration-500 group-hover:scale-110" />
+        </div>
+
+        {/* Animated number */}
+        <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3 transition-all duration-500 group-hover:scale-110">
+          <span className={`bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+            {inView ? count : 0}
+          </span>
+          <span className={`bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+            {stat.suffix}
+          </span>
+        </div>
+
+        {/* Animated label */}
+        <div className="text-xl font-semibold text-gray-900 mb-3 transition-all duration-300 group-hover:text-gray-700">
+          {stat.label}
+        </div>
+
+        {/* Animated description */}
+        <div className="text-sm text-gray-600 leading-relaxed transition-all duration-300 group-hover:text-gray-500">
+          {stat.description}
+        </div>
+
+        {/* Decorative elements */}
+        <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+      </CardContent>
+    </Card>
+  )
+}
+
 export function Impact() {
   const [headerRef, headerInView] = useInView(0.2)
   const [statsRef, statsInView] = useInView(0.1)
@@ -146,56 +196,18 @@ export function Impact() {
         </div>
 
         {/* Animated Stats Grid */}
-        <div ref={statsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => {
-            const count = useCountUp(stat.number, 2000, statsInView)
-            return (
-              <Card
-                key={index}
-                className={`text-center border-0 bg-white/80 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 group relative overflow-hidden ${statsInView
-                  ? 'opacity-100 translate-y-0'
-                  : 'opacity-0 translate-y-10'
-                  }`}
-                style={{
-                  transitionDelay: `${index * 100}ms`
-                }}
-              >
-                {/* Animated background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+        <div ref={statsRef} className="grid md:grid-cols-3 gap-8 mb-8">
+          {stats.slice(0, 3).map((stat, index) => (
+            <ImpactStatCard key={index} stat={stat} index={index} inView={statsInView} />
+          ))}
+        </div>
 
-                <CardContent className="p-8 relative">
-                  {/* Animated icon container */}
-                  <div className={`p-6 bg-gradient-to-br ${stat.color} rounded-3xl w-fit mx-auto mb-6 shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
-                    <stat.icon className="h-14 w-14 text-white transition-all duration-500 group-hover:scale-110" />
-                  </div>
-
-                  {/* Animated number */}
-                  <div className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3 transition-all duration-500 group-hover:scale-110">
-                    <span className={`bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                      {statsInView ? count : 0}
-                    </span>
-                    <span className={`bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                      {stat.suffix}
-                    </span>
-                  </div>
-
-                  {/* Animated label */}
-                  <div className="text-xl font-semibold text-gray-900 mb-3 transition-all duration-300 group-hover:text-gray-700">
-                    {stat.label}
-                  </div>
-
-                  {/* Animated description */}
-                  <div className="text-sm text-gray-600 leading-relaxed transition-all duration-300 group-hover:text-gray-500">
-                    {stat.description}
-                  </div>
-
-                  {/* Decorative elements */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-4 left-4 w-1 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                </CardContent>
-              </Card>
-            )
-          })}
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
+          {stats.slice(3, 5).map((stat, index) => (
+            <div key={index + 3} className="w-full md:w-[calc(50%-1rem)] lg:w-1/3 max-w-sm">
+              <ImpactStatCard stat={stat} index={index + 3} inView={statsInView} />
+            </div>
+          ))}
         </div>
 
 

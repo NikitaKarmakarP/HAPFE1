@@ -56,35 +56,19 @@ export function OurPartners() {
                 <Card className="relative h-full bg-white/80 backdrop-blur-xl border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden border-0">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
 
-                  <CardHeader className="text-center pb-2 pt-8">
-                    <div className="relative w-24 h-24 mx-auto mb-6">
-                      <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse opacity-20 group-hover:opacity-40 transition-opacity" />
-                      <div className="relative w-full h-full bg-gradient-to-br from-white to-blue-50 rounded-full flex items-center justify-center shadow-inner border border-blue-100 group-hover:scale-110 transition-transform duration-500 overflow-hidden">
+                  <CardContent className="flex items-center justify-center p-12 h-64">
+                    <div className="relative w-48 h-48 mx-auto flex items-center justify-center">
+                      <div className="absolute inset-0 bg-blue-50/50 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-500 p-2">
                         {partner.logo.startsWith("/") ? (
-                          <img src={partner.logo} alt={partner.name} className="w-full h-full object-cover p-1 rounded-full" />
+                          <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain drop-shadow-md group-hover:drop-shadow-xl transition-all duration-300" />
                         ) : (
-                          <span className="text-4xl filter drop-shadow-sm transform group-hover:rotate-12 transition-transform duration-300">
+                          <span className="text-8xl filter drop-shadow-sm transform group-hover:rotate-12 transition-transform duration-300">
                             {partner.logo}
                           </span>
                         )}
                       </div>
                     </div>
-
-                    <CardTitle className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-3 group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
-                      {partner.name}
-                    </CardTitle>
-
-                    <div className="flex justify-center">
-                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent transition-colors duration-300 tracking-wide uppercase">
-                        {partner.category}
-                      </span>
-                    </div>
-                  </CardHeader>
-
-                  <CardContent className="pb-8 px-8">
-                    <CardDescription className="text-center text-gray-600 text-base leading-relaxed group-hover:text-gray-900 transition-colors duration-300 font-medium">
-                      {partner.description}
-                    </CardDescription>
                   </CardContent>
                 </Card>
               </div>
