@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, Sprout, Heart, Home, Star, Sparkles, TrendingUp } from "lucide-react"
 
@@ -89,13 +91,7 @@ export function DonationImpact() {
               ></div>
 
               {/* Popular Badge for middle options */}
-              {(index === 1 || index === 2) && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
-                    {index === 1 ? "MOST POPULAR" : "BEST VALUE"}
-                  </div>
-                </div>
-              )}
+              {/* Badges removed */}
 
               <CardContent className="p-8 text-center relative z-10 flex-grow flex flex-col justify-between">
                 <div>
@@ -130,6 +126,12 @@ export function DonationImpact() {
 
                 <div className="mt-auto">
                   <button
+                    onClick={() => {
+                      const element = document.getElementById("donation-form")
+                      if (element) {
+                        element.scrollIntoView({ behavior: "smooth" })
+                      }
+                    }}
                     className={`w-full py-4 rounded-2xl bg-gradient-to-r ${level.gradient} text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 active:scale-95 flex items-center justify-center gap-2`}
                   >
                     Donate {level.amount}

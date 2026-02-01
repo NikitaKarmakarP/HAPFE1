@@ -1,8 +1,16 @@
 "use client"
 
 import { Heart, Users, Sprout, Gift, Star, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function DonateHero() {
+  const scrollToDonation = () => {
+    const element = document.getElementById("donation-form")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 overflow-hidden">
       {/* Animated Background Elements */}
@@ -56,7 +64,10 @@ export function DonateHero() {
 
           {/* CTA Buttons with Hover Effects */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up delay-600">
-            <button className="group relative bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden">
+            <button
+              onClick={scrollToDonation}
+              className="group relative bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-2xl text-xl font-semibold shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 overflow-hidden"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-emerald-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-3">
                 <Heart className="h-6 w-6 group-hover:animate-pulse" />
@@ -64,12 +75,12 @@ export function DonateHero() {
                 <div className="w-2 h-2 bg-white rounded-full group-hover:animate-ping"></div>
               </span>
             </button>
-            <button className="group bg-white/80 backdrop-blur-sm text-gray-800 px-10 py-5 rounded-2xl text-xl font-semibold border-2 border-green-200 hover:border-green-400 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <Link href="/impact/stories" className="group bg-white/80 backdrop-blur-sm text-gray-800 px-10 py-5 rounded-2xl text-xl font-semibold border-2 border-green-200 hover:border-green-400 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center">
               <span className="flex items-center gap-3">
                 <Users className="h-6 w-6 text-green-600 group-hover:animate-bounce" />
                 See Impact Stories
               </span>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -111,7 +122,8 @@ export function DonateHero() {
           ].map((item, index) => (
             <div
               key={index}
-              className={`group relative bg-gradient-to-br ${item.bgColor} p-8 rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 animate-fade-in-up ${item.delay} border border-white/50 backdrop-blur-sm`}
+              onClick={scrollToDonation}
+              className={`group relative bg-gradient-to-br ${item.bgColor} p-8 rounded-3xl shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 animate-fade-in-up ${item.delay} border border-white/50 backdrop-blur-sm cursor-pointer`}
             >
               {/* Glow Effect */}
               <div

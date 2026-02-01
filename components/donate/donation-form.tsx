@@ -91,7 +91,7 @@ export function DonationForm() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-green-50 relative overflow-hidden">
+    <section id="donation-form" className="py-24 bg-gradient-to-br from-gray-50 to-green-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -151,11 +151,10 @@ export function DonationForm() {
                       key={option.type}
                       type="button"
                       onClick={() => setDonationType(option.type as "one-time" | "monthly")}
-                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                        donationType === option.type
+                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${donationType === option.type
                           ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
                           : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
-                      }`}
+                        }`}
                     >
                       <div className="text-3xl mb-3">{option.icon}</div>
                       <div className="font-bold text-lg text-gray-900 mb-2">{option.title}</div>
@@ -179,11 +178,10 @@ export function DonationForm() {
                       key={item.amount}
                       type="button"
                       onClick={() => handleAmountSelect(item.amount)}
-                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                        selectedAmount === item.amount
+                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${selectedAmount === item.amount
                           ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
                           : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
-                      }`}
+                        }`}
                     >
                       {item.popular && (
                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">
@@ -246,16 +244,14 @@ export function DonationForm() {
                       key={option.method}
                       type="button"
                       onClick={() => setPaymentMethod(option.method as "card" | "upi" | "bank")}
-                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${
-                        paymentMethod === option.method
+                      className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${paymentMethod === option.method
                           ? `border-${option.color}-500 bg-gradient-to-br from-${option.color}-50 to-${option.color}-100 shadow-lg scale-105`
                           : "border-gray-200 hover:border-gray-300 hover:shadow-md hover:scale-102"
-                      }`}
+                        }`}
                     >
                       <option.icon
-                        className={`h-8 w-8 mx-auto mb-3 ${
-                          paymentMethod === option.method ? `text-${option.color}-600` : "text-gray-400"
-                        } group-hover:scale-110 transition-transform duration-300`}
+                        className={`h-8 w-8 mx-auto mb-3 ${paymentMethod === option.method ? `text-${option.color}-600` : "text-gray-400"
+                          } group-hover:scale-110 transition-transform duration-300`}
                       />
                       <div className="font-bold text-gray-900 mb-1">{option.title}</div>
                       <div className="text-sm text-gray-600">{option.desc}</div>
