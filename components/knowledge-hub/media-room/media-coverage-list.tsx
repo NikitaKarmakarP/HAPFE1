@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import { Calendar, ExternalLink, Newspaper, Tv, Radio, Globe, Search } from "lucide-react"
+import { Calendar, ExternalLink, Newspaper, Tv, Radio, Globe, Search, PlayCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
+import { motion, AnimatePresence } from "framer-motion"
 
 const mediaTypes = [
   { id: "all", label: "All Media", icon: Globe },
@@ -17,160 +17,164 @@ const mediaTypes = [
 const mediaCoverage = [
   {
     id: 1,
-    title: "HAPEF's Mushroom Cultivation Program Transforms Rural Livelihoods",
-    publication: "The Telegraph",
-    type: "print",
-    date: "2024-01-20",
+    title: "Featured on ETV Bharat Jharkhand",
+    publication: "ETV Bharat",
+    type: "tv",
+    date: "2024-03-15",
     summary:
-      "Feature story highlighting how HAPEF's mushroom cultivation training has helped over 500 women become successful entrepreneurs in rural West Bengal.",
-    url: "https://example.com/telegraph-article",
-    image: "/placeholder.svg?height=150&width=200&text=Telegraph+Article",
+      "HAPEF's rural development work and community impact highlighted on regional television, focusing on sustainable agricultural practices.",
+    url: "#",
+    image: "/placeholder.svg?height=400&width=600&text=ETV+Bharat+Feature",
   },
   {
     id: 2,
-    title: "Climate-Smart Agriculture: HAPEF's Innovative Approach",
-    publication: "DD News",
+    title: "Documentary on DD National",
+    publication: "DD National",
     type: "tv",
-    date: "2024-01-18",
+    date: "2023-01-20",
     summary:
-      "Television documentary showcasing HAPEF's climate-resilient agriculture program and its impact on farmer communities.",
-    url: "https://example.com/dd-news-video",
-    image: "/placeholder.svg?height=150&width=200&text=DD+News+Feature",
+      "30-minute documentary showcasing HAPEF's impact on rural communities aired nationally, featuring success stories from diverse beneficiaries.",
+    url: "#",
+    image: "/placeholder.svg?height=400&width=600&text=DD+National+Documentary",
   },
 ]
 
 export function MediaCoverageList() {
-  const [selectedType, setSelectedType] = useState("all")
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const filteredCoverage = mediaCoverage.filter((item) => {
-    const matchesType = selectedType === "all" || item.type === selectedType
-    const matchesSearch =
-      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.publication.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.summary.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesType && matchesSearch
-  })
+  const filteredCoverage = mediaCoverage
 
   const getTypeIcon = (type: string) => {
     const mediaType = mediaTypes.find((mt) => mt.id === type)
     return mediaType ? mediaType.icon : Globe
   }
 
+
   const getTypeColor = (type: string) => {
     switch (type) {
       case "print":
-        return "bg-blue-100 text-blue-800"
+        return "bg-blue-100 text-blue-800 border-blue-200"
       case "tv":
-        return "bg-purple-100 text-purple-800"
+        return "bg-purple-100 text-purple-800 border-purple-200"
       case "radio":
-        return "bg-green-100 text-green-800"
+        return "bg-green-100 text-green-800 border-green-200"
       case "online":
-        return "bg-orange-100 text-orange-800"
+        return "bg-orange-100 text-orange-800 border-orange-200"
       default:
-        return "bg-gray-100 text-gray-800"
+        return "bg-gray-100 text-gray-800 border-gray-200"
     }
   }
 
   return (
-    <div>
-      {/* Search and Filter */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Media Coverage</h2>
-
-        {/* Search Bar */}
-        <div className="relative mb-4">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-          <Input
-            type="text"
-            placeholder="Search media coverage..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="pl-10"
-          />
-        </div>
-
-        {/* Media Type Filter */}
-        <div className="flex flex-wrap gap-2">
-          {mediaTypes.map((type) => {
-            const Icon = type.icon
-            return (
-              <Button
-                key={type.id}
-                variant={selectedType === type.id ? "default" : "outline"}
-                onClick={() => setSelectedType(type.id)}
-                className={`flex items-center gap-2 ${selectedType === type.id ? "bg-green-600 hover:bg-green-700" : ""
-                  }`}
-              >
-                <Icon className="h-4 w-4" />
-                {type.label}
-              </Button>
-            )
-          })}
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-700 to-green-900">
+            Media Coverage
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl">
+            Explore how HAPEF is making headlines and driving change across major media platforms.
+          </p>
         </div>
       </div>
 
-      {/* Media Coverage List */}
-      <div className="space-y-6">
-        {filteredCoverage.map((item) => {
-          const TypeIcon = getTypeIcon(item.type)
-          return (
-            <div key={item.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="md:w-48 flex-shrink-0">
-                  <img
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.title}
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                </div>
+      {/* Search and Filter Bar */}
+      {/* Search and Filter Bar Removed */}
 
-                <div className="flex-1">
-                  <div className="flex items-start justify-between mb-3">
-                    <div>
-                      <Badge className={`mb-2 ${getTypeColor(item.type)}`}>
-                        <TypeIcon className="h-3 w-3 mr-1" />
-                        {item.publication}
-                      </Badge>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+
+      {/* Media Coverage Grid */}
+      <div className="grid grid-cols-1 gap-8">
+        <AnimatePresence>
+          {filteredCoverage.map((item, index) => {
+            const TypeIcon = getTypeIcon(item.type)
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-shadow duration-300 group bg-white">
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/3 lg:w-1/4 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10" />
+                      <img
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-full h-64 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                      {item.type === 'tv' && (
+                        <div className="absolute inset-0 flex items-center justify-center z-20">
+                          <div className="bg-white/90 rounded-full p-3 shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 pb-3">
+                            <PlayCircle className="h-8 w-8 text-green-700" />
+                          </div>
+                        </div>
+                      )}
                     </div>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(item.date).toLocaleDateString()}
+
+                    <div className="flex-1 p-8 flex flex-col justify-center">
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <Badge className={`px-3 py-1 text-xs border ${getTypeColor(item.type)}`}>
+                          <TypeIcon className="h-3 w-3 mr-1.5" />
+                          {item.publication}
+                        </Badge>
+                        <span className="flex items-center text-sm text-gray-500 font-medium">
+                          <Calendar className="h-4 w-4 mr-1.5 text-gray-400" />
+                          {new Date(item.date).toLocaleDateString(undefined, {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">
+                        {item.summary}
+                      </p>
+
+                      <div className="flex items-center justify-between mt-auto">
+                        <Button
+                          variant="ghost"
+                          onClick={() => window.open(item.url, "_blank")}
+                          className="text-green-700 hover:text-green-800 hover:bg-green-50 px-0 hover:px-4 transition-all"
+                        >
+                          Read Full Coverage
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </Button>
+
+                        <span className="text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                          {item.type} Media
+                        </span>
+                      </div>
                     </div>
                   </div>
-
-                  <p className="text-gray-600 mb-4 line-clamp-3">{item.summary}</p>
-
-                  <div className="flex items-center justify-between">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => window.open(item.url, "_blank")}
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Read Full Coverage
-                    </Button>
-
-                    <div className="text-sm text-gray-500 capitalize">{item.type} Media</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+                </Card>
+              </motion.div>
+            )
+          })}
+        </AnimatePresence>
       </div>
 
       {filteredCoverage.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-gray-400 mb-4">
-            <Search className="h-12 w-12 mx-auto" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center py-24 bg-gray-50 rounded-2xl border border-dashed border-gray-200"
+        >
+          <div className="bg-white p-4 rounded-full inline-block shadow-sm mb-4">
+            <Search className="h-8 w-8 text-gray-400" />
           </div>
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No media coverage found</h3>
-          <p className="text-gray-500">Try adjusting your search terms or filters.</p>
-        </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No media coverage found</h3>
+          <p className="text-gray-500 max-w-md mx-auto">
+            We haven't added any media coverage items yet.
+          </p>
+        </motion.div>
       )}
     </div>
   )
 }
+

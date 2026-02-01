@@ -22,40 +22,10 @@ export function OurPartners() {
     {
       name: "Government of West Bengal",
       category: "Government Partner",
-      logo: "🏛️",
+      logo: "/wb-govt.png",
       description: "Strategic partnership for rural development initiatives across West Bengal."
     },
-    {
-      name: "UNICEF India",
-      category: "International Organization",
-      logo: "🌍",
-      description: "Collaboration on child welfare and education programs in rural communities."
-    },
 
-    {
-      name: "State Bank of India",
-      category: "Financial Institution",
-      logo: "🏦",
-      description: "Financial inclusion and microfinance partnership for rural entrepreneurs."
-    },
-    {
-      name: "Indian Institute of Technology",
-      category: "Academic Institution",
-      logo: "🎓",
-      description: "Research collaboration on sustainable technology solutions."
-    },
-    {
-      name: "Oxfam India",
-      category: "NGO Partner",
-      logo: "🤝",
-      description: "Joint programs on poverty alleviation and disaster management."
-    },
-    {
-      name: "Microsoft India",
-      category: "Technology Partner",
-      logo: "💻",
-      description: "Digital literacy and technology access programs for rural communities."
-    }
   ]
 
   return (
@@ -77,46 +47,49 @@ export function OurPartners() {
         </div>
 
         {/* Partners Carousel */}
-        <div className="mb-16">
-          <Carousel
-            plugins={[plugin.current]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {partners.map((partner, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
-                  <Card className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-blue-200 group h-full">
-                    <CardHeader className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+        {/* Partners Grid */}
+        <div className="mb-16 flex flex-wrap justify-center gap-8">
+          {partners.map((partner, index) => (
+            <div key={index} className="w-full md:w-[calc(50%-1rem)] lg:w-1/3 max-w-sm">
+              <div className="group relative h-full p-2">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-3xl transform rotate-1 scale-95 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                <Card className="relative h-full bg-white/80 backdrop-blur-xl border-white/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 rounded-2xl overflow-hidden border-0">
+                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+
+                  <CardHeader className="text-center pb-2 pt-8">
+                    <div className="relative w-24 h-24 mx-auto mb-6">
+                      <div className="absolute inset-0 bg-blue-100 rounded-full animate-pulse opacity-20 group-hover:opacity-40 transition-opacity" />
+                      <div className="relative w-full h-full bg-gradient-to-br from-white to-blue-50 rounded-full flex items-center justify-center shadow-inner border border-blue-100 group-hover:scale-110 transition-transform duration-500 overflow-hidden">
                         {partner.logo.startsWith("/") ? (
-                          <img src={partner.logo} alt={partner.name} className="w-full h-full object-cover" />
+                          <img src={partner.logo} alt={partner.name} className="w-full h-full object-cover p-1 rounded-full" />
                         ) : (
-                          <span className="text-3xl">{partner.logo}</span>
+                          <span className="text-4xl filter drop-shadow-sm transform group-hover:rotate-12 transition-transform duration-300">
+                            {partner.logo}
+                          </span>
                         )}
                       </div>
-                      <CardTitle className="text-lg leading-tight">
-                        {partner.name}
-                      </CardTitle>
-                      <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-sm font-medium rounded-full">
+                    </div>
+
+                    <CardTitle className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700 mb-3 group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
+                      {partner.name}
+                    </CardTitle>
+
+                    <div className="flex justify-center">
+                      <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-100 group-hover:bg-blue-600 group-hover:text-white group-hover:border-transparent transition-colors duration-300 tracking-wide uppercase">
                         {partner.category}
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-center text-sm leading-relaxed">
-                        {partner.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-0" />
-            <CarouselNext className="right-0" />
-          </Carousel>
+                      </span>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className="pb-8 px-8">
+                    <CardDescription className="text-center text-gray-600 text-base leading-relaxed group-hover:text-gray-900 transition-colors duration-300 font-medium">
+                      {partner.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>

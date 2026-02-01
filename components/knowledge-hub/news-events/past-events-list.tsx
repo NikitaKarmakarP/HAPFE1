@@ -1,170 +1,33 @@
 "use client"
 
-import { useState } from "react"
-import { Calendar, Clock, MapPin, Users, Filter, Search, Award, Download } from "lucide-react"
+import { Calendar, Clock, MapPin, Users, Award, Download } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-
 export function PastEventsList() {
-  const [selectedCategory, setSelectedCategory] = useState("All Events")
-  const [selectedYear, setSelectedYear] = useState("All Years")
-  const [searchTerm, setSearchTerm] = useState("")
-
-  const categories = [
-    "All Events",
-    "Training Workshops",
-    "Community Meetings",
-    "Health Camps",
-    "Cultural Events",
-    "Awareness Programs",
-    "Skill Development",
-    "Awards & Recognition",
-  ]
-
-  const years = ["All Years", "2024", "2023", "2022", "2021", "2020"]
 
   const pastEvents = [
     {
       id: 1,
-      title: "Annual Community Development Summit 2023",
-      date: "2023-12-15",
-      time: "9:00 AM - 6:00 PM",
-      location: "HAPEF Convention Center, Kolkata",
+      title: "Blanket Distribution Drive",
+      date: "2025-01-01",
+      time: "10:00 AM - 2:00 PM",
+      location: "Hiranpur, Pakur",
       category: "Community Meetings",
-      participants: 250,
+      participants: 50,
       description:
-        "Our flagship annual event bringing together community leaders, beneficiaries, and stakeholders to celebrate achievements and plan for the future.",
+        "A community-driven initiative to provide warmth and comfort to those in need during the winter season.",
       image: "/placeholder.svg?height=200&width=300",
-      outcomes: "5 new partnerships formed, 12 community projects launched",
-      materials: ["Event Report", "Photo Gallery", "Video Highlights"],
+      outcomes: "Provided warmth and comfort to those in need.",
+      materials: ["Event Report", "Photos"],
       featured: true,
-      year: "2023",
-    },
-    {
-      id: 2,
-      title: "Mushroom Cultivation Master Training Program",
-      date: "2023-11-20",
-      time: "10:00 AM - 5:00 PM",
-      location: "Agricultural Training Center, Hooghly",
-      category: "Training Workshops",
-      participants: 85,
-      description:
-        "Comprehensive 3-day training program on advanced mushroom cultivation techniques, covering spawn production to marketing.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "85 farmers trained, 60% increase in mushroom production reported",
-      materials: ["Training Manual", "Participant Certificates", "Follow-up Report"],
-      featured: false,
-      year: "2023",
-    },
-    {
-      id: 3,
-      title: "Women's Empowerment Awards Ceremony",
-      date: "2023-10-08",
-      time: "4:00 PM - 8:00 PM",
-      location: "Rabindra Sadan, Kolkata",
-      category: "Awards & Recognition",
-      participants: 180,
-      description:
-        "Annual awards ceremony recognizing outstanding women entrepreneurs and leaders from our self-help group programs.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "25 women recognized, 10 success stories shared",
-      materials: ["Award Winners List", "Success Stories", "Media Coverage"],
-      featured: true,
-      year: "2023",
-    },
-    {
-      id: 4,
-      title: "Climate-Smart Agriculture Field Day",
-      date: "2023-09-12",
-      time: "8:00 AM - 4:00 PM",
-      location: "Demonstration Farm, Nadia",
-      category: "Training Workshops",
-      participants: 120,
-      description:
-        "Hands-on demonstration of climate-resilient farming techniques, drought-resistant crops, and water conservation methods.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "120 farmers trained, 15 new techniques demonstrated",
-      materials: ["Field Guide", "Technique Videos", "Resource List"],
-      featured: false,
-      year: "2023",
-    },
-    {
-      id: 5,
-      title: "Digital Health Camp - Rural Outreach",
-      date: "2023-08-25",
-      time: "7:00 AM - 3:00 PM",
-      location: "Multiple Villages, Sundarbans",
-      category: "Health Camps",
-      participants: 400,
-      description:
-        "Mobile health camp providing free medical checkups, telemedicine consultations, and health awareness sessions.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "400 people screened, 50 referred for specialized care",
-      materials: ["Health Report", "Follow-up Plan", "Awareness Materials"],
-      featured: false,
-      year: "2023",
-    },
-    {
-      id: 6,
-      title: "Youth Leadership Development Workshop",
-      date: "2023-07-18",
-      time: "9:00 AM - 6:00 PM",
-      location: "HAPEF Youth Center, Kolkata",
-      category: "Skill Development",
-      participants: 60,
-      description:
-        "Intensive leadership training for young community members, focusing on project management, communication, and social entrepreneurship.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "60 youth trained, 8 community projects initiated",
-      materials: ["Leadership Manual", "Project Templates", "Mentorship Guide"],
-      featured: false,
-      year: "2023",
-    },
-    {
-      id: 7,
-      title: "Organic Farming Certification Drive",
-      date: "2023-06-10",
-      time: "10:00 AM - 4:00 PM",
-      location: "Organic Certification Center, West Bengal",
-      category: "Training Workshops",
-      participants: 75,
-      description:
-        "Workshop on organic farming certification process, documentation requirements, and market linkage opportunities.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "75 farmers registered for certification, 45 completed documentation",
-      materials: ["Certification Guide", "Documentation Templates", "Market Directory"],
-      featured: false,
-      year: "2023",
-    },
-    {
-      id: 8,
-      title: "International Day of Rural Women Celebration",
-      date: "2023-10-15",
-      time: "2:00 PM - 7:00 PM",
-      location: "Community Centers, Multiple Locations",
-      category: "Cultural Events",
-      participants: 300,
-      description:
-        "Celebrating the contributions of rural women with cultural programs, skill exhibitions, and recognition ceremonies.",
-      image: "/placeholder.svg?height=200&width=300",
-      outcomes: "300 women participated, 50 skills showcased",
-      materials: ["Event Highlights", "Skill Catalog", "Cultural Performances"],
-      featured: false,
-      year: "2023",
+      year: "2025",
     },
   ]
 
-  const filteredEvents = pastEvents.filter((event) => {
-    const matchesCategory = selectedCategory === "All Events" || event.category === selectedCategory
-    const matchesYear = selectedYear === "All Years" || event.year === selectedYear
-    const matchesSearch =
-      event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.location.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesYear && matchesSearch
-  })
+
+
+
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -182,132 +45,118 @@ export function PastEventsList() {
   return (
     <div className="space-y-6">
       {/* Search and Filter */}
-      <div className="bg-white p-6 rounded-lg shadow-sm border">
-        <div className="flex flex-col md:flex-row gap-4 mb-6">
-          <div className="flex-1">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-              <Input
-                placeholder="Search past events..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Filter className="h-4 w-4 text-gray-500" />
-            <span className="text-sm text-gray-600">Filter:</span>
-          </div>
-        </div>
+      {/* Search Bar */}
 
-        <div className="space-y-4">
-          <div className="flex flex-wrap gap-2">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? "bg-blue-600 hover:bg-blue-700" : ""}
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            {years.map((year) => (
-              <Button
-                key={year}
-                variant={selectedYear === year ? "default" : "outline"}
-                size="sm"
-                onClick={() => setSelectedYear(year)}
-                className={selectedYear === year ? "bg-indigo-600 hover:bg-indigo-700" : ""}
-              >
-                {year}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Events List */}
       <div className="space-y-6">
-        {filteredEvents.map((event) => (
+        {pastEvents.map((event) => (
           <Card
             key={event.id}
-            className={`overflow-hidden hover:shadow-lg transition-shadow ${event.featured ? "ring-2 ring-blue-200" : ""}`}
+            className={`group text-left overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 ${event.featured
+                ? "bg-gradient-to-br from-white via-indigo-50/30 to-blue-50/30 ring-1 ring-blue-200 shadow-blue-100/50"
+                : "bg-white hover:bg-gray-50/50 ring-1 ring-gray-100"
+              }`}
           >
-            <div className="md:flex">
-              <div className="md:w-1/3">
+            <div className="md:flex h-full">
+              <div className="md:w-1/3 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                 <img
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
-                  className="w-full h-48 md:h-full object-cover"
+                  className="w-full h-full min-h-[300px] object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
+                <div className="absolute bottom-4 left-4 z-20 flex flex-col gap-2">
+                  <div className="inline-flex items-center gap-2">
+                    <Badge className={`${getCategoryColor(event.category)} shadow-lg backdrop-blur-md`}>
+                      {event.category}
+                    </Badge>
+                    {event.featured && (
+                      <Badge className="bg-gradient-to-r from-orange-400 to-pink-500 text-white border-0 shadow-lg animate-pulse">
+                        <Award className="h-3 w-3 mr-1" />
+                        Featured
+                      </Badge>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="md:w-2/3 p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Badge className={getCategoryColor(event.category)}>{event.category}</Badge>
-                      {event.featured && (
-                        <Badge className="bg-orange-100 text-orange-800">
-                          <Award className="h-3 w-3 mr-1" />
-                          Featured
-                        </Badge>
-                      )}
-                      <Badge variant="outline">{event.year}</Badge>
+
+              <div className="md:w-2/3 p-8 flex flex-col">
+                <div className="mb-6">
+                  <div className="flex justify-between items-start gap-4 mb-3">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                      {event.title}
+                    </h3>
+                    <Badge variant="outline" className="shrink-0 text-gray-500 border-gray-300">
+                      {event.year}
+                    </Badge>
+                  </div>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                    {event.description}
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm text-gray-600 bg-white/60 p-4 rounded-xl border border-gray-100">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <Calendar className="h-4 w-4" />
+                      </div>
+                      <span className="font-medium">
+                        {new Date(event.date).toLocaleDateString("en-US", {
+                          weekday: "short",
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{event.title}</h3>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+                        <Clock className="h-4 w-4" />
+                      </div>
+                      <span className="font-medium">{event.time}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-rose-50 text-rose-600 rounded-lg">
+                        <MapPin className="h-4 w-4" />
+                      </div>
+                      <span className="font-medium">{event.location}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+                        <Users className="h-4 w-4" />
+                      </div>
+                      <span className="font-medium">{event.participants} participants</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div className="flex items-center text-gray-600">
-                    <Calendar className="h-4 w-4 mr-2 text-blue-600" />
-                    <span className="text-sm">
-                      {new Date(event.date).toLocaleDateString("en-US", {
-                        weekday: "long",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
+                <div className="mt-auto space-y-6">
+                  <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-4 rounded-xl border border-amber-100">
+                    <h4 className="flex items-center gap-2 font-semibold text-amber-900 mb-2">
+                      <Award className="h-4 w-4 text-amber-600" />
+                      Key Outcomes
+                    </h4>
+                    <p className="text-gray-700 font-medium">{event.outcomes}</p>
                   </div>
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="h-4 w-4 mr-2 text-blue-600" />
-                    <span className="text-sm">{event.time}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2 text-blue-600" />
-                    <span className="text-sm">{event.location}</span>
-                  </div>
-                  <div className="flex items-center text-gray-600">
-                    <Users className="h-4 w-4 mr-2 text-blue-600" />
-                    <span className="text-sm">{event.participants} participants</span>
-                  </div>
-                </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Outcomes:</h4>
-                  <p className="text-sm text-gray-600">{event.outcomes}</p>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex flex-wrap gap-2">
-                    {event.materials.map((material, index) => (
-                      <Button key={index} size="sm" variant="outline" className="text-xs bg-transparent">
-                        <Download className="h-3 w-3 mr-1" />
-                        {material}
-                      </Button>
-                    ))}
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100">
+                    <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+                      {event.materials.map((material, index) => (
+                        <Button
+                          key={index}
+                          size="sm"
+                          variant="ghost"
+                          className="text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 transition-colors"
+                        >
+                          <Download className="h-3 w-3 mr-2" />
+                          {material}
+                        </Button>
+                      ))}
+                    </div>
+                    <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                      View Details
+                    </Button>
                   </div>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                    View Details
-                  </Button>
                 </div>
               </div>
             </div>
@@ -315,19 +164,9 @@ export function PastEventsList() {
         ))}
       </div>
 
-      {filteredEvents.length === 0 && (
+      {pastEvents.length === 0 && (
         <div className="text-center py-12">
-          <div className="text-gray-500 mb-4">No events found matching your criteria.</div>
-          <Button
-            variant="outline"
-            onClick={() => {
-              setSelectedCategory("All Events")
-              setSelectedYear("All Years")
-              setSearchTerm("")
-            }}
-          >
-            Clear Filters
-          </Button>
+          <div className="text-gray-500 mb-4">No past events found.</div>
         </div>
       )}
     </div>

@@ -531,7 +531,7 @@ export function Leadership() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
 
               {
@@ -544,23 +544,15 @@ export function Leadership() {
                 linkedin: "https://www.linkedin.com/in/nikita-karmakar/",
               },
               {
-                name: "Jhuma Ghosh Nandi",
+                name: "Sougata Nandi",
                 role: "Development Internship Trainee",
                 university: "B.Com (Accounts Hons), MBA (Finance); pursuing MSW (Child and Women Development)",
                 image: "/oo.jpg",
-                quote: "I had the privilege of spearheading community outreach programs. Establishing partnerships with over 15 local organizations has shown me the power of collaboration.",
+                quote: "I’ve supported HAPEF for three years and have been highly satisfied with their work.I truly appreciate their community-driven approach and consistent communication, which clearly shows the positive change they are making.",
                 startDate: "6 months",
                 linkedin: "#",
               },
-              {
-                name: "Amit Ghosh",
-                role: "Digital Innovation Intern",
-                university: "ISI Kolkata",
-                image: "/placeholder.svg?height=300&width=300",
-                quote: "I was able to apply my technical skills to real-world problems. Developing mobile apps for farmer education has been a rewarding journey in bridging the digital divide.",
-                startDate: "July 2023",
-                linkedin: "#",
-              },
+
             ].map((intern, index) => (
               <Card
                 key={index}

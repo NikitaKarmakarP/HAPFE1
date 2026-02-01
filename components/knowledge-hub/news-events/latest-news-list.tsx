@@ -20,58 +20,8 @@ const newsArticles = [
     likes: 89,
     image: "/placeholder.svg?height=300&width=600",
   },
-  {
-    id: 2,
-    title: "HAPEF Expands Climate-Resilient Agriculture Program to Three New Regions",
-    excerpt:
-      "The organization's innovative approach to sustainable farming practices reaches more communities facing climate challenges.",
-    content:
-      "Building on the success of pilot programs, HAPEF announces the expansion of its Climate-Resilient Agriculture initiative to three additional regions...",
-    author: "Michael Chen",
-    date: "2024-01-15",
-    readTime: "4 min read",
-    category: "Program Updates",
-    tags: ["Climate Change", "Agriculture", "Expansion"],
-    featured: false,
-    views: 892,
-    likes: 67,
-    image: "/placeholder.svg?height=300&width=600",
-  },
-  {
-    id: 3,
-    title: "Community Workshop Series Empowers 200 Women Entrepreneurs",
-    excerpt:
-      "HAPEF's women-focused entrepreneurship workshops create new opportunities for economic independence and leadership development.",
-    content:
-      "Over the past quarter, HAPEF's specialized workshop series has successfully trained 200 women in various entrepreneurial skills...",
-    author: "Priya Sharma",
-    date: "2024-01-12",
-    readTime: "3 min read",
-    category: "Community Impact",
-    tags: ["Women Empowerment", "Entrepreneurship", "Training"],
-    featured: false,
-    views: 743,
-    likes: 92,
-    image: "/placeholder.svg?height=300&width=600",
-  },
-  {
-    id: 4,
-    title: "Technology Integration Boosts Agricultural Productivity by 40%",
-    excerpt:
-      "Smart farming techniques and digital tools help farmers optimize their crop yields and reduce resource waste.",
-    content:
-      "HAPEF's technology integration program has demonstrated significant improvements in agricultural productivity across participating communities...",
-    author: "David Rodriguez",
-    date: "2024-01-10",
-    readTime: "6 min read",
-    category: "Innovation",
-    tags: ["Technology", "Smart Farming", "Productivity"],
-    featured: false,
-    views: 1156,
-    likes: 78,
-    image: "/placeholder.svg?height=300&width=600",
-  },
 ]
+
 
 export function LatestNewsList() {
   const featuredArticle = newsArticles.find((article) => article.featured)
@@ -81,17 +31,12 @@ export function LatestNewsList() {
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold text-gray-900">Latest News</h2>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm">
-            <Tag className="h-4 w-4 mr-2" />
-            Filter by Category
-          </Button>
-        </div>
+
       </div>
 
       {/* Featured Article */}
       {featuredArticle && (
-        <Card className="overflow-hidden border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-white">
+        <Card className="overflow-hidden border-2 border-orange-200 bg-gradient-to-r from-orange-50 to-white max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative">
               <img
@@ -212,10 +157,9 @@ export function LatestNewsList() {
       </div>
 
       <div className="text-center pt-8">
-        <Button variant="outline" size="lg">
-          Load More Articles
-        </Button>
+        {/* Load More Articles Button Removed */}
       </div>
     </div>
   )
 }
+
