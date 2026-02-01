@@ -79,7 +79,7 @@ export function DonateHero() {
             {
               icon: Sprout,
               amount: "₹500",
-              impact: "Trained 1 farmer in mushroom cultivation",
+              impact: "Provided educational support to a student",
               color: "from-green-500 to-emerald-500",
               bgColor: "from-green-50 to-emerald-50",
               delay: "delay-100",
