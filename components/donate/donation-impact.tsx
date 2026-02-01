@@ -6,7 +6,7 @@ export function DonationImpact() {
     {
       amount: "₹500",
       title: "Supporter",
-      description: "Provides essential seeds and basic tools to a rural farming family for one full season.",
+      description: "",
       icon: Sprout,
       impacts: [],
       color: "green",
@@ -17,7 +17,7 @@ export function DonationImpact() {
     {
       amount: "₹2,000",
       title: "Advocate",
-      description: "Covers comprehensive vocational training and skill development for a women's self-help group.",
+      description: "",
       icon: Users,
       impacts: [],
       color: "blue",
@@ -28,7 +28,7 @@ export function DonationImpact() {
     {
       amount: "₹5,000",
       title: "Champion",
-      description: "Funds the establishment of a community mushroom unit, creating sustainable local employment.",
+      description: "",
       icon: Heart,
       impacts: [],
       color: "purple",
@@ -39,7 +39,7 @@ export function DonationImpact() {
     {
       amount: "₹10,000",
       title: "Transformer",
-      description: "Drives large-scale community transformation through multiple livelihoods and infrastructure programs.",
+      description: "",
       icon: Home,
       impacts: [],
       color: "orange",
@@ -81,7 +81,7 @@ export function DonationImpact() {
           {impactLevels.map((level, index) => (
             <Card
               key={index}
-              className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 bg-gradient-to-br ${level.bgGradient} hover:scale-105 hover:-translate-y-4 min-h-[480px] flex flex-col`}
+              className={`group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 bg-gradient-to-br ${level.bgGradient} hover:scale-105 hover:-translate-y-4 min-h-[350px] flex flex-col`}
             >
               {/* Glow Effect */}
               <div
@@ -125,10 +125,7 @@ export function DonationImpact() {
                     <Star className={`h-5 w-5 text-${level.color}-500 group-hover:animate-spin`} />
                   </div>
 
-                  {/* Short Description */}
-                  <p className="text-gray-600 font-medium leading-relaxed mb-8">
-                    {level.description}
-                  </p>
+                  {/* Short Description removed */}
                 </div>
 
                 <div className="mt-auto">
