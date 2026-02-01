@@ -134,7 +134,7 @@ export function FeaturedWork() {
                 title: "Christmas Blanket Distribution",
                 description:
                   "Annual winter relief program providing warm blankets to vulnerable families across rural communities.",
-                stats: ["1000+ Blankets", "50+ Villages"],
+                stats: ["100+ Blankets", "20+ Villages"],
                 color: "blue",
                 gradient: "from-blue-500 to-cyan-500",
                 bgGradient: "from-blue-50 to-cyan-50",
@@ -145,7 +145,7 @@ export function FeaturedWork() {
                 title: "Climate-Resilient Agriculture",
                 description:
                   "Building sustainable farming practices that adapt to climate change while improving crop yields.",
-                stats: ["100+ Farmers", "25+ Techniques"],
+                stats: ["4000+ Farmers", "40 Villages"],
                 color: "emerald",
                 gradient: "from-emerald-500 to-teal-500",
                 bgGradient: "from-emerald-50 to-teal-50",
@@ -156,7 +156,7 @@ export function FeaturedWork() {
                 title: "Convergence Initiatives",
                 description:
                   "Collaborative programs bringing together communities, government, and organizations for maximum impact.",
-                stats: ["15+ Partners", "Multi-sector"],
+                stats: ["10+ Programs Integrated", "700+ Beneficiaries Reached"],
                 color: "purple",
                 gradient: "from-purple-500 to-pink-500",
                 bgGradient: "from-purple-50 to-pink-50",

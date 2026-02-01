@@ -31,22 +31,22 @@ export function KnowledgeHero() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-blue-100 text-center">
             <BookOpen className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">0</div>
             <div className="text-sm text-gray-600">Articles & Guides</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-purple-100 text-center">
             <Video className="h-12 w-12 text-purple-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">25+</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">0</div>
             <div className="text-sm text-gray-600">Training Videos</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-green-100 text-center">
             <Download className="h-12 w-12 text-green-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">15+</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">0</div>
             <div className="text-sm text-gray-600">Downloadable Resources</div>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-orange-100 text-center">
             <Users className="h-12 w-12 text-orange-600 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-gray-900 mb-2">1000+</div>
+            <div className="text-3xl font-bold text-gray-900 mb-2">0</div>
             <div className="text-sm text-gray-600">Community Members</div>
           </div>
         </div>

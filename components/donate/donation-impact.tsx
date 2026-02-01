@@ -187,7 +187,7 @@ export function DonationImpact() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="grid md:grid-cols-2 gap-8 mb-8 max-w-4xl mx-auto">
                 <div className="group">
                   <div className="text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
                     0%
@@ -201,13 +201,6 @@ export function DonationImpact() {
                   </div>
                   <div className="text-green-100 font-medium">Direct Impact</div>
                   <div className="text-sm text-green-200 mt-1">Transparent fund utilization</div>
-                </div>
-                <div className="group">
-                  <div className="text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
-                    ₹5.2Cr
-                  </div>
-                  <div className="text-green-100 font-medium">Total Impact Created</div>
-                  <div className="text-sm text-green-200 mt-1">Since our inception</div>
                 </div>
               </div>
 

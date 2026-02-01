@@ -18,19 +18,19 @@ export function PastEventsHero({ title, description, breadcrumb }: PastEventsHer
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">150+</div>
+              <div className="text-3xl font-bold text-white">3</div>
               <div className="text-blue-200 text-sm">Events Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">5,000+</div>
+              <div className="text-3xl font-bold text-white">100+</div>
               <div className="text-blue-200 text-sm">Total Participants</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">25</div>
-              <div className="text-blue-200 text-sm">Locations Covered</div>
+              <div className="text-3xl font-bold text-white">3+</div>
+              <div className="text-blue-200 text-sm">Location Covered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">5</div>
+              <div className="text-3xl font-bold text-white">3+</div>
               <div className="text-blue-200 text-sm">Years of Events</div>
             </div>
           </div>

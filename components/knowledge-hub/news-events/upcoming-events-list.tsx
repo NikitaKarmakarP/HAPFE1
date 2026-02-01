@@ -10,17 +10,18 @@ export function UpcomingEventsList() {
   const upcomingEvents = [
     {
       id: 1,
-      title: "Blanket Distribution Drive",
+      title: "Farmers Field School",
       description: "A community-driven initiative to provide warmth and comfort to those in need during the winter season.",
-      date: "2025-01-01",
-      dateRange: "1-7 January",
+      date: "2026-03-31",
+      dateRange: "31 March",
+      fullDate: "Tuesday, March 31, 2026",
       time: "10:00 AM - 2:00 PM",
       location: "Hiranpur, Pakur",
       participants: 50,
       category: "Community Meetings",
       featured: true,
       registrationOpen: true,
-      image: "/placeholder.jpg"
+      image: "/upcoming-blanket-drive.jpg"
     }
   ]
 
@@ -45,87 +46,81 @@ export function UpcomingEventsList() {
         {filteredEvents.map((event) => (
           <Card
             key={event.id}
-            className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 bg-white border-0 ring-2 ring-green-500"
+            className="overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 bg-white border border-gray-100 rounded-2xl group"
           >
             <div className="grid md:grid-cols-2 gap-0">
-              <div className="relative overflow-hidden h-64 md:h-full">
+              <div className="relative overflow-hidden h-72 md:h-full">
+                <div className="absolute inset-0 bg-gray-900/10 group-hover:bg-gray-900/0 transition-colors z-10" />
                 <img
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
-              </div>
-              
-              <div className="p-8 md:p-10 bg-gradient-to-br from-white via-green-50 to-green-50 flex flex-col justify-center">
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-4 flex-wrap">
-                    <Badge className={`${getCategoryColor(event.category)} text-sm font-semibold px-4 py-1`}>
-                      {event.category}
+                <div className="absolute top-4 left-4 z-20 flex gap-2">
+                  <Badge className={`${getCategoryColor(event.category)} shadow-sm backdrop-blur-md border-0`}>
+                    {event.category}
+                  </Badge>
+                  {event.featured && (
+                    <Badge className="bg-orange-500 text-white shadow-sm border-0">
+                      Featured
                     </Badge>
-                    {event.featured && (
-                      <Badge className="bg-gradient-to-r from-orange-400 to-orange-600 text-white text-sm font-semibold px-4 py-1">
-                        ⭐ Featured
-                      </Badge>
-                    )}
-                  </div>
-                  <h2 className="text-4xl font-bold text-gray-900 mb-3 leading-tight">
-                    {event.title}
-                  </h2>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {event.description}
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 mb-8 p-6 bg-white rounded-xl border-2 border-green-100">
-                  <div className="flex items-start gap-3">
-                    <Calendar className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs text-gray-500 font-semibold">DATE</p>
-                      <p className="text-base font-bold text-gray-900">{event.dateRange}</p>
-                      <p className="text-sm text-gray-600">Wednesday, January 1, 2025</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs text-gray-500 font-semibold">TIME</p>
-                      <p className="text-base font-bold text-gray-900">{event.time}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs text-gray-500 font-semibold">LOCATION</p>
-                      <p className="text-base font-bold text-gray-900">{event.location}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Users className="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="text-xs text-gray-500 font-semibold">EXPECTED</p>
-                      <p className="text-base font-bold text-gray-900">{event.participants}</p>
-                      <p className="text-sm text-gray-600">participants</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <Button
-                    size="lg"
-                    className="flex-1 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold text-base py-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
-                  >
-                    Learn More
-                  </Button>
-                  {event.registrationOpen && (
-                    <Button
-                      size="lg"
-                      className="flex-1 border-2 border-green-600 bg-white text-green-600 hover:bg-green-50 font-bold text-base py-6 rounded-lg shadow-md hover:shadow-lg transition-all"
-                    >
-                      Register Now
-                    </Button>
                   )}
                 </div>
+              </div>
+
+              <div className="p-8 lg:p-10 flex flex-col justify-center">
+                <div className="mb-8">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-green-700 transition-colors">
+                    {event.title}
+                  </h2>
+                  <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                    {event.description}
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-y-6 gap-x-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-green-50 text-green-600 rounded-lg shrink-0">
+                        <Calendar className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{event.dateRange}</p>
+                        <p className="text-xs text-gray-500">{event.fullDate}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-blue-50 text-blue-600 rounded-lg shrink-0">
+                        <Clock className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{event.time}</p>
+                        <p className="text-xs text-gray-500">Duration: 4 Hours</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-red-50 text-red-600 rounded-lg shrink-0">
+                        <MapPin className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{event.location}</p>
+                        <p className="text-xs text-gray-500">Pakur District</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 bg-purple-50 text-purple-600 rounded-lg shrink-0">
+                        <Users className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{event.participants} Participants</p>
+                        <p className="text-xs text-gray-500">Expected Turnout</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </Card>

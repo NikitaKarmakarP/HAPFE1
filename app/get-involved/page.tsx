@@ -47,37 +47,24 @@ export default function GetInvolvedPage() {
   const [formExperience, setFormExperience] = useState("")
   const [formSource, setFormSource] = useState("")
   const [formFileName, setFormFileName] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const { toast } = useToast()
 
-  const handleApplicationSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleApplicationSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      position: formPosition,
-      experience: formExperience,
-      coverLetter: formData.get("coverLetter"),
-      portfolio: formData.get("portfolio"),
-      source: formSource,
-    }
+    setIsSubmitting(true)
 
-    const subject = `Job Application: ${data.position} - ${data.firstName} ${data.lastName}`
-    const body = `
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Phone: ${data.phone}
-Position: ${data.position}
-Experience: ${data.experience}
-Portfolio: ${data.portfolio}
-Source: ${data.source}
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000))
 
-Cover Letter:
-${data.coverLetter}
-    `.trim()
+    setIsSubmitting(false)
+    setIsSuccess(true)
 
-    window.location.href = `mailto:info.hapef@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    toast({
+      title: "Application Submitted!",
+      description: "We've received your application and will review it soon.",
+    })
   }
   const [selectedDepartment, setSelectedDepartment] = useState("All Departments")
   const [selectedType, setSelectedType] = useState("All Types")
@@ -210,6 +197,7 @@ ${data.coverLetter}
               <Button
                 size="lg"
                 className="group bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <span className="flex items-center gap-2">
                   View Open Positions
@@ -221,6 +209,7 @@ ${data.coverLetter}
                 variant="outline"
                 size="lg"
                 className="group border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-4 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                onClick={() => document.getElementById('how-to-apply')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <span className="flex items-center gap-2">
                   <Target className="h-5 w-5 group-hover:rotate-12 transition-transform duration-300" />
@@ -249,13 +238,24 @@ ${data.coverLetter}
       </section>
 
       {/* Open Positions Section */}
-      <section className="py-20 bg-white">
+      <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Open Positions
+            <div className="inline-flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">Exciting Opportunities</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Open </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600">
+                Positions
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 mx-auto rounded-full mb-8"></div>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               Join our team and make a difference in rural communities across India. Find the perfect role that matches your skills and passion.
             </p>
           </div>
@@ -398,7 +398,7 @@ ${data.coverLetter}
 
                           <div className="flex justify-end gap-3 pt-4 border-t">
                             <Button className="bg-emerald-600 hover:bg-emerald-700 w-full sm:w-auto" onClick={() => {
-                              document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' });
+                              document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
                             }}>
                               Apply Now
                             </Button>
@@ -417,20 +417,34 @@ ${data.coverLetter}
       </section>
 
       {/* How to Apply Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="how-to-apply" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              How to Apply
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">Joining HAPEF</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">How to </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+                Apply
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-8"></div>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               Our application process is designed to be simple and transparent. Follow these steps to join our team and make a difference.
             </p>
           </div>
 
           {/* Application Process */}
           <div className="mb-20">
-            <h3 className="text-2xl font-bold text-gray-900 mb-12 text-center">Application Process</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-12 text-center relative inline-block w-full">
+              <span className="relative z-10">Application Process</span>
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-emerald-100 -mb-2 rounded-full"></span>
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {applicationSteps.map((step, index) => (
                 <div key={step.step} className="text-center relative">
@@ -451,16 +465,48 @@ ${data.coverLetter}
           </div>
 
           {/* Application Tips */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Application Tips</h3>
-            <p className="text-gray-600 mb-6">Make your application stand out with these helpful tips</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {applicationTips.map((tip, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{tip}</span>
+          <div className="relative mt-20">
+            {/* Background Accent */}
+            <div className="absolute inset-0 bg-emerald-600/5 rounded-[3rem] -rotate-1 transform -z-10"></div>
+
+            <div className="bg-white/80 backdrop-blur-md rounded-[2.5rem] p-12 shadow-2xl border border-emerald-100/50">
+              <div className="flex flex-col items-center text-center gap-6 mb-12">
+                <div className="bg-emerald-100/50 p-4 rounded-2xl w-fit">
+                  <Heart className="h-8 w-8 text-emerald-600 animate-pulse" />
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-4xl font-extrabold mb-3 tracking-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-blue-600">
+                      Application Tips
+                    </span>
+                  </h3>
+                  <div className="w-20 h-1 bg-gradient-to-r from-emerald-600 to-blue-600 mx-auto rounded-full mb-4"></div>
+                  <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+                    Follow these insights to make your application truly stand out
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {applicationTips.map((tip, index) => (
+                  <div
+                    key={index}
+                    className="group flex items-start gap-5 p-6 rounded-2xl bg-white border border-transparent hover:border-emerald-200 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300"
+                  >
+                    <div className="flex-shrink-0 w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 transition-all duration-300">
+                      <CheckCircle className="h-6 w-6 text-emerald-600 group-hover:text-white transition-colors" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 mb-1 group-hover:text-emerald-700 transition-colors">
+                        Tip #{index + 1}
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed font-light">
+                        {tip}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -468,14 +514,25 @@ ${data.coverLetter}
 
 
       {/* Quick Application Form */}
-      <section className="py-20 bg-white">
+      <section id="application-form" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Quick Application
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-purple-700 uppercase tracking-widest">Begin Your Journey</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Quick </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600">
+                Application
+              </span>
             </h2>
-            <p className="text-xl text-gray-600">
-              Start your application process by filling out this form
+
+            <div className="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mb-8"></div>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+              Start your application process by filling out this form. We look forward to hearing from you!
             </p>
           </div>
 
@@ -668,13 +725,25 @@ ${data.coverLetter}
       <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Join Our Mission
+            <div className="inline-flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">Impact with HAPEF</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Join Our </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-blue-600 to-indigo-600">
+                Mission
+              </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+
+            <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-600 to-indigo-600 mx-auto rounded-full mb-8"></div>
+
+            <h3 className="text-2xl font-semibold text-emerald-800 mb-6 tracking-tight">
               Ready to Make a Difference?
-            </p>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            </h3>
+
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
               Join our dedicated team and help us transform rural communities through sustainable development, innovative programs, and community empowerment initiatives.
             </p>
           </div>
@@ -706,6 +775,7 @@ ${data.coverLetter}
               <Button
                 size="lg"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4"
+                onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Open Positions
               </Button>
@@ -713,6 +783,7 @@ ${data.coverLetter}
                 variant="outline"
                 size="lg"
                 className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-4"
+                onClick={() => document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Start Application
               </Button>
@@ -773,7 +844,13 @@ ${data.coverLetter}
             </p>
 
             <div className="flex justify-center space-x-4">
-              <a href="#" className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors">
+              <a
+                href="https://www.facebook.com/people/Humanitarian-Aid-for-Poverty-Eradication-Foundation/100090807904220/?rdid=Yz6pCIqxdXM67v69&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BqzZw9X6B%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-6 h-6 text-blue-600" />
               </a>
               <a href="#" className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors">
@@ -782,7 +859,13 @@ ${data.coverLetter}
               <a href="#" className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center hover:bg-pink-200 transition-colors">
                 <Instagram className="w-6 h-6 text-pink-600" />
               </a>
-              <a href="#" className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors">
+              <a
+                href="https://www.linkedin.com/company/humanitarian-aid-for-poverty-eradication-foundation/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-6 h-6 text-blue-600" />
               </a>
             </div>

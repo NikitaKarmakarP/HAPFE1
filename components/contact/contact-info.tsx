@@ -43,7 +43,13 @@ export function ContactInfo() {
           <div>
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h4>
             <div className="flex gap-5">
-              <a href="#" aria-label="Facebook" className="text-gray-500 hover:text-green-600">
+              <a
+                href="https://www.facebook.com/people/Humanitarian-Aid-for-Poverty-Eradication-Foundation/100090807904220/?rdid=Yz6pCIqxdXM67v69&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BqzZw9X6B%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-gray-500 hover:text-green-600"
+              >
                 <Facebook className="h-6 w-6" />
               </a>
               <a href="#" aria-label="Instagram" className="text-gray-500 hover:text-green-600">
@@ -52,7 +58,13 @@ export function ContactInfo() {
               <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-green-600">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-500 hover:text-green-600">
+              <a
+                href="https://www.linkedin.com/company/humanitarian-aid-for-poverty-eradication-foundation/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-500 hover:text-green-600"
+              >
                 <Linkedin className="h-6 w-6" />
               </a>
             </div>

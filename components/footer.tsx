@@ -116,7 +116,7 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <span className="text-gray-400 text-sm">Follow us:</span>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/share/1BqzZw9X6B/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors">
+                <a href="https://www.facebook.com/people/Humanitarian-Aid-for-Poverty-Eradication-Foundation/100090807904220/?rdid=Yz6pCIqxdXM67v69&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BqzZw9X6B%2F" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a href="#" className="text-gray-300 hover:text-green-400 transition-colors">

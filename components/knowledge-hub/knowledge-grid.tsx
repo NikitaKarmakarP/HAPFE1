@@ -2,50 +2,62 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, User, ArrowRight, Download, Eye } from "lucide-react"
 
+interface Resource {
+  type: string
+  title: string
+  description: string
+  category: string
+  image: string
+  author?: string
+  date?: string
+  views?: number
+  downloads?: number
+}
+
 export function KnowledgeGrid() {
-  const resources = [
+  const resources: Resource[] = [
     {
-      type: "Guide",
+      type: "photo",
       title: "Complete Mushroom Cultivation Manual",
       description: "Step-by-step guide for setting up and managing oyster mushroom cultivation units",
-      author: "Dr. Sunita Devi",
-      date: "March 2024",
       category: "Agriculture",
       image: "/placeholder.svg?height=200&width=300",
-      downloads: 245,
-      views: 1200,
     },
     {
-      type: "Video",
+      type: "photo",
       title: "Community Engagement Best Practices",
       description: "Learn effective strategies for engaging rural communities in development programs",
-      author: "Amit Ghosh",
-      date: "February 2024",
       category: "Community Development",
-      image: "/placeholder.svg?height=200&width=300",
-      downloads: 0,
-      views: 850,
+      image: "/community-engagement.jpg",
     },
     {
-      type: "Case Study",
+      type: "photo",
       title: "Success Story: Priya's Mushroom Enterprise",
       description: "How one woman transformed her family's livelihood through mushroom farming",
-      author: "HAPEF Team",
-      date: "January 2024",
       category: "Success Stories",
       image: "/placeholder.svg?height=200&width=300",
-      downloads: 156,
-      views: 2100,
     },
-
   ]
 
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Resources</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full border border-indigo-100 mb-6 group cursor-default shadow-sm">
+            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+            <span className="text-xs font-bold text-indigo-700 uppercase tracking-widest">Fresh Content</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+            <span className="text-gray-900">Latest </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
+              Resources
+            </span>
+          </h2>
+
+          <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-pink-600 mx-auto rounded-full mb-8"></div>
+
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
             Stay updated with our newest guides, training materials, and success stories from the field.
           </p>
         </div>
@@ -73,52 +85,12 @@ export function KnowledgeGrid() {
                   {resource.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4 leading-relaxed">{resource.description}</p>
-
-                <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
-                  <div className="flex items-center gap-1">
-                    <User className="h-3 w-3" />
-                    <span>{resource.author}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-3 w-3" />
-                    <span>{resource.date}</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4 text-xs text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Eye className="h-3 w-3" />
-                      <span>{resource.views}</span>
-                    </div>
-                    {resource.downloads > 0 && (
-                      <div className="flex items-center gap-1">
-                        <Download className="h-3 w-3" />
-                        <span>{resource.downloads}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 group">
-                  {resource.type === "Video" ? "Watch Now" : "Read More"}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 bg-transparent"
-          >
-            View All Resources
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
+
       </div>
     </section>
   )

@@ -124,7 +124,7 @@ export function Impact() {
     },
     {
       icon: MapPin,
-      number: 40,
+      number: 20,
       suffix: "+",
       label: "Villages Reached",
       description: "Communities across Hiranpur Block under Pakur District and beyond",

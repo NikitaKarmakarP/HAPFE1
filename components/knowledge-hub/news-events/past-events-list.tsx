@@ -4,24 +4,32 @@ import { Calendar, Clock, MapPin, Users, Award, Download } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 export function PastEventsList() {
 
   const pastEvents = [
     {
       id: 1,
       title: "Blanket Distribution Drive",
-      date: "2025-01-01",
+      date: "2026-01-09",
       time: "10:00 AM - 2:00 PM",
       location: "Hiranpur, Pakur",
       category: "Community Meetings",
       participants: 50,
       description:
         "A community-driven initiative to provide warmth and comfort to those in need during the winter season.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/blanket-drive-2025.jpg",
       outcomes: "Provided warmth and comfort to those in need.",
       materials: ["Event Report", "Photos"],
       featured: true,
-      year: "2025",
+      year: "2026",
     },
   ]
 
@@ -54,8 +62,8 @@ export function PastEventsList() {
           <Card
             key={event.id}
             className={`group text-left overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 ${event.featured
-                ? "bg-gradient-to-br from-white via-indigo-50/30 to-blue-50/30 ring-1 ring-blue-200 shadow-blue-100/50"
-                : "bg-white hover:bg-gray-50/50 ring-1 ring-gray-100"
+              ? "bg-gradient-to-br from-white via-indigo-50/30 to-blue-50/30 ring-1 ring-blue-200 shadow-blue-100/50"
+              : "bg-white hover:bg-gray-50/50 ring-1 ring-gray-100"
               }`}
           >
             <div className="md:flex h-full">
@@ -139,24 +147,7 @@ export function PastEventsList() {
                     <p className="text-gray-700 font-medium">{event.outcomes}</p>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100">
-                    <div className="flex flex-wrap gap-2 w-full sm:w-auto">
-                      {event.materials.map((material, index) => (
-                        <Button
-                          key={index}
-                          size="sm"
-                          variant="ghost"
-                          className="text-gray-600 hover:text-blue-600 hover:bg-blue-50/50 transition-colors"
-                        >
-                          <Download className="h-3 w-3 mr-2" />
-                          {material}
-                        </Button>
-                      ))}
-                    </div>
-                    <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
-                      View Details
-                    </Button>
-                  </div>
+
                 </div>
               </div>
             </div>

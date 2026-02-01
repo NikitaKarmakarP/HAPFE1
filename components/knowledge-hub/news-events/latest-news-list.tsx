@@ -1,6 +1,15 @@
+"use client"
 import { Calendar, Clock, User, Tag, Share2, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 const newsArticles = [
   {
@@ -18,7 +27,7 @@ const newsArticles = [
     featured: true,
     views: 1250,
     likes: 89,
-    image: "/placeholder.svg?height=300&width=600",
+    image: "/local-farmers-mushroom.jpg",
   },
 ]
 
@@ -29,10 +38,8 @@ export function LatestNewsList() {
 
   return (
     <div className="space-y-12 py-8">
-      <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest News</h2>
-        <div className="w-20 h-1 bg-orange-500 mx-auto rounded-full"></div>
-      </div>
+
+
 
       {/* Featured Article */}
       {featuredArticle && (
@@ -81,18 +88,69 @@ export function LatestNewsList() {
               </p>
 
               <div className="flex items-center justify-between mt-auto">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-orange-700 font-bold text-xs">
-                    {featuredArticle.author.charAt(0)}
-                  </div>
-                  <span className="text-sm font-medium text-gray-900">{featuredArticle.author}</span>
-                </div>
+                <div></div>
 
                 <div className="flex gap-3">
-                  <Button className="bg-orange-600 hover:bg-orange-700 text-white shadow-md hover:shadow-lg transition-all rounded-full px-6">
-                    Read Full Article
-                  </Button>
-                  <Button variant="outline" size="icon" className="rounded-full border-orange-200 text-orange-600 hover:bg-orange-50">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button className="bg-orange-600 hover:bg-orange-700 text-white shadow-md hover:shadow-lg transition-all rounded-full px-6">
+                        Read Full Article
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-5xl max-h-[95vh] p-0 overflow-hidden border-0 shadow-3xl bg-white rounded-2xl">
+                      <div className="overflow-y-auto h-full max-h-[95vh]">
+                        <div className="relative h-80 md:h-[500px] w-full group">
+                          <img
+                            src={featuredArticle.image}
+                            alt={featuredArticle.title}
+                            className="object-cover w-full h-full brightness-95 group-hover:brightness-100 transition-all duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                          <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white max-w-3xl">
+                            <div className="flex items-center gap-3 mb-4">
+                              <span className="bg-orange-600 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-widest">{featuredArticle.category}</span>
+                              <span className="text-gray-300 text-sm flex items-center gap-1"><Clock className="w-4 h-4" /> {featuredArticle.readTime}</span>
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-2 tracking-tight font-serif">{featuredArticle.title}</h2>
+                            <p className="text-gray-300 text-lg flex items-center gap-2 mt-4 font-light">
+                              <Calendar className="w-5 h-5 text-orange-400" /> {new Date(featuredArticle.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="p-8 md:p-16 max-w-4xl mx-auto">
+                          <div className="prose prose-lg prose-slate max-w-none">
+                            <p className="lead text-xl md:text-2xl text-gray-700 font-medium mb-10 border-l-4 border-orange-500 pl-6 italic leading-relaxed">
+                              {featuredArticle.excerpt}
+                            </p>
+                            <div className="text-gray-800 leading-8 whitespace-pre-wrap text-lg font-light tracking-wide">
+                              {featuredArticle.content}
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full border-orange-200 text-orange-600 hover:bg-orange-50"
+                    onClick={() => {
+                      if (navigator.share) {
+                        navigator.share({
+                          title: featuredArticle.title,
+                          text: featuredArticle.excerpt,
+                          url: window.location.href,
+                        }).catch(console.error);
+                      } else {
+                        // Fallback copy to clipboard
+                        navigator.clipboard.writeText(window.location.href);
+                      }
+                    }}
+                  >
                     <Share2 className="h-4 w-4" />
                   </Button>
                 </div>

@@ -1,8 +1,36 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowRight, Bell, BookOpen, Users } from "lucide-react"
+import { ArrowRight, Bell, BookOpen, Users, CheckCircle2, Loader2 } from "lucide-react"
+import { useToast } from "@/components/ui/use-toast"
 
 export function KnowledgeCTA() {
+  const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const { toast } = useToast()
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    setIsSubmitting(true)
+
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500))
+
+    setIsSubmitting(false)
+    setIsSuccess(true)
+    setEmail("")
+
+    toast({
+      title: "Successfully Subscribed!",
+      description: "You've been added to our newsletter list.",
+    })
+  }
+
   return (
     <section className="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10">
@@ -29,7 +57,7 @@ export function KnowledgeCTA() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Bell className="h-8 w-8 text-white" />
             </div>
@@ -39,7 +67,7 @@ export function KnowledgeCTA() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="h-8 w-8 text-white" />
             </div>
@@ -49,7 +77,7 @@ export function KnowledgeCTA() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Users className="h-8 w-8 text-white" />
             </div>
@@ -61,18 +89,48 @@ export function KnowledgeCTA() {
         </div>
 
         <div className="max-w-md mx-auto">
-          <div className="flex gap-4 mb-8">
-            <Input
-              type="email"
-              placeholder="Enter your email address"
-              className="bg-white/10 border-white/20 text-white placeholder:text-blue-200"
-            />
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-6">
-              Subscribe
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
-          <p className="text-sm text-blue-200 text-center">Join 1000+ subscribers. No spam, unsubscribe anytime.</p>
+          {isSuccess ? (
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/20 animate-in fade-in zoom-in duration-500">
+              <CheckCircle2 className="h-12 w-12 text-white mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">You're Subscribed!</h3>
+              <p className="text-blue-100 mb-6">Thank you for joining our community. Check your inbox soon!</p>
+              <Button
+                onClick={() => setIsSuccess(false)}
+                variant="outline"
+                className="border-white/20 text-white hover:bg-white/10"
+              >
+                Subscribe another email
+              </Button>
+            </div>
+          ) : (
+            <>
+              <form onSubmit={handleSubscribe} className="flex gap-4 mb-8">
+                <Input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-blue-200 focus:bg-white/20 transition-all"
+                />
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-white text-blue-600 hover:bg-blue-50 px-6 min-w-[120px]"
+                >
+                  {isSubmitting ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <>
+                      Subscribe
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+              </form>
+              <p className="text-sm text-blue-200 text-center">Join 1000+ subscribers. No spam, unsubscribe anytime.</p>
+            </>
+          )}
         </div>
       </div>
     </section>
