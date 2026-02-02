@@ -1,5 +1,4 @@
-Our Story
-Our Journey"use client"
+use client
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Sprout, Users, Target, Sparkles, Award, Globe, MapPin, Star } from "lucide-react"
@@ -19,7 +18,7 @@ export function OurStory() {
             <Heart className="h-5 w-5 text-emerald-600" />
             <span className="text-sm font-semibold text-emerald-800 tracking-wide uppercase">Our Story</span>
           </div>
-          
+
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 relative">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 animate-gradient-x">
               Our Strategic Impact
@@ -30,7 +29,7 @@ export function OurStory() {
             <div className="absolute -top-2 -left-4 text-yellow-400 animate-bounce">
               <Sparkles className="h-5 w-5" />
             </div>
-            <div className="absolute -top-1 -right-4 text-emerald-400 animate-bounce" style={{animationDelay: '0.5s'}}>
+            <div className="absolute -top-1 -right-4 text-emerald-400 animate-bounce" style={{ animationDelay: '0.5s' }}>
               <Sparkles className="h-4 w-4" />
             </div>
           </h2>
@@ -65,7 +64,7 @@ export function OurStory() {
                   alt="HAPEF team working with rural community members, showcasing our grassroots approach to sustainable development"
                   className="w-full h-[700px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
-                
+
                 {/* Elegant overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -75,7 +74,7 @@ export function OurStory() {
                 <div className="relative bg-gradient-to-br from-white via-white to-emerald-50/30 backdrop-blur-lg p-8 rounded-3xl shadow-2xl border border-emerald-200/50 hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 hover:rotate-1">
                   {/* Glowing background effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-green-500/10 rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   {/* Content */}
                   <div className="relative flex items-center gap-5">
                     <div className="relative">
@@ -93,7 +92,7 @@ export function OurStory() {
                       <div className="w-12 h-0.5 bg-gradient-to-r from-emerald-400 to-green-400 mt-1 group-hover/card:w-16 transition-all duration-300"></div>
                     </div>
                   </div>
-                  
+
                   {/* Decorative corner elements */}
                   <div className="absolute top-2 right-2 w-2 h-2 bg-emerald-400 rounded-full opacity-60"></div>
                   <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-green-400 rounded-full opacity-40"></div>
@@ -104,7 +103,7 @@ export function OurStory() {
                 <div className="relative bg-gradient-to-br from-white via-white to-blue-50/30 backdrop-blur-lg p-8 rounded-3xl shadow-2xl border border-blue-200/50 hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 hover:-rotate-1">
                   {/* Glowing background effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 to-indigo-500/10 rounded-3xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
-                  
+
                   {/* Content */}
                   <div className="relative flex items-center gap-5">
                     <div className="relative">
@@ -122,7 +121,7 @@ export function OurStory() {
                       <div className="w-12 h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 mt-1 group-hover/card:w-16 transition-all duration-300"></div>
                     </div>
                   </div>
-                  
+
                   {/* Decorative corner elements */}
                   <div className="absolute top-2 right-2 w-2 h-2 bg-blue-400 rounded-full opacity-60"></div>
                   <div className="absolute bottom-2 left-2 w-1.5 h-1.5 bg-indigo-400 rounded-full opacity-40"></div>
