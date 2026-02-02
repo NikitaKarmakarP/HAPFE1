@@ -53,7 +53,6 @@ export function DonorTestimonials() {
                 <div>
                   <h4 className="font-bold text-gray-900 text-xl">Sougata Nandi</h4>
                   <p className="text-green-600 font-semibold">Individual Donor</p>
-                  <p className="text-gray-500 text-sm">Long-term Supporter</p>
                 </div>
               </div>
             </CardContent>

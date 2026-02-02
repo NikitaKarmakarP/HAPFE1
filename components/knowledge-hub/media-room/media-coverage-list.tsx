@@ -23,7 +23,7 @@ const mediaCoverage = [
     date: "2024-03-15",
     summary:
       "HAPEF's rural development work and community impact highlighted on regional television, focusing on sustainable agricultural practices.",
-    url: "#",
+    url: "https://www.etvbharat.com/hi/!state/women-becoming-self-reliant-by-strawberry-and-mushroom-farming-in-pakur-jharkhand-news-jhs25020402231",
     image: "/placeholder.svg?height=400&width=600&text=ETV+Bharat+Feature",
   },
   {
@@ -34,8 +34,8 @@ const mediaCoverage = [
     date: "2023-01-20",
     summary:
       "30-minute documentary showcasing HAPEF's impact on rural communities aired nationally, featuring success stories from diverse beneficiaries.",
-    url: "#",
-    image: "/placeholder.svg?height=400&width=600&text=DD+National+Documentary",
+    url: "https://www.youtube.com/watch?v=KUQRnMppXKc",
+    image: "/media-dd-national.jpg",
   },
 ]
 
@@ -105,9 +105,12 @@ export function MediaCoverageList() {
                       />
                       {item.type === 'tv' && (
                         <div className="absolute inset-0 flex items-center justify-center z-20">
-                          <div className="bg-white/90 rounded-full p-3 shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 pb-3">
+                          <button
+                            onClick={() => window.open(item.url, "_blank")}
+                            className="bg-white/90 rounded-full p-3 shadow-lg opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 pb-3 hover:bg-white"
+                          >
                             <PlayCircle className="h-8 w-8 text-green-700" />
-                          </div>
+                          </button>
                         </div>
                       )}
                     </div>

@@ -152,8 +152,8 @@ export function DonationForm() {
                       type="button"
                       onClick={() => setDonationType(option.type as "one-time" | "monthly")}
                       className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${donationType === option.type
-                          ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
-                          : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
+                        ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
+                        : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
                         }`}
                     >
                       <div className="text-3xl mb-3">{option.icon}</div>
@@ -179,8 +179,8 @@ export function DonationForm() {
                       type="button"
                       onClick={() => handleAmountSelect(item.amount)}
                       className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${selectedAmount === item.amount
-                          ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
-                          : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
+                        ? "border-green-500 bg-gradient-to-br from-green-50 to-emerald-50 shadow-lg scale-105"
+                        : "border-gray-200 hover:border-green-300 hover:shadow-md hover:scale-102"
                         }`}
                     >
                       {item.popular && (
@@ -190,11 +190,11 @@ export function DonationForm() {
                       )}
                       <div className="font-bold text-2xl text-gray-900 mb-2">₹{item.amount.toLocaleString()}</div>
                       <div className="text-sm text-gray-600">
-                        {item.amount === 500 && "Train 1 farmer"}
-                        {item.amount === 1000 && "Support for 2 weeks"}
-                        {item.amount === 2000 && "Monthly family support"}
-                        {item.amount === 5000 && "10 family blankets"}
-                        {item.amount === 10000 && "Complete mushroom unit"}
+                        {item.amount === 500 && "Provided educational support to a student"}
+                        {item.amount === 1000 && "Provided educational support to 2 students"}
+                        {item.amount === 2000 && "Supported a family with mushroom seeds and equipment"}
+                        {item.amount === 5000 && "Supported kitchen garden kits to 5 families"}
+                        {item.amount === 10000 && "Sets up complete mushroom unit"}
                         {item.amount === 25000 && "Transform a village"}
                       </div>
                       {selectedAmount === item.amount && (
@@ -245,8 +245,8 @@ export function DonationForm() {
                       type="button"
                       onClick={() => setPaymentMethod(option.method as "card" | "upi" | "bank")}
                       className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 ${paymentMethod === option.method
-                          ? `border-${option.color}-500 bg-gradient-to-br from-${option.color}-50 to-${option.color}-100 shadow-lg scale-105`
-                          : "border-gray-200 hover:border-gray-300 hover:shadow-md hover:scale-102"
+                        ? `border-${option.color}-500 bg-gradient-to-br from-${option.color}-50 to-${option.color}-100 shadow-lg scale-105`
+                        : "border-gray-200 hover:border-gray-300 hover:shadow-md hover:scale-102"
                         }`}
                     >
                       <option.icon
