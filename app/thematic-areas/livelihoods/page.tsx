@@ -91,7 +91,7 @@ export default function LivelihoodsPage() {
           />
           */}
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="max-w-3xl">
             <div className="flex items-center mb-4">
@@ -105,12 +105,16 @@ export default function LivelihoodsPage() {
               Creating sustainable income opportunities and improving economic conditions for vulnerable populations through skill development and enterprise support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-green-50">
-                Our Programs
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600">
-                Success Stories
-              </Button>
+              <Link href="#our-approach">
+                <Button size="lg" className="bg-white text-green-600 hover:bg-green-50 w-full sm:w-auto">
+                  Our Approach
+                </Button>
+              </Link>
+              <Link href="#view-impact">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 w-full sm:w-auto">
+                  View Impact
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -167,7 +171,7 @@ export default function LivelihoodsPage() {
       </section>
 
       {/* Programs Grid */}
-      <section className="py-20 bg-gray-50">
+      <section id="our-approach" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -202,7 +206,7 @@ export default function LivelihoodsPage() {
 
 
       {/* Impact Statistics */}
-      <section className="py-20 bg-green-600 text-white">
+      <section id="view-impact" className="py-20 bg-green-600 text-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

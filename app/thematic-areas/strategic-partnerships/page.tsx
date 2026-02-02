@@ -103,12 +103,16 @@ export default function StrategicPartnershipsPage() {
               Building collaborative partnerships with diverse stakeholders to enhance developmental outcomes and promote sustainable solutions for emerging challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50">
-                Our Partners
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600">
-                Partnership Opportunities
-              </Button>
+              <Link href="#our-approach">
+                <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 w-full sm:w-auto">
+                  Our Approach
+                </Button>
+              </Link>
+              <Link href="#view-impact">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 w-full sm:w-auto">
+                  View Impact
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -165,7 +169,7 @@ export default function StrategicPartnershipsPage() {
       </section>
 
       {/* Partnership Types Grid */}
-      <section className="py-20 bg-gray-50">
+      <section id="our-approach" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -220,7 +224,7 @@ export default function StrategicPartnershipsPage() {
 
 
       {/* Impact Statistics */}
-      <section className="py-20 bg-orange-600 text-white">
+      <section id="view-impact" className="py-20 bg-orange-600 text-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

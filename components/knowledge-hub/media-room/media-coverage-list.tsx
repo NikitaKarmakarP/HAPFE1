@@ -20,18 +20,18 @@ const mediaCoverage = [
     title: "Featured on ETV Bharat Jharkhand",
     publication: "ETV Bharat",
     type: "tv",
-    date: "2024-03-15",
+    date: "2025-02-04",
     summary:
       "HAPEF's rural development work and community impact highlighted on regional television, focusing on sustainable agricultural practices.",
     url: "https://www.etvbharat.com/hi/!state/women-becoming-self-reliant-by-strawberry-and-mushroom-farming-in-pakur-jharkhand-news-jhs25020402231",
-    image: "/placeholder.svg?height=400&width=600&text=ETV+Bharat+Feature",
+    image: "/media-etv-bharat.jpg",
   },
   {
     id: 2,
     title: "Documentary on DD National",
     publication: "DD National",
     type: "tv",
-    date: "2023-01-20",
+    date: "2025-02-05",
     summary:
       "30-minute documentary showcasing HAPEF's impact on rural communities aired nationally, featuring success stories from diverse beneficiaries.",
     url: "https://www.youtube.com/watch?v=KUQRnMppXKc",
@@ -121,14 +121,6 @@ export function MediaCoverageList() {
                           <TypeIcon className="h-3 w-3 mr-1.5" />
                           {item.publication}
                         </Badge>
-                        <span className="flex items-center text-sm text-gray-500 font-medium">
-                          <Calendar className="h-4 w-4 mr-1.5 text-gray-400" />
-                          {new Date(item.date).toLocaleDateString(undefined, {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                          })}
-                        </span>
                       </div>
 
                       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">

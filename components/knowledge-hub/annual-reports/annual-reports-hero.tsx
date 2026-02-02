@@ -4,7 +4,7 @@ import { FileText, ShieldCheck, BarChart3, Users, Download, ArrowRight, Sparkle 
 
 export function AnnualReportsHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section id="reports" className="py-12 scroll-mt-20 relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(900px_400px_at_10%_10%,#000,transparent)]">
         <div className="absolute -top-10 -left-10 h-64 w-64 rounded-full bg-blue-400 blur-3xl"></div>
@@ -41,18 +41,15 @@ export function AnnualReportsHero() {
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild className="bg-blue-600 hover:bg-blue-700">
-                <a href="#reports">
+                <Link href="#reports">
                   Browse reports
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
               </Button>
               <Button variant="outline" className="bg-transparent" asChild>
-                <a href="#">
+                <a href="/annual-report-cover.jpg" download>
                   <Download className="mr-2 h-4 w-4" /> Download latest PDF
                 </a>
-              </Button>
-              <Button variant="ghost" asChild>
-                <a href="#report-2022-2023">View archive</a>
               </Button>
             </div>
           </div>

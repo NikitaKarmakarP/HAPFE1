@@ -74,12 +74,12 @@ export function About() {
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-green-200/40 to-emerald-200/40 rounded-bl-full blur-sm"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-green-300/30 to-emerald-300/30 rounded-tr-full blur-sm"></div>
             <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-gradient-to-r from-emerald-200/20 to-teal-200/20 rounded-full blur-lg"></div>
-            
+
             {/* Floating decorative particles */}
             <div className="absolute top-20 left-20 w-2 h-2 bg-green-400/60 rounded-full animate-bounce"></div>
             <div className="absolute bottom-32 right-32 w-3 h-3 bg-emerald-400/50 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
             <div className="absolute top-40 right-1/4 w-1.5 h-1.5 bg-teal-400/70 rounded-full animate-bounce" style={{ animationDelay: '2s' }}></div>
-            
+
             {/* Years of Service Badge - Enhanced */}
             <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-2xl border border-green-100/80 hover:scale-110 transition-all duration-500 cursor-pointer group">
               <div className="text-center">
@@ -183,47 +183,48 @@ export function About() {
           </div>
         </div>
 
-          <div
-            className={`relative transition-all duration-1000 delay-400 ${isVisible ? "animate-slide-in-right" : "opacity-0 translate-x-10"}`}
-          >
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-6">
-                <img
-                  src="/ses1.jpg"
-                  alt="HAPEF team working with rural community members"
-                  className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
-                />
-                <img
-                  src="/ses2.jpg"
-                  alt="Agricultural training session with farmers"
-                  className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="space-y-6 pt-12">
-                <img
-                  src="/ses3.jpg"
-                  alt="Women empowerment program in action"
-                  className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
-                />
-                <img
-                  src="/ses4.jpg"
-                  alt="Sustainable farming practices demonstration"
-                  className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+        <div
+          className={`relative transition-all duration-1000 delay-400 ${isVisible ? "animate-slide-in-right" : "opacity-0 translate-x-10"}`}
+        >
+          <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <img
+                src="/ses1.jpg"
+                alt="HAPEF team working with rural community members"
+                className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
+              />
+              <img
+                src="/ses2.jpg"
+                alt="Agricultural training session with farmers"
+                className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
+              />
             </div>
-
-            {/* Floating Stats */}
-            <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-green-100 animate-float-card hover:scale-110 transition-all duration-300 cursor-pointer group">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 group-hover:animate-bounce">3+</div>
-                <div className="text-sm text-gray-600">Years of Service</div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+            <div className="space-y-6 pt-12">
+              <img
+                src="/ses3.jpg"
+                alt="Women empowerment program in action"
+                className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
+              />
+              <img
+                src="/ses4.jpg"
+                alt="Sustainable farming practices demonstration"
+                className="rounded-2xl shadow-xl w-full hover:scale-105 transition-transform duration-500"
+              />
             </div>
           </div>
-        </div>
 
+          {/* Floating Stats */}
+          <div className="absolute -top-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl border border-green-100 animate-float-card hover:scale-110 transition-all duration-300 cursor-pointer group">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-600 group-hover:animate-bounce">3+</div>
+              <div className="text-sm text-gray-600">Years of Service</div>
+            </div>
+            <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         {/* Mission, Vision, Values with Enhanced Animations */}
         <div className="grid md:grid-cols-3 gap-8">
           {[

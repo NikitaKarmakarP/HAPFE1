@@ -139,7 +139,7 @@ const interns = [
     email: "priyanka.intern@hapef.org",
     linkedin: "https://www.linkedin.com/in/sunandinidas/",
     focus: ["Qualitative Research", "Quantitative Research", "Data Analysis"],
-    startDate: "March 2024",
+    startDate: "February 2025",
   },
   {
     name: "Paramita Dey",
@@ -665,7 +665,12 @@ export function Leadership() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Featured on ETV Bharat Jharkhand */}
-            <div className="group bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 backdrop-blur-sm border border-blue-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+            <a
+              href="https://www.etvbharat.com/hi/!state/women-becoming-self-reliant-by-strawberry-and-mushroom-farming-in-pakur-jharkhand-news-jhs25020402231"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-white via-blue-50/30 to-cyan-50/30 backdrop-blur-sm border border-blue-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 cursor-pointer block"
+            >
               <div className="flex items-start gap-6">
                 <div className="relative">
                   <div className="p-4 bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -684,17 +689,22 @@ export function Leadership() {
                     </span>
                   </div>
                   <div className="text-blue-600 font-semibold mb-3 text-sm uppercase tracking-wide">
-                    March 2024
+                    February 2025
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     HAPEF's rural development work and community impact highlighted on regional television.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
 
             {/* Documentary on DD National */}
-            <div className="group bg-gradient-to-br from-white via-teal-50/30 to-green-50/30 backdrop-blur-sm border border-teal-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+            <a
+              href="https://www.youtube.com/watch?v=KUQRnMppXKc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-white via-teal-50/30 to-green-50/30 backdrop-blur-sm border border-teal-200/50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 cursor-pointer block"
+            >
               <div className="flex items-start gap-6">
                 <div className="relative">
                   <div className="p-4 bg-gradient-to-br from-teal-500 via-teal-600 to-green-600 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -713,14 +723,14 @@ export function Leadership() {
                     </span>
                   </div>
                   <div className="text-teal-600 font-semibold mb-3 text-sm uppercase tracking-wide">
-                    January 2023
+                    February 2025
                   </div>
                   <p className="text-gray-700 leading-relaxed">
                     30-minute documentary showcasing HAPEF's impact on rural communities aired nationally.
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 

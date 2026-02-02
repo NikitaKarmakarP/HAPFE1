@@ -45,7 +45,7 @@ const reports: Report[] = [
 
 export function AnnualReportsList() {
   return (
-    <section id="reports" className="py-12">
+    <section id="reports" className="py-12 scroll-mt-20">
       <div className="space-y-8">
         {reports.map((report) => (
           <Card
