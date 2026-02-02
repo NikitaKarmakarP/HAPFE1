@@ -1,4 +1,6 @@
-import { Sprout, Users } from "lucide-react"
+import { Sprout, Users, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 interface ProgramHeroProps {
   data: {
@@ -34,6 +36,21 @@ export function ProgramHero({ data }: ProgramHeroProps) {
             <h2 className="text-xl lg:text-2xl text-green-600 font-semibold mb-6">{data.subtitle}</h2>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">{data.description}</p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <Button asChild className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Link href="/contact" className="flex items-center gap-2">
+                  Apply Now
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </Button>
+
+              <Button asChild variant="outline" className="group border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-6 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <Link href="#details" className="flex items-center gap-2">
+                  Learn More
+                </Link>
+              </Button>
+            </div>
 
             <div className="grid grid-cols-2 gap-6">
               {data.stats.map((stat, index) => (

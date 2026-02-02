@@ -22,7 +22,10 @@ export default function MushroomEntrepreneurshipPage() {
       <ProgramHero data={programData} />
       <ProgramDetails benefitsImage="/mo1.jpg" benefitsImageAlt="Mushroom program benefits" />
       <ProgramTestimonials />
-      <ProgramCTA />
+      <ProgramCTA
+        primaryButton={{ text: "Apply Now", href: "/contact" }}
+        secondaryButton={{ text: "Learn More", href: "#details" }}
+      />
       <ContactSection />
     </main>
   )
