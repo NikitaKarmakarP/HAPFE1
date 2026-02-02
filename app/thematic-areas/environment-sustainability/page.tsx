@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import Image from "next/image"
+import { ProgramTestimonials } from "@/components/programs/program-testimonials"
 
 
 export default function EnvironmentSustainabilityPage() {
@@ -55,6 +56,19 @@ export default function EnvironmentSustainabilityPage() {
     "/sdg14.jpg",
     "/sdg15.jpg",
     "/sdg17.jpg",
+  ]
+
+  const environmentalStories = [
+    {
+      name: "Punam Devi",
+      location: "Hiranpur Block, Pakur District • Mushroom Entrepreneur",
+      quote: "Before joining HAPEF's mushroom program, I struggled to support my family of four with just my husband's farming income. The training changed everything. Now I earn ₹3,000 monthly from mushroom cultivation and have become financially independent. My children can attend better schools, and I'm even training other women in my village.",
+    },
+    {
+      name: "Karmela Tudu",
+      location: "Village Head • Community Leader",
+      quote: "Our entire village has benefited from HAPEF's sustainable agriculture programs. We now have better crop yields and improved food security for all families.",
+    }
   ]
 
 
@@ -334,73 +348,13 @@ export default function EnvironmentSustainabilityPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full border border-amber-100 mb-6 group cursor-default shadow-sm">
-              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
-              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">Impact Stories</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
-              <span className="text-gray-900">Environmental Success </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
-                Stories
-              </span>
-            </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto rounded-full mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
-              Real impact from our environmental and disaster management initiatives.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Punam Devi Story */}
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-2 h-full bg-emerald-500"></div>
-              <div className="flex flex-col h-full">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center text-xl font-bold text-emerald-700 border-2 border-emerald-200">
-                    PD
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Mushroom Farming Success</h3>
-                    <p className="text-sm text-emerald-600 font-medium">Punam Devi</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 italic leading-relaxed text-lg flex-grow">
-                  "Before joining HAPEF's mushroom program, I struggled to support my family of four with just my husband's farming income. The training changed everything. Now I earn ₹3,000 monthly from mushroom cultivation and have become financially independent. My children can attend better schools, and I'm even training other women in my village."
-                </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-500 font-medium">Hiranpur Block, Pakur District • Mushroom Entrepreneur</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Karmela Tudu Story */}
-            <Card className="p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-2 h-full bg-teal-500"></div>
-              <div className="flex flex-col h-full">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center text-xl font-bold text-teal-700 border-2 border-teal-200">
-                    RK
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">Community Transformation</h3>
-                    <p className="text-sm text-teal-600 font-medium">Karmela Tudu</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6 italic leading-relaxed text-lg flex-grow">
-                  "Our entire village has benefited from HAPEF's sustainable agriculture programs. We now have better crop yields and improved food security for all families."
-                </p>
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-500 font-medium">Village Head • Community Leader</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <ProgramTestimonials
+        testimonials={environmentalStories}
+        title="Environmental Success Stories"
+        description="Real impact from our environmental and disaster management initiatives."
+        badge="Impact Stories"
+        accentColor="orange"
+      />
 
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-16">

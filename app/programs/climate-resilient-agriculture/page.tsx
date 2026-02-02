@@ -70,25 +70,10 @@ export default function ClimateResilientAgriculturePage() {
 
   const testimonials = [
     {
-      name: "Ravi Kumar",
-      role: "Farmer, Birbhum District",
-      content:
-        "The drought-resistant rice varieties and water conservation techniques have completely transformed my farming. Even during the worst drought in years, I was able to maintain good yields.",
-      image: "/placeholder.svg?height=80&width=80&text=RK",
-    },
-    {
-      name: "Sunita Devi",
-      role: "Women Farmer Group Leader",
-      content:
-        "Through the farmer field schools, I learned organic farming methods that not only improved my crops but also reduced my input costs by 30%. Now I train other women in my village.",
-      image: "/placeholder.svg?height=80&width=80&text=SD",
-    },
-    {
-      name: "Amit Ghosh",
-      role: "Young Farmer, Purulia",
-      content:
-        "The climate information services help me plan my farming activities better. I receive weather updates and farming advisories on my phone, which has improved my decision-making significantly.",
-      image: "/placeholder.svg?height=80&width=80&text=AG",
+      name: "Karolina Kisku",
+      location: "Hiranpur Block, Jharkhand",
+      quote:
+        "I used to rely on chemical farming, but thanks to HAPEF's Bio-input Resource Centre's entrepreneurship model, I've shifted to natural farming. Not only is it better for the soil, but I've also saved on my input costs.",
     },
   ]
 
@@ -111,7 +96,11 @@ export default function ClimateResilientAgriculturePage() {
     <main className="min-h-screen">
       <ProgramHero data={programData} />
       <ProgramDetails {...details} benefitsImage="/cl2.jpg" benefitsImageAlt="Climate-resilient agriculture benefits" />
-      <ProgramTestimonials testimonials={testimonials} />
+      <ProgramTestimonials
+        testimonials={testimonials}
+        title="Success Stories"
+        description="Hear from the entrepreneurs who have transformed their lives through our mushroom cultivation program."
+      />
       <ProgramCTA {...ctaData} />
       <ContactSection />
     </main>
