@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -16,7 +16,7 @@ const executiveTeam = [
     bio: "Empowering rural communities through sustainable agriculture, convergence, and livelihood initiatives.",
     details: `Kanchan Kumar Mandal is currently working with HAPEF as a Cluster Coordinator, where he plays a key role in empowering rural communities through sustainable agriculture, convergence, and livelihood initiatives. With over a decade of grassroots experience, he has worked with renowned organizations such as the World Health Organization, Evidence Action, Sathee and Aangan Trust, and Action for Social Advancement, contributing to impactful projects including polio eradication campaigns, coverage evaluation surveys, child safety programs, prevalence studies, and livelihood promotion. A graduate in Sociology (Hons.) from K.K.M. College, Pakur, Kanchan is skilled in livelihood development, field monitoring, data analysis, and community mobilization. His strong analytical mindset, deep commitment to rural development, and ability to engage communities make him a driving force behind HAPEF’s mission of creating long-term positive change.`,
     email: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sneha-roy-048b7520a/",
     expertise: ["Livelihood Development", "Field Monitoring", "Community Mobilization"],
   },
 ]
@@ -54,7 +54,7 @@ const boardMembers = [
     bio: "Dedicated to building sustainable agricultural programs and fostering community partnerships for lasting impact.",
     details: `Sourav Bhanja is the Co-founder and Director of HAPEF. He holds a Bachelor's degree in Civil Engineering. With experience in implementing sustainable development projects, his expertise includes watershed development, rainwater conservation, and community-based livelihood enhancement. He is currently working on the Jharkhand Jalchhajan Yojana, a watershed development initiative, across 20 villages in the Khunti block of Khunti district, Jharkhand. Previously, Sourav worked as a Block Coordinator in a welfare project under PRADAN.`,
     email: "sourav@hapef.org",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sneha-roy-048b7520a/",
     experience: "Agricultural Development Specialist",
     specialization: "Sustainable Agriculture & Partnerships",
   },
@@ -81,7 +81,7 @@ const advisoryBoard = [
     bio: "Ex-Professor, Bidhan Chandra Krishi Viswavidyalaya",
     details: `Dr. Bikash Ghosh is an Advisory Member of HAPEF. He is a renowned horticulturist and retired Professor from the Department of Fruits and Orchard Management at Bidhan Chandra Krishi Viswavidyalaya, West Bengal. With over four decades of experience in academics, research, and fieldwork, he has made significant contributions to fruit crop husbandry, particularly in mango, citrus, guava, litchi, and ber. He has mentored numerous M.Sc. and Ph.D. scholars and has published more than 40 research papers in reputed journals. Dr. Ghosh has led and collaborated on major projects funded by ICAR, DBT, and the Department of Food Processing Industries and Horticulture. His work on orchard rejuvenation, crop regulation, and organic nutrition has had a lasting impact on both the scientific community and farming practices. He has represented India at international symposia in countries including Indonesia, Portugal, China, and Thailand. Dr. Ghosh has actively contributed to academic collaboration with Bangladesh by presenting a paper at an international symposium in Maymensingh in 2009 and serving as an external Ph.D. thesis evaluator for Khulna University in 2016. He continues to advise academic institutions, serve as a thesis examiner, and contribute actively to national horticultural development initiatives.`,
     email: "sk.mishra@hapef.org",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sneha-roy-048b7520a/",
     expertise: ["Agricultural Research", "Innovation Strategy", "Technology Transfer"],
     achievements: "50+ Research Publications, National Agriculture Award",
   },
@@ -119,7 +119,7 @@ const interns = [
     name: "Nikita Karmakar",
     role: "Development Internship Trainee (Full-stack Developer)",
     university: "Netaji Subhash Engineering College (Garia)",
-    duration: "4 months",
+    duration: "6 months",
     image: "/nikita.jpg",
     bio: "",
     details: `Nikita Karmakar is the Development Internship Trainee (Full-stack Developer) at HAPEF. She holds a B.Tech in Computer Science & Engineering from Netaji Subhash Engineering College (Garia). Nikita's expertise includes programming languages like Java, JavaScript, and Python, as well as front-end and back-end development frameworks. She's proficient in databases like MongoDB and MySQL, and tools like Git, GitHub, and Docker. Nikita also has knowledge of machine learning with TensorFlow and OpenCV. With strong analytical and collaboration skills, she handles website designing, content creation, and documentation, leveraging her technical skills to drive innovation and adaptability in her role.`,
@@ -150,7 +150,7 @@ const interns = [
     bio: "Development Internship Trainee supporting documentation, coordination, communication, and operations for field projects.",
     details: `Paramita Dey is a Development Internship Trainee at HAPEF. She is pursuing a Master of Social Work (MSW) from IGNOU, after completing her B.Com (Accounts Hons) degree. During her internship, she has provided administrative support, documentation, communication, coordination, and operations management for various field-level projects. Paramita gained practical experience in program documentation, administrative coordination, community-level communication, and operational support by working closely with field teams and grassroots institutions. Through this internship, she has built a strong foundation in rural development practice, with a focus on inclusive community participation, efficient program management, and livelihood promotion.`,
     email: "",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sneha-roy-048b7520a/",
     focus: ["Program Documentation", "Administrative Coordination", "Community Communication", "Operations Support", "Livelihood Promotion", "Inclusive Participation"],
     startDate: "—",
   },
@@ -544,13 +544,13 @@ export function Leadership() {
                 linkedin: "https://www.linkedin.com/in/nikita-karmakar/",
               },
               {
-                name: "Sougata Nandi",
+                name: "Sneha Roy",
                 role: "Development Internship Trainee",
-                university: "B.Com (Accounts Hons), MBA (Finance); pursuing MSW (Child and Women Development)",
+                university: "Jadavpur University (M.A in Sociology)",
                 image: "/oo.jpg",
-                quote: "I’ve supported HAPEF for three years and have been highly satisfied with their work.I truly appreciate their community-driven approach and consistent communication, which clearly shows the positive change they are making.",
-                startDate: "6 months",
-                linkedin: "#",
+                quote: "I’ve had the opportunity to learn through fieldwork in Pakur, engaging with the extremely underserved communities, gaining a deeper understanding of how mushroom cultivation and sustainable agriculture support and quietly transform livelihood generation.",
+                startDate: "February 2026",
+                linkedin: "https://www.linkedin.com/in/sneha-roy-048b7520a/",
               },
 
             ].map((intern, index) => (
@@ -807,3 +807,4 @@ export function Leadership() {
 }
 
 export default Leadership
+

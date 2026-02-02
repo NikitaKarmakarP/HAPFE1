@@ -257,8 +257,7 @@ export function Impact() {
                       <div className="relative">
                         <div className="absolute -left-2 top-0 text-4xl text-green-200 font-serif">"</div>
                         <p className="text-gray-600 leading-relaxed mb-4 pl-4 italic">
-                          Through HAPEF's mushroom cultivation program, I was able to start my own business and increase my
-                          family's monthly income by <span className="font-bold text-green-600">300%</span>. The training and ongoing support have been invaluable.
+                          Before joining HAPEF's mushroom program, I struggled to support my family of four with just my husband's farming income. The training changed everything. Now I earn <span className="font-bold text-green-600">₹3,000 monthly</span> from mushroom cultivation and have become financially independent. My children can attend better schools, and I'm even training other women in my village.
                         </p>
                       </div>
 

@@ -24,8 +24,9 @@ export function DonorTestimonials() {
           </p>
         </div>
 
-        {/* Testimonials Card (Single) */}
-        <div className="mb-16 max-w-2xl mx-auto">
+        {/* Testimonials Grid */}
+        <div className="mb-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {/* Testimonial 1 - Sougata Nandi */}
           <Card className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
             <CardHeader className="p-8 pb-4">
               {/* Quote Icon and Rating */}
@@ -39,8 +40,8 @@ export function DonorTestimonials() {
               </div>
 
               {/* Testimonial Text */}
-              <blockquote className="text-gray-700 text-xl md:text-2xl leading-relaxed italic font-medium">
-                "I’ve supported HAPEF for three years and have been highly satisfied with their work. I truly appreciate their community-driven approach and consistent communication, which clearly shows the positive change they are making."
+              <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed italic font-medium">
+                "I've supported HAPEF for three years and have been highly satisfied with their work. I truly appreciate their community-driven approach and consistent communication, which clearly shows the positive change they are making."
               </blockquote>
             </CardHeader>
 
@@ -52,6 +53,72 @@ export function DonorTestimonials() {
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900 text-xl">Sougata Nandi</h4>
+                  <p className="text-green-600 font-semibold">Individual Donor</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Testimonial 2 - Ayantika Chatterjee */}
+          <Card className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+            <CardHeader className="p-8 pb-4">
+              {/* Quote Icon and Rating */}
+              <div className="flex justify-between items-start mb-6">
+                <Quote className="w-10 h-10 text-green-600 opacity-60" />
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+
+              {/* Testimonial Text */}
+              <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed italic font-medium">
+                "For the past two years, I've been a proud supporter of HAPEF and couldn't be happier with the results. Their dedication to grassroots involvement and their habit of keeping donors in the loop really highlights the real-world impact they have every day."
+              </blockquote>
+            </CardHeader>
+
+            <CardContent className="p-8 pt-4">
+              {/* Donor Info */}
+              <div className="flex items-center p-4 bg-gray-50 rounded-2xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center text-3xl mr-5 shadow-inner">
+                  👩‍💼
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-xl">Ayantika Chatterjee</h4>
+                  <p className="text-green-600 font-semibold">Individual Donor</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Testimonial 3 - Neha Gupta */}
+          <Card className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+            <CardHeader className="p-8 pb-4">
+              {/* Quote Icon and Rating */}
+              <div className="flex justify-between items-start mb-6">
+                <Quote className="w-10 h-10 text-green-600 opacity-60" />
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+
+              {/* Testimonial Text */}
+              <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed italic font-medium">
+                "As a donor, I've been consistently impressed by Humanitarian Aid for Poverty Eradication Foundation's transparent impact and community-centered approach. Their programs deliver measurable change where it's needed most, and communication is both clear and heartfelt. I'm proud to support an organization that turns compassion into concrete results."
+              </blockquote>
+            </CardHeader>
+
+            <CardContent className="p-8 pt-4">
+              {/* Donor Info */}
+              <div className="flex items-center p-4 bg-gray-50 rounded-2xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full flex items-center justify-center text-3xl mr-5 shadow-inner">
+                  👩‍💼
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-900 text-xl">Neha Gupta</h4>
                   <p className="text-green-600 font-semibold">Individual Donor</p>
                 </div>
               </div>
