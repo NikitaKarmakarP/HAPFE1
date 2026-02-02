@@ -18,6 +18,7 @@ export default function Navbar() {
   const [isThematicAreasOpen, setIsThematicAreasOpen] = useState(false)
   const [isOurImpactOpen, setIsOurImpactOpen] = useState(false)
   const [isOurInternsOpen, setIsOurInternsOpen] = useState(false)
+  const [isResourcesGuidesOpen, setIsResourcesGuidesOpen] = useState(false)
 
   const programs = [
     {
@@ -666,6 +667,20 @@ export default function Navbar() {
                         Media Coverage
                       </div>
                     </Link>
+
+                    {/* View Complete About Us */}
+                    <div className="pt-2 mt-2 border-t border-gray-200">
+                      <Link
+                        href="/about"
+                        className="block py-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          View Complete About Us
+                          <ChevronRight className="ml-1 h-3 w-3" />
+                        </div>
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -732,6 +747,16 @@ export default function Navbar() {
                           >
                             Strategic Partnerships
                           </Link>
+                          <div className="pt-2 mt-1 border-t border-gray-100">
+                            <Link
+                              href="/thematic-areas"
+                              className="flex items-center text-xs font-semibold text-blue-600 hover:text-blue-700 py-1"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              View All Thematic Areas
+                              <ChevronRight className="ml-1 h-3 w-3" />
+                            </Link>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -761,8 +786,32 @@ export default function Navbar() {
                               {program.title}
                             </Link>
                           ))}
+                          <div className="pt-2 mt-1 border-t border-gray-100">
+                            <Link
+                              href="/programs"
+                              className="flex items-center text-xs font-semibold text-green-600 hover:text-green-700 py-1"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              View All Programs
+                              <ChevronRight className="ml-1 h-3 w-3" />
+                            </Link>
+                          </div>
                         </div>
                       )}
+                    </div>
+
+                    {/* View All What We Do */}
+                    <div className="pt-2 mt-2 border-t border-gray-200">
+                      <Link
+                        href="/thematic-areas"
+                        className="block py-2 text-sm text-green-600 hover:text-green-700 font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          View All What We Do
+                          <ChevronRight className="ml-1 h-3 w-3" />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -844,6 +893,39 @@ export default function Navbar() {
 
                 {isKnowledgeHubOpen && (
                   <div className="mt-1 pl-4 space-y-1">
+                    <div>
+                      <button
+                        onClick={() => setIsResourcesGuidesOpen(!isResourcesGuidesOpen)}
+                        className="flex items-center justify-between w-full py-2 text-sm text-gray-600 hover:text-green-600"
+                      >
+                        <div className="flex items-center">
+                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                          Resources & Guides
+                        </div>
+                        <ChevronRight className={`h-4 w-4 text-gray-400 transition-transform ${isResourcesGuidesOpen ? "rotate-90" : ""}`} />
+                      </button>
+
+                      {isResourcesGuidesOpen && (
+                        <div className="mt-1 pl-4 space-y-1">
+                          <Link
+                            href="/knowledge-hub"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <div className="font-medium text-gray-900 group-hover/link:text-blue-600 text-sm">All Resources</div>
+                            <div className="text-xs text-gray-500">Browse all downloadable resources</div>
+                          </Link>
+                          <Link
+                            href="/knowledge-hub/annual-reports"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <div className="font-medium text-gray-900 group-hover/link:text-blue-600 text-sm">Annual Reports</div>
+                            <div className="text-xs text-gray-500">Yearly impact and financial summaries</div>
+                          </Link>
+                        </div>
+                      )}
+                    </div>
 
                     <div>
                       <button
@@ -862,24 +944,20 @@ export default function Navbar() {
 
                           <Link
                             href="/knowledge-hub/media-room/photo-gallery"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                              Photo Gallery
-                            </div>
+                            <div className="font-medium text-gray-900 group-hover/link:text-green-600 text-sm">Photo Gallery</div>
+                            <div className="text-xs text-gray-500">Images from our programs and events</div>
                           </Link>
 
                           <Link
                             href="/knowledge-hub/media-room/media-coverage"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
-                              Media Coverage
-                            </div>
+                            <div className="font-medium text-gray-900 group-hover/link:text-green-600 text-sm">Media Coverage</div>
+                            <div className="text-xs text-gray-500">News articles and features</div>
                           </Link>
                         </div>
                       )}
@@ -900,33 +978,27 @@ export default function Navbar() {
                         <div className="mt-1 pl-4 space-y-1">
                           <Link
                             href="/knowledge-hub/news-events/latest-news"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
-                              Latest News
-                            </div>
+                            <div className="font-medium text-gray-900 group-hover/link:text-purple-600 text-sm">Latest News</div>
+                            <div className="text-xs text-gray-500">Recent updates and announcements</div>
                           </Link>
                           <Link
                             href="/knowledge-hub/news-events/upcoming-events"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
-                              Upcoming Events
-                            </div>
+                            <div className="font-medium text-gray-900 group-hover/link:text-purple-600 text-sm">Upcoming Events</div>
+                            <div className="text-xs text-gray-500">Workshops, training, and community events</div>
                           </Link>
                           <Link
                             href="/knowledge-hub/news-events/past-events"
-                            className="block py-2 text-sm text-gray-600 hover:text-green-600 transition-colors"
+                            className="block py-2 rounded-lg hover:bg-gray-50 transition-colors group/link"
                             onClick={() => setIsOpen(false)}
                           >
-                            <div className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-purple-600 rounded-full mr-2"></div>
-                              Past Events
-                            </div>
+                            <div className="font-medium text-gray-900 group-hover/link:text-purple-600 text-sm">Past Events</div>
+                            <div className="text-xs text-gray-500">Archive of completed events</div>
                           </Link>
 
                         </div>

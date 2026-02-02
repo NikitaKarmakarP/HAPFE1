@@ -145,7 +145,7 @@ export function FeaturedWork() {
                 title: "Climate-Resilient Agriculture",
                 description:
                   "Building sustainable farming practices that adapt to climate change while improving crop yields.",
-                stats: ["4000+ Farmers", "40 Villages"],
+                stats: ["4000+ Farmers Supported", "40 Villages"],
                 color: "emerald",
                 gradient: "from-emerald-500 to-teal-500",
                 bgGradient: "from-emerald-50 to-teal-50",
