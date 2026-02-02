@@ -23,14 +23,12 @@ const defaultTestimonials: Testimonial[] = [
     location: "Hiranpur Block, Jharkhand",
     quote:
       "Before joining HAPEF's mushroom program, I struggled to support my family of four with just my husband's farming income. The training changed everything. Now I earn ₹3,000 monthly from mushroom cultivation and have become financially independent. My children can attend better schools, and I'm even training other women in my village.",
-    impact: "300% Income Increase",
   },
   {
     name: "Dularas Kiski",
     location: "Hiranpur Block, Jharkhand",
     quote:
       "The training was excellent and the ongoing support helped me overcome initial challenges. Now I'm training other women in my village to start their own mushroom farms.",
-    impact: "Community Leader",
   },
 ]
 
