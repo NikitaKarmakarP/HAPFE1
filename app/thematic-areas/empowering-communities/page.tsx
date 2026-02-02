@@ -106,9 +106,17 @@ export default function EmpoweringCommunitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Community-Centric Approach
+              <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mb-6 group cursor-default shadow-sm">
+                <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+                <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">Overview</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
+                <span className="text-gray-900">Our Community-Centric </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600">
+                  Approach
+                </span>
               </h2>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mb-8"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 We believe that sustainable development happens when communities are empowered to lead their own transformation. Our approach focuses on building local capacity, fostering leadership, and creating systems that ensure long-term sustainability.
               </p>
@@ -145,10 +153,18 @@ export default function EmpoweringCommunitiesPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Key Initiatives
+            <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full border border-indigo-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-indigo-700 uppercase tracking-widest">Programs</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Key </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">
+                Initiatives
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-indigo-600 to-blue-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Our comprehensive approach to community empowerment encompasses multiple interconnected initiatives.
             </p>
           </div>
@@ -199,12 +215,20 @@ export default function EmpoweringCommunitiesPage() {
       {/* Thematic Impact Highlights */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Thematic Impact Highlights
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">Global Goals</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Thematic Impact </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Highlights
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Aligning with Sustainable Development Goals
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+              Aligning with Sustainable Development Goals for positive transformation.
             </p>
           </div>
 
@@ -229,10 +253,18 @@ export default function EmpoweringCommunitiesPage() {
       <section id="our-approach" className="py-20 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Methodology
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">Process</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Our </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Methodology
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               A proven approach that ensures sustainable community development and lasting impact.
             </p>
           </div>

@@ -123,9 +123,17 @@ export default function StrategicPartnershipsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Collaborative Development Approach
+              <div className="inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full border border-orange-100 mb-6 group cursor-default shadow-sm">
+                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+                <span className="text-xs font-bold text-orange-700 uppercase tracking-widest">Synergy</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
+                <span className="text-gray-900">Collaborative </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-600">
+                  Development Approach
+                </span>
               </h2>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full mb-8"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Our strategic partnerships are built on the principle that complex development challenges require collaborative solutions. We work with diverse stakeholders to leverage complementary strengths and resources.
               </p>
@@ -172,10 +180,18 @@ export default function StrategicPartnershipsPage() {
       <section id="our-approach" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Partnership Portfolio
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full border border-amber-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">Collaborations</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Partnership </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
+                Portfolio
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               We collaborate with diverse stakeholders across sectors to create comprehensive development solutions.
             </p>
           </div>
@@ -204,12 +220,20 @@ export default function StrategicPartnershipsPage() {
       {/* Thematic Impact Highlights */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Thematic Impact Highlights
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-full border border-orange-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-orange-700 uppercase tracking-widest">Global Action</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Thematic Impact </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
+                Highlights
+              </span>
             </h2>
-            <p className="text-lg text-gray-600">
-              Aligning with Sustainable Development Goals
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+              Aligning with Sustainable Development Goals through strategic alliances.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -250,10 +274,18 @@ export default function StrategicPartnershipsPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Partnership Framework
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full border border-amber-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">Our Strategy</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Partnership </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
+                Framework
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-amber-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Our structured approach to build and maintain effective partnerships.
             </p>
           </div>

@@ -125,9 +125,17 @@ export default function LivelihoodsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Sustainable Economic Opportunities
+              <div className="inline-flex items-center gap-2 bg-green-50 px-4 py-2 rounded-full border border-green-100 mb-6 group cursor-default shadow-sm">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                <span className="text-xs font-bold text-green-700 uppercase tracking-widest">Overview</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
+                <span className="text-gray-900">Sustainable </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 animate-gradient-x">
+                  Economic Opportunities
+                </span>
               </h2>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-green-600 to-teal-600 rounded-full mb-8"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Our livelihoods programs focus on creating pathways out of poverty by developing skills, supporting entrepreneurship, and connecting people with sustainable income opportunities.
               </p>
@@ -174,10 +182,18 @@ export default function LivelihoodsPage() {
       <section id="our-approach" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Livelihood Programs
+            <div className="inline-flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest">Our Approach</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Our Livelihood </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
+                Programs
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Comprehensive programs designed to create sustainable economic opportunities across various sectors.
             </p>
           </div>
@@ -231,12 +247,20 @@ export default function LivelihoodsPage() {
       {/* Thematic Impact Highlights */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Thematic Impact Highlights
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full border border-blue-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-blue-700 uppercase tracking-widest">Global Alignment</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Thematic Impact </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                Highlights
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Aligning with Sustainable Development Goals
+            <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+              Aligning with Sustainable Development Goals to create lasting positive change.
             </p>
           </div>
 
@@ -255,48 +279,70 @@ export default function LivelihoodsPage() {
         </div>
       </section>
 
-      {/* Success Story Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-4 py-2 rounded-full border border-amber-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">Voices of Change</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Success </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
+                Stories
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Real stories of transformation from our livelihood development programs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
-                  👩‍🌾
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {/* Punam Devi Story */}
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-2 h-full bg-green-500"></div>
+              <div className="flex flex-col h-full">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-xl font-bold text-green-700 border-2 border-green-200">
+                    PD
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Mushroom Farming Success</h3>
+                    <p className="text-sm text-green-600 font-medium">Punam Devi</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Priya's Organic Farm</h3>
-                  <p className="text-gray-600 mb-4">
-                    "Through HAPEF's agricultural training, I transformed my small plot into a thriving organic farm. My income has increased by 300% in just two years."
-                  </p>
-                  <div className="text-sm text-green-600 font-medium">Agriculture Program Graduate</div>
+                <p className="text-gray-600 mb-6 italic leading-relaxed text-lg flex-grow">
+                  "Before joining HAPEF's mushroom program, I struggled to support my family of four with just my husband's farming income. The training changed everything. Now I earn ₹3,000 monthly from mushroom cultivation and have become financially independent. My children can attend better schools, and I'm even training other women in my village."
+                </p>
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-sm text-gray-500 font-medium">Hiranpur Block, Pakur District • Mushroom Entrepreneur</p>
                 </div>
               </div>
             </Card>
 
-            <Card className="p-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-2xl">
-                  👨‍💼
+            {/* Karmela Tudu Story */}
+            <Card className="p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+              <div className="flex flex-col h-full">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-xl font-bold text-blue-700 border-2 border-blue-200">
+                    RK
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">Community Transformation</h3>
+                    <p className="text-sm text-blue-600 font-medium">Karmela Tudu</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Raj's Tech Services</h3>
-                  <p className="text-gray-600 mb-4">
-                    "The digital skills training helped me start my own computer repair business. Now I employ 5 other young people from my village."
-                  </p>
-                  <div className="text-sm text-green-600 font-medium">Technology Training Graduate</div>
+                <p className="text-gray-600 mb-6 italic leading-relaxed text-lg flex-grow">
+                  "Our entire village has benefited from HAPEF's sustainable agriculture programs. We now have better crop yields and improved food security for all families."
+                </p>
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-sm text-gray-500 font-medium">Village Head • Community Leader</p>
                 </div>
               </div>
             </Card>
+
           </div>
         </div>
       </section>

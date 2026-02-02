@@ -115,9 +115,17 @@ export default function EnterpriseMarketingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Bridging Markets & Enterprises
+              <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 mb-6 group cursor-default shadow-sm">
+                <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                <span className="text-xs font-bold text-purple-700 uppercase tracking-widest">Market Access</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">
+                <span className="text-gray-900">Bridging Markets </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600">
+                  & Enterprises
+                </span>
               </h2>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full mb-8"></div>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Our enterprise and marketing linkage programs focus on creating sustainable connections between local producers and markets, enabling rural enterprises to access broader opportunities and achieve sustainable growth.
               </p>
@@ -164,10 +172,18 @@ export default function EnterpriseMarketingPage() {
       <section id="our-approach" className="py-20 bg-gray-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Enterprise Services
+            <div className="inline-flex items-center gap-2 bg-violet-50 px-4 py-2 rounded-full border border-violet-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-violet-700 uppercase tracking-widest">Growth Solutions</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Our Enterprise </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">
+                Services
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-violet-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               Comprehensive support services to help enterprises grow and access new markets.
             </p>
           </div>
@@ -220,12 +236,20 @@ export default function EnterpriseMarketingPage() {
       {/* Thematic Impact Highlights */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Thematic Impact Highlights
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-purple-50 px-4 py-2 rounded-full border border-purple-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-purple-700 uppercase tracking-widest">Global Reach</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Thematic Impact </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">
+                Highlights
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Aligning with Sustainable Development Goals
+            <div className="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-violet-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+              Aligning with Sustainable Development Goals for economic prosperity.
             </p>
           </div>
 
@@ -250,10 +274,18 @@ export default function EnterpriseMarketingPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Value Chain Development
+            <div className="inline-flex items-center gap-2 bg-violet-50 px-4 py-2 rounded-full border border-violet-100 mb-6 group cursor-default shadow-sm">
+              <span className="w-2 h-2 bg-violet-500 rounded-full animate-pulse"></span>
+              <span className="text-xs font-bold text-violet-700 uppercase tracking-widest">Integration</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
+              <span className="text-gray-900">Value Chain </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">
+                Development
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-purple-600 to-violet-600 mx-auto rounded-full mb-8"></div>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
               We work across the entire value chain to ensure enterprises can compete effectively in the market.
             </p>
           </div>
