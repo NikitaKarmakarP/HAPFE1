@@ -7,7 +7,6 @@ export function KnowledgeCategories() {
       icon: Sprout,
       title: "Agriculture & Farming",
       description: "Sustainable farming techniques, mushroom cultivation guides, and climate-resilient practices",
-      count: "25 Resources",
       color: "from-emerald-500 to-green-600",
       lightColor: "bg-emerald-50 text-emerald-600",
       shadow: "shadow-emerald-100/50",
@@ -16,7 +15,6 @@ export function KnowledgeCategories() {
       icon: Users,
       title: "Community Development",
       description: "Community engagement strategies, leadership development, and social impact methodologies",
-      count: "18 Resources",
       color: "from-blue-500 to-indigo-600",
       lightColor: "bg-blue-50 text-blue-600",
       shadow: "shadow-blue-100/50",
@@ -25,7 +23,6 @@ export function KnowledgeCategories() {
       icon: BookOpen,
       title: "Training Materials",
       description: "Comprehensive training modules, workshop guides, and educational content for programs",
-      count: "30 Resources",
       color: "from-purple-500 to-violet-600",
       lightColor: "bg-purple-50 text-purple-600",
       shadow: "shadow-purple-100/50",
@@ -34,7 +31,6 @@ export function KnowledgeCategories() {
       icon: Video,
       title: "Video Library",
       description: "Training videos, success stories, and documentary content from our field work",
-      count: "25 Videos",
       color: "from-rose-500 to-red-600",
       lightColor: "bg-rose-50 text-rose-600",
       shadow: "shadow-rose-100/50",
@@ -43,7 +39,6 @@ export function KnowledgeCategories() {
       icon: Download,
       title: "Downloads",
       description: "Forms, templates, reports, and other downloadable resources for program implementation",
-      count: "15 Files",
       color: "from-orange-500 to-amber-600",
       lightColor: "bg-orange-50 text-orange-600",
       shadow: "shadow-orange-100/50",
@@ -52,7 +47,6 @@ export function KnowledgeCategories() {
       icon: MessageCircle,
       title: "Success Stories",
       description: "Real stories from beneficiaries, case studies, and impact documentation",
-      count: "20 Stories",
       color: "from-teal-500 to-cyan-600",
       lightColor: "bg-teal-50 text-teal-600",
       shadow: "shadow-teal-100/50",
@@ -108,9 +102,6 @@ export function KnowledgeCategories() {
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">
-                  <span className={`px-4 py-1.5 ${category.lightColor} rounded-full text-xs font-bold tracking-tight shadow-sm`}>
-                    {category.count}
-                  </span>
                 </div>
               </CardContent>
 

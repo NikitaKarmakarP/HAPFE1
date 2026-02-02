@@ -35,7 +35,7 @@ export function KnowledgeGrid() {
       title: "Success Story: Priya's Mushroom Enterprise",
       description: "How one woman transformed her family's livelihood through mushroom farming",
       category: "Success Stories",
-      image: "/priya-success-new.jpg",
+      image: "/priya-success.jpg",
     },
   ]
 

@@ -67,17 +67,6 @@ export function LatestNewsList() {
             </div>
 
             <div className="p-8 flex flex-col justify-center bg-gradient-to-br from-orange-50/50 to-white">
-              <div className="flex items-center gap-3 mb-4 text-sm text-gray-500">
-                <span className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-1 text-orange-500" />
-                  {new Date(featuredArticle.date).toLocaleDateString()}
-                </span>
-                <span>•</span>
-                <span className="flex items-center">
-                  <Clock className="h-4 w-4 mr-1 text-orange-500" />
-                  {featuredArticle.readTime}
-                </span>
-              </div>
 
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-orange-600 transition-colors">
                 {featuredArticle.title}
@@ -109,12 +98,10 @@ export function LatestNewsList() {
                           <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white max-w-3xl">
                             <div className="flex items-center gap-3 mb-4">
                               <span className="bg-orange-600 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-widest">{featuredArticle.category}</span>
-                              <span className="text-gray-300 text-sm flex items-center gap-1"><Clock className="w-4 h-4" /> {featuredArticle.readTime}</span>
+
                             </div>
                             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-2 tracking-tight font-serif">{featuredArticle.title}</h2>
-                            <p className="text-gray-300 text-lg flex items-center gap-2 mt-4 font-light">
-                              <Calendar className="w-5 h-5 text-orange-400" /> {new Date(featuredArticle.date).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}
-                            </p>
+
                           </div>
                         </div>
 

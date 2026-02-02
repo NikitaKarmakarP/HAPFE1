@@ -69,8 +69,8 @@ export function PhotoGalleryGrid() {
     },
     {
       id: "5",
-      title: "New Water Pump Installation",
-      description: "Installation of solar-powered water pump system for irrigation in drought-affected area.",
+      title: "Net House Installation",
+      description: "Installation of modern net house structures to protect crops and ensure higher yields for rural farmers.",
       image: "/inf.jpg",
       category: "Infrastructure",
       date: "2024-02-05",
@@ -103,8 +103,8 @@ export function PhotoGalleryGrid() {
     },
     {
       id: "9",
-      title: "Organic Farming Training",
-      description: "Demonstration of organic composting and natural pest control methods for sustainable farming.",
+      title: "Natural Farming",
+      description: "Farmers being trained in natural farming practices, focusing on chemical-free agriculture and biodiversity.",
       image: "/t2.jpg",
       category: "Training Sessions",
       date: "2024-02-25",

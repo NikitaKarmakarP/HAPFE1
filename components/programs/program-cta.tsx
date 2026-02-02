@@ -12,15 +12,18 @@ interface ProgramCTAProps {
   primaryButton?: CTAButton
   secondaryButton?: CTAButton
   image?: string
+  phone?: string
+  email?: string
 }
 
 export function ProgramCTA({
   title = "Ready to Transform Your Community?",
-  description =
-  "Join our mushroom entrepreneurship program and become part of a growing network of successful rural entrepreneurs.",
+  description = "Join our mushroom entrepreneurship program and become part of a growing network of successful rural entrepreneurs.",
   primaryButton = { text: "Apply Now", href: "#" },
   secondaryButton = { text: "Learn More", href: "#" },
   image = "/ppp.jpg",
+  phone = "+91 8240374731",
+  email = "info.hapef@gmail.com",
 }: ProgramCTAProps = {}) {
   const [firstLine, secondLine] = title.split("\n")
 
@@ -40,13 +43,13 @@ export function ProgramCTA({
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <Phone className="h-4 w-4 text-green-600" />
                 </div>
-                <span className="text-gray-700">Call us: +91 8240374731</span>
+                <span className="text-gray-700">Call us: {phone}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                   <Mail className="h-4 w-4 text-green-600" />
                 </div>
-                <span className="text-gray-700">Email: info.hapef@gmail.com</span>
+                <span className="text-gray-700">Email: {email}</span>
               </div>
 
             </div>

@@ -110,7 +110,7 @@ export function AboutHapef() {
             About HAPEF
           </h2>
           <div className="w-24 h-1 bg-emerald-500 mx-auto mb-8"></div>
-          
+
           {/* Beautiful Main Heading */}
           <div className="relative mb-8">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
@@ -134,17 +134,17 @@ export function AboutHapef() {
                 </div>
               </span>
             </h3>
-            
+
             {/* Decorative elements */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <div className="flex space-x-2">
-                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{animationDelay: '0.4s'}}></div>
+                <div className="w-2 h-2 bg-emerald-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
               </div>
             </div>
           </div>
-          
+
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Since its inception, HAPEF has been at the forefront of rural development by combining new ideas with community empowerment to bring lasting change in India.
           </p>
@@ -166,37 +166,37 @@ export function AboutHapef() {
               <p className="text-xl text-gray-600 leading-relaxed">
                 Operating primarily in the Pakur district of Jharkhand, with our registered office at Kolkata, West Bengal, we've built strong partnerships with government departments and community organizations, highlighting our commitment to transparency and measurable impact.
               </p>
-              
+
               {/* Info cards removed from homepage */}
-              
+
               {/* Learn Our Story Button - Enhanced with animations */}
               <div className="text-left mt-8">
                 <Link href="/about#our-story">
                   <div className="relative inline-block group">
                     {/* Animated background glow */}
                     <div className="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-green-500 to-emerald-600 rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-500 group-hover:duration-200 animate-pulse"></div>
-                    
+
                     {/* Main button */}
                     <Button size="lg" className="relative bg-gradient-to-r from-emerald-500 via-green-600 to-emerald-700 hover:from-emerald-600 hover:via-green-700 hover:to-emerald-800 text-white px-10 py-4 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 border-2 border-emerald-400/50 hover:border-emerald-300 overflow-hidden">
                       {/* Shimmer effect */}
                       <div className="absolute inset-0 -top-1 -left-1 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 w-1/4 animate-[shimmer_3s_ease-in-out_infinite] opacity-0 group-hover:opacity-100"></div>
-                      
+
                       {/* Button content */}
                       <span className="relative flex items-center">
                         <span className="mr-3">Learn Our Story</span>
                         <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300" />
                       </span>
-                      
+
                       {/* Floating particles */}
-                      <div className="absolute top-1 left-4 w-1 h-1 bg-white/60 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{animationDelay: '0s'}}></div>
-                      <div className="absolute top-3 right-6 w-1 h-1 bg-white/40 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{animationDelay: '0.3s'}}></div>
-                      <div className="absolute bottom-2 left-8 w-0.5 h-0.5 bg-white/50 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{animationDelay: '0.6s'}}></div>
+                      <div className="absolute top-1 left-4 w-1 h-1 bg-white/60 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{ animationDelay: '0s' }}></div>
+                      <div className="absolute top-3 right-6 w-1 h-1 bg-white/40 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{ animationDelay: '0.3s' }}></div>
+                      <div className="absolute bottom-2 left-8 w-0.5 h-0.5 bg-white/50 rounded-full animate-bounce opacity-0 group-hover:opacity-100" style={{ animationDelay: '0.6s' }}></div>
                     </Button>
                   </div>
                 </Link>
               </div>
             </div>
-            
+
             {/* Image Gallery */}
             <div className="relative grid grid-cols-2 gap-6 max-w-4xl ml-12 mt-8">
               {/* Animated Years Badge */}
@@ -263,7 +263,7 @@ export function AboutHapef() {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Mission - Floating Animation */}
-            <div className="relative group animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-lg transform rotate-3 group-hover:rotate-6 transition-transform duration-500 animate-float"></div>
               <div className="relative bg-white/80 backdrop-blur-sm border border-emerald-200/50 rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300">
@@ -277,7 +277,7 @@ export function AboutHapef() {
             </div>
 
             {/* Vision - Pulse Animation */}
-            <div className="relative group animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+            <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-lg animate-pulse-slow"></div>
               <div className="relative bg-white/80 backdrop-blur-sm border border-blue-200/50 rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300 animate-pulse-icon">
@@ -291,7 +291,7 @@ export function AboutHapef() {
             </div>
 
             {/* Values - Rotate Animation */}
-            <div className="relative group animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+            <div className="relative group animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/20 rounded-lg transform -rotate-2 group-hover:-rotate-4 transition-transform duration-500 animate-wiggle"></div>
               <div className="relative bg-white/80 backdrop-blur-sm border border-purple-200/50 rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300">
