@@ -31,9 +31,13 @@ export function ProgramHero({ data }: ProgramHeroProps) {
               <span className="text-sm font-medium text-green-800">Active Program</span>
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">{data.title}</h1>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600">
+                {data.title}
+              </span>
+            </h1>
 
-            <h2 className="text-xl lg:text-2xl text-green-600 font-semibold mb-6">{data.subtitle}</h2>
+            <h2 className="text-xl lg:text-2xl text-gray-900 font-semibold mb-6">{data.subtitle}</h2>
 
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">{data.description}</p>
 
