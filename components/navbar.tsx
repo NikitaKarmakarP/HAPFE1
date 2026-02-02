@@ -1000,9 +1000,22 @@ export default function Navbar() {
                             <div className="font-medium text-gray-900 group-hover/link:text-purple-600 text-sm">Past Events</div>
                             <div className="text-xs text-gray-500">Archive of completed events</div>
                           </Link>
-
                         </div>
                       )}
+                    </div>
+
+                    {/* View All Knowledge Hub */}
+                    <div className="pt-2 mt-2 border-t border-gray-200">
+                      <Link
+                        href="/knowledge-hub"
+                        className="block py-2 text-sm text-green-600 hover:text-green-700 font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          View All Knowledge Hub
+                          <ChevronRight className="ml-1 h-3 w-3" />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 )}
