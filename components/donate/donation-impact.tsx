@@ -127,14 +127,14 @@ export function DonationImpact() {
                 <div className="mt-auto">
                   <button
                     onClick={() => {
-                      const element = document.getElementById("donation-form")
+                      const element = document.getElementById("payment-methods")
                       if (element) {
                         element.scrollIntoView({ behavior: "smooth" })
                       }
                     }}
                     className={`w-full py-4 rounded-2xl bg-gradient-to-r ${level.gradient} text-white font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 active:scale-95 flex items-center justify-center gap-2`}
                   >
-                    Donate {level.amount}
+                    Donate {level.amount} Now
                     <Sparkles className="h-5 w-5" />
                   </button>
                 </div>

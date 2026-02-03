@@ -51,43 +51,13 @@ export function DonationForm() {
     return selectedAmount || Number.parseInt(customAmount) || 0
   }
 
-  const handleDonation = async (e: React.FormEvent) => {
+  const handleDonation = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsProcessing(true)
 
-    // Simulate payment processing with realistic delay
-    await new Promise((resolve) => setTimeout(resolve, 3000))
-
-    const amount = getFinalAmount()
-    const type = donationType
-    const method = paymentMethod
-
-    console.log("Processing donation:", { amount, type, method })
-
-    // Simulate success with celebration
-    setIsProcessing(false)
-
-    // Show success animation
-    const successDiv = document.createElement("div")
-    successDiv.innerHTML = `
-      <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-fade-in">
-        <div class="bg-white p-8 rounded-3xl shadow-2xl text-center max-w-md mx-4 animate-scale-in">
-          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-green-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">Thank You! 🎉</h3>
-          <p class="text-gray-600 mb-4">Your ${type} donation of ₹${amount.toLocaleString()} has been processed successfully!</p>
-          <p class="text-sm text-gray-500">Receipt sent to your email</p>
-        </div>
-      </div>
-    `
-    document.body.appendChild(successDiv)
-
-    setTimeout(() => {
-      document.body.removeChild(successDiv)
-    }, 4000)
+    const element = document.getElementById("payment-methods")
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (

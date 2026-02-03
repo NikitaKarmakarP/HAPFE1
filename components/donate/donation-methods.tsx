@@ -59,11 +59,11 @@ export function DonationMethods() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement("a")
     a.href = url
-    a.download = `HAPEF-Receipt-${now.getFullYear()}${(now.getMonth()+1)
+    a.download = `HAPEF-Receipt-${now.getFullYear()}${(now.getMonth() + 1)
       .toString()
       .padStart(2, "0")}${now.getDate().toString().padStart(2, "0")}-${now.getHours()
-      .toString()
-      .padStart(2, "0")}${now.getMinutes().toString().padStart(2, "0")}.html`
+        .toString()
+        .padStart(2, "0")}${now.getMinutes().toString().padStart(2, "0")}.html`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -141,7 +141,7 @@ export function DonationMethods() {
   ]
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-gray-50 to-green-50 relative overflow-hidden">
+    <section id="payment-methods" className="py-24 bg-gradient-to-br from-white via-gray-50 to-green-50 relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full blur-3xl opacity-20 animate-pulse"></div>

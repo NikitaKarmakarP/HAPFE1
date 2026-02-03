@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export function DonateHero() {
   const scrollToDonation = () => {
-    const element = document.getElementById("donation-form")
+    const element = document.getElementById("payment-methods")
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
